@@ -1,0 +1,64 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDPROYECTO'/>
+    <element ref='t:IDINGRESO'/>
+    <element ref='t:IDINGRESOPREVISTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODTIPOORIGEN' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDORIGENPROYECTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:NUMEROANUALIDAD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:DESCRIPCION' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODTIPOINGRESOGENERICO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODTIPOMONEDA'/>
+    <element ref='t:IMPORTE'/>
+    <element ref='t:IDDOCUMENTO'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDPROYECTO' type='string'>
+ </element>
+
+ <element name='IDINGRESO' type='string'>
+ </element>
+
+ <element name='IDINGRESOPREVISTO' type='string'>
+ </element>
+
+ <element name='CODTIPOORIGEN' type='string'>
+ </element>
+
+ <element name='IDORIGENPROYECTO' type='string'>
+ </element>
+
+ <element name='NUMEROANUALIDAD' type='string'>
+ </element>
+
+ <element name='DESCRIPCION' type='string'>
+ </element>
+
+ <element name='CODTIPOINGRESOGENERICO' type='string'>
+ </element>
+
+ <element name='CODTIPOMONEDA' type='string'>
+ </element>
+
+ <element name='IMPORTE' type='string'>
+ </element>
+
+ <element name='IDDOCUMENTO' type='string'>
+ </element>
+</schema>

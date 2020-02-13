@@ -1,0 +1,76 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDUNIDADRECURSOHUMANO'/>
+    <element ref='t:IDCONVOCATORIARECURSOHUMANO'/>
+    <element ref='t:IDSUBPROGRAMA'/>
+    <element ref='t:CODTIPORECURSOHUMANO'/>
+    <element ref='t:IDEMPRESAGESTORA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDRESPONSABLEECONOMICO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAINICIOSOLICITUDES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAFINSOLICITUDES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAALEGACION' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:PLAZOPRESENTACIONINFORMES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:DURACIONMAXIMA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:NUMEROMAXIMORECURSOSHUMANOS' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:MOVILIDAD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:OBSERVACIONES' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDUNIDADRECURSOHUMANO' type='string'>
+ </element>
+
+ <element name='IDCONVOCATORIARECURSOHUMANO' type='string'>
+ </element>
+
+ <element name='IDSUBPROGRAMA' type='string'>
+ </element>
+
+ <element name='CODTIPORECURSOHUMANO' type='string'>
+ </element>
+
+ <element name='IDEMPRESAGESTORA' type='string'>
+ </element>
+
+ <element name='IDRESPONSABLEECONOMICO' type='string'>
+ </element>
+
+ <element name='FECHAINICIOSOLICITUDES' type='string'>
+ </element>
+
+ <element name='FECHAFINSOLICITUDES' type='string'>
+ </element>
+
+ <element name='FECHAALEGACION' type='string'>
+ </element>
+
+ <element name='PLAZOPRESENTACIONINFORMES' type='string'>
+ </element>
+
+ <element name='DURACIONMAXIMA' type='string'>
+ </element>
+
+ <element name='NUMEROMAXIMORECURSOSHUMANOS' type='string'>
+ </element>
+
+ <element name='MOVILIDAD' type='string'>
+ </element>
+
+ <element name='OBSERVACIONES' type='string'>
+ </element>
+</schema>

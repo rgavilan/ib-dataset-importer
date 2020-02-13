@@ -1,0 +1,56 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDACTIVIDAD'/>
+    <element ref='t:NUMERO'/>
+    <element ref='t:TIPOIMPUESTO'/>
+    <element ref='t:CODTIPOMONEDA'/>
+    <element ref='t:IMPORTEBASE'/>
+    <element ref='t:TIPOIMPOSITIVO'/>
+    <element ref='t:IMPORTE'/>
+    <element ref='t:EXENCION'/>
+    <element ref='t:MOTIVOEXENCION' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDACTIVIDAD' type='string'>
+ </element>
+
+ <element name='NUMERO' type='string'>
+ </element>
+
+ <element name='TIPOIMPUESTO' type='string'>
+ </element>
+
+ <element name='CODTIPOMONEDA' type='string'>
+ </element>
+
+ <element name='IMPORTEBASE' type='string'>
+ </element>
+
+ <element name='TIPOIMPOSITIVO' type='string'>
+ </element>
+
+ <element name='IMPORTE' type='string'>
+ </element>
+
+ <element name='EXENCION' type='string'>
+ </element>
+
+ <element name='MOTIVOEXENCION' type='string'>
+ </element>
+</schema>

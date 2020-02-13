@@ -1,0 +1,25 @@
+---
+app:
+  persistence:
+    datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+      url: jdbc:mysql://localhost:3306/asio_jobs?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8
+  kafka:
+    input-topic-name: input-data
+    create-topics: false
+  data:
+    path:
+
+# Spring configuration
+spring:
+  batch:
+    initialize-schema: never
+  main:
+    allow-bean-definition-overriding: true
+  kafka:
+    bootstrap-servers:
+      - localhost:29092
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

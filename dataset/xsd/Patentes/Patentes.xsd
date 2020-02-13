@@ -1,0 +1,72 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDPATENTE'/>
+    <element ref='t:TIPOPATENTE'/>
+    <element ref='t:REFERENCIAPATENTE' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:TITULO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDAGENTE' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:OBSERVACIONES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODPROVINCIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:NUMEROSOLICITUD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:ANIOSOLICITUD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHASOLICITUD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODASIENTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:ANIOASIENTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:NUMEROASIENTO' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDPATENTE' type='string'>
+ </element>
+
+ <element name='TIPOPATENTE' type='string'>
+ </element>
+
+ <element name='REFERENCIAPATENTE' type='string'>
+ </element>
+
+ <element name='TITULO' type='string'>
+ </element>
+
+ <element name='IDAGENTE' type='string'>
+ </element>
+
+ <element name='OBSERVACIONES' type='string'>
+ </element>
+
+ <element name='CODPROVINCIA' type='string'>
+ </element>
+
+ <element name='NUMEROSOLICITUD' type='string'>
+ </element>
+
+ <element name='ANIOSOLICITUD' type='string'>
+ </element>
+
+ <element name='FECHASOLICITUD' type='string'>
+ </element>
+
+ <element name='CODASIENTO' type='string'>
+ </element>
+
+ <element name='ANIOASIENTO' type='string'>
+ </element>
+
+ <element name='NUMEROASIENTO' type='string'>
+ </element>
+</schema>

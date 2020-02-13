@@ -1,0 +1,92 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDDOCUMENTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDDOCUMENTOSOLICITUD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:APROBACIONSOLICITUDAYUDA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDCONVOCATORIAAYUDA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:DESCRIPCIONCONVOCATORIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:REFERENCIACONVOCATORIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDSUBPROGRAMA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:DESCRIPCIONSUBPROGRAMA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDUNIDADAYUDA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:DESCRIPCIONUNIDADAYUDA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDTERCEROCONVOCANTE' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHACONVOCATORIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDPERSONASOLICITANTE' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:OBSERVACIONES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDGRUPOGASTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODTIPOMONEDA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IMPORTE' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:REFERENCIACONVOCANTE' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDDOCUMENTO' type='string'>
+ </element>
+
+ <element name='IDDOCUMENTOSOLICITUD' type='string'>
+ </element>
+
+ <element name='APROBACIONSOLICITUDAYUDA' type='string'>
+ </element>
+
+ <element name='IDCONVOCATORIAAYUDA' type='string'>
+ </element>
+
+ <element name='DESCRIPCIONCONVOCATORIA' type='string'>
+ </element>
+
+ <element name='REFERENCIACONVOCATORIA' type='string'>
+ </element>
+
+ <element name='IDSUBPROGRAMA' type='string'>
+ </element>
+
+ <element name='DESCRIPCIONSUBPROGRAMA' type='string'>
+ </element>
+
+ <element name='IDUNIDADAYUDA' type='string'>
+ </element>
+
+ <element name='DESCRIPCIONUNIDADAYUDA' type='string'>
+ </element>
+
+ <element name='IDTERCEROCONVOCANTE' type='string'>
+ </element>
+
+ <element name='FECHACONVOCATORIA' type='string'>
+ </element>
+
+ <element name='IDPERSONASOLICITANTE' type='string'>
+ </element>
+
+ <element name='OBSERVACIONES' type='string'>
+ </element>
+
+ <element name='IDGRUPOGASTO' type='string'>
+ </element>
+
+ <element name='CODTIPOMONEDA' type='string'>
+ </element>
+
+ <element name='IMPORTE' type='string'>
+ </element>
+
+ <element name='REFERENCIACONVOCANTE' type='string'>
+ </element>
+</schema>

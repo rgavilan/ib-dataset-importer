@@ -1,0 +1,44 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDDOCUMENTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODAREAUNESCO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:NUMEROCAMPOUNESCO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODCAMPOUNESCO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:NUMEROLINEAUNESCO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODLINEAUNESCO' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDDOCUMENTO' type='string'>
+ </element>
+
+ <element name='CODAREAUNESCO' type='string'>
+ </element>
+
+ <element name='NUMEROCAMPOUNESCO' type='string'>
+ </element>
+
+ <element name='CODCAMPOUNESCO' type='string'>
+ </element>
+
+ <element name='NUMEROLINEAUNESCO' type='string'>
+ </element>
+
+ <element name='CODLINEAUNESCO' type='string'>
+ </element>
+</schema>

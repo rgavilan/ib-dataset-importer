@@ -1,0 +1,28 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:CODTIPOPARTICIPACIONGRUPO'/>
+    <element ref='t:DESCRIPCION'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='CODTIPOPARTICIPACIONGRUPO' type='string'>
+ </element>
+
+ <element name='DESCRIPCION' type='string'>
+ </element>
+</schema>

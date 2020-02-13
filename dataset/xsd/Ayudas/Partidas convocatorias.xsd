@@ -1,0 +1,48 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDCONVOCATORIAAYUDA'/>
+    <element ref='t:IDSUBPROGRAMA'/>
+    <element ref='t:NUMERO'/>
+    <element ref='t:IDUNIDADORG'/>
+    <element ref='t:CODECONOMICA'/>
+    <element ref='t:CODFUNCIONAL'/>
+    <element ref='t:TIPOAPLICACIONECO'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDCONVOCATORIAAYUDA' type='string'>
+ </element>
+
+ <element name='IDSUBPROGRAMA' type='string'>
+ </element>
+
+ <element name='NUMERO' type='string'>
+ </element>
+
+ <element name='IDUNIDADORG' type='string'>
+ </element>
+
+ <element name='CODECONOMICA' type='string'>
+ </element>
+
+ <element name='CODFUNCIONAL' type='string'>
+ </element>
+
+ <element name='TIPOAPLICACIONECO' type='string'>
+ </element>
+</schema>

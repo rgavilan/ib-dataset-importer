@@ -1,0 +1,60 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDPROYECTO'/>
+    <element ref='t:IDGASTOPREVISTO'/>
+    <element ref='t:CODTIPOORIGEN' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDORIGENPROYECTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:NUMEROANUALIDAD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAPREVISTA'/>
+    <element ref='t:DESCRIPCION' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDTIPOGASTO'/>
+    <element ref='t:CODTIPOMONEDA'/>
+    <element ref='t:IMPORTE'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDPROYECTO' type='string'>
+ </element>
+
+ <element name='IDGASTOPREVISTO' type='string'>
+ </element>
+
+ <element name='CODTIPOORIGEN' type='string'>
+ </element>
+
+ <element name='IDORIGENPROYECTO' type='string'>
+ </element>
+
+ <element name='NUMEROANUALIDAD' type='string'>
+ </element>
+
+ <element name='FECHAPREVISTA' type='string'>
+ </element>
+
+ <element name='DESCRIPCION' type='string'>
+ </element>
+
+ <element name='IDTIPOGASTO' type='string'>
+ </element>
+
+ <element name='CODTIPOMONEDA' type='string'>
+ </element>
+
+ <element name='IMPORTE' type='string'>
+ </element>
+</schema>

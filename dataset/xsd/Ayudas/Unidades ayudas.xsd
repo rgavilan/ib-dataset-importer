@@ -1,0 +1,100 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDUNIDADAYUDA'/>
+    <element ref='t:IDCONVOCATORIAAYUDA'/>
+    <element ref='t:IDSUBPROGRAMA'/>
+    <element ref='t:CODTIPOAYUDA'/>
+    <element ref='t:CODTIPOCATEGORIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAINICIOSOLICITUDES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAFINSOLICITUDES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAALEGACION' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHARESOLUCION' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAALEGACION_1' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAFASE1' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAFASE2' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODTIPOMONEDA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IMPORTEMINIMO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IMPORTEMAXIMO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:INTERESMINIMO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:INTERESMAXIMO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:ANUALIDADES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CONTROLANUALIDADES' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:OBSERVACIONES' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDUNIDADAYUDA' type='string'>
+ </element>
+
+ <element name='IDCONVOCATORIAAYUDA' type='string'>
+ </element>
+
+ <element name='IDSUBPROGRAMA' type='string'>
+ </element>
+
+ <element name='CODTIPOAYUDA' type='string'>
+ </element>
+
+ <element name='CODTIPOCATEGORIA' type='string'>
+ </element>
+
+ <element name='FECHAINICIOSOLICITUDES' type='string'>
+ </element>
+
+ <element name='FECHAFINSOLICITUDES' type='string'>
+ </element>
+
+ <element name='FECHAALEGACION' type='string'>
+ </element>
+
+ <element name='FECHARESOLUCION' type='string'>
+ </element>
+
+ <element name='FECHAALEGACION_1' type='string'>
+ </element>
+
+ <element name='FECHAFASE1' type='string'>
+ </element>
+
+ <element name='FECHAFASE2' type='string'>
+ </element>
+
+ <element name='CODTIPOMONEDA' type='string'>
+ </element>
+
+ <element name='IMPORTEMINIMO' type='string'>
+ </element>
+
+ <element name='IMPORTEMAXIMO' type='string'>
+ </element>
+
+ <element name='INTERESMINIMO' type='string'>
+ </element>
+
+ <element name='INTERESMAXIMO' type='string'>
+ </element>
+
+ <element name='ANUALIDADES' type='string'>
+ </element>
+
+ <element name='CONTROLANUALIDADES' type='string'>
+ </element>
+
+ <element name='OBSERVACIONES' type='string'>
+ </element>
+</schema>

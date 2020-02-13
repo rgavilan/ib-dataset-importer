@@ -1,0 +1,104 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDDOCUMENTO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDPERSONASOLICITANTE' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDCONVOCATORIARECURSOHUMANO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:DESCRIPCIONCONVOCATORIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:REFERENCIACONVOCATORIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDSUBPROGRAMA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:DESCRIPCIONSUBPROGRAMA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDUNIDADRECURSOHUMANO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:DESCRIPCIONUNIDADRECURSOHUMANO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDTERCEROCONVOCANTE' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHACONVOCATORIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:UNIVERSIDAD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODIGOPAISUNIVERSIDAD' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:ESTUDIOSRECONOCIDOS' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:ANIOFINESTUDIOS' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CODIGOTITULACION' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:IDPERSONADIRECTOR' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:TITULO' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:OBJETIVOS' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:METODOLOGIA' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:CRONOGRAMA' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDDOCUMENTO' type='string'>
+ </element>
+
+ <element name='IDPERSONASOLICITANTE' type='string'>
+ </element>
+
+ <element name='IDCONVOCATORIARECURSOHUMANO' type='string'>
+ </element>
+
+ <element name='DESCRIPCIONCONVOCATORIA' type='string'>
+ </element>
+
+ <element name='REFERENCIACONVOCATORIA' type='string'>
+ </element>
+
+ <element name='IDSUBPROGRAMA' type='string'>
+ </element>
+
+ <element name='DESCRIPCIONSUBPROGRAMA' type='string'>
+ </element>
+
+ <element name='IDUNIDADRECURSOHUMANO' type='string'>
+ </element>
+
+ <element name='DESCRIPCIONUNIDADRECURSOHUMANO' type='string'>
+ </element>
+
+ <element name='IDTERCEROCONVOCANTE' type='string'>
+ </element>
+
+ <element name='FECHACONVOCATORIA' type='string'>
+ </element>
+
+ <element name='UNIVERSIDAD' type='string'>
+ </element>
+
+ <element name='CODIGOPAISUNIVERSIDAD' type='string'>
+ </element>
+
+ <element name='ESTUDIOSRECONOCIDOS' type='string'>
+ </element>
+
+ <element name='ANIOFINESTUDIOS' type='string'>
+ </element>
+
+ <element name='CODIGOTITULACION' type='string'>
+ </element>
+
+ <element name='IDPERSONADIRECTOR' type='string'>
+ </element>
+
+ <element name='TITULO' type='string'>
+ </element>
+
+ <element name='OBJETIVOS' type='string'>
+ </element>
+
+ <element name='METODOLOGIA' type='string'>
+ </element>
+
+ <element name='CRONOGRAMA' type='string'>
+ </element>
+</schema>

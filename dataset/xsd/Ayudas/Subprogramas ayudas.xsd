@@ -1,0 +1,44 @@
+<schema
+  xmlns='http://www.w3.org/2000/10/XMLSchema'
+  targetNamespace='http://www.um.es/hercules'
+  xmlns:t='http://www.um.es/hercules'>
+
+ <element name='main'>
+  <complexType>
+   <sequence>
+    <element ref='t:DATA_RECORD' minOccurs='0' maxOccurs='unbounded'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='DATA_RECORD'>
+  <complexType>
+   <sequence maxOccurs='unbounded'>
+    <element ref='t:IDCONVOCATORIAAYUDA'/>
+    <element ref='t:IDSUBPROGRAMA'/>
+    <element ref='t:DESCRIPCION'/>
+    <element ref='t:RESUMEN' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHARESOLUCION' minOccurs='0' maxOccurs='1'/>
+    <element ref='t:FECHAALEGACION' minOccurs='0' maxOccurs='1'/>
+   </sequence>
+  </complexType>
+ </element>
+
+ <element name='IDCONVOCATORIAAYUDA' type='string'>
+ </element>
+
+ <element name='IDSUBPROGRAMA' type='string'>
+ </element>
+
+ <element name='DESCRIPCION' type='string'>
+ </element>
+
+ <element name='RESUMEN' type='string'>
+ </element>
+
+ <element name='FECHARESOLUCION' type='string'>
+ </element>
+
+ <element name='FECHAALEGACION' type='string'>
+ </element>
+</schema>
