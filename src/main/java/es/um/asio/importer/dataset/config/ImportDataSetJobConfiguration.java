@@ -29,6 +29,7 @@ import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
 import es.um.asio.domain.project.PlannedJustificationsProjects;
 import es.um.asio.domain.project.Project;
+import es.um.asio.domain.project.ProjectOrigins;
 import es.um.asio.importer.dataset.processor.DataItemProcessor;
 import es.um.asio.importer.dataset.writer.DataItemWriter;
 import es.um.asio.importer.marshaller.DataConverter;
@@ -121,6 +122,37 @@ public class ImportDataSetJobConfiguration {
         return reader;
     }
 
+    /**
+     * Devuelve la implementacion de {@link ItemReader} necesaria para la funcionalidad.
+     * Utiliza la clase {@link FlatFileItemReader} de Spring Batch para la logica de lectura.
+     *
+     * @return Implementacion de {@link ItemReader}
+     */
+    @Bean
+    public ItemReader<DataSetData> projectOriginsReader() {
+
+        final Class<ProjectOrigins> targetClass = ProjectOrigins.class;
+
+        final Map<String, String> propertiesBinding = new HashMap<>();
+        propertiesBinding.put("CODTIPOORIGEN", "typeOriginCode");
+        propertiesBinding.put("IDORIGENPROYECTO", "originProjectId");
+        propertiesBinding.put("DESCRIPCION", "description");
+
+        final DataConverter<ProjectOrigins> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<ProjectOrigins>(targetClass));
+        converter.setPropertiesBinding(propertiesBinding);
+
+        final DataSetMarshaller<ProjectOrigins> ummarshaller = new DataSetMarshaller<>(targetClass);
+        ummarshaller.setConverters(converter);
+
+        final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
+        reader.setResource(this.getFile("dataset/Proyectos/Origenes proyectos.xml"));
+        reader.setUnmarshaller(ummarshaller);
+        reader.setFragmentRootElementName(DataSetMarshaller.DATA_RECORD);
+
+        return reader;
+    }
+
 
     /**
      * Devuelve una instancia de {@link DataItemProcessor}
@@ -156,8 +188,10 @@ public class ImportDataSetJobConfiguration {
     @Bean
     public Job importUserJob(final JobBuilderFactory jobs, @Qualifier("projectStep") final Step s1,
             @Qualifier("plannedJustificationsProjectsStep") final Step s2,
+            @Qualifier("projectOriginsStep") final Step s3,
             final JobExecutionListener listener) {
         return jobs.get("importProjectJob").incrementer(new RunIdIncrementer()).listener(listener).flow(s1).next(s2)
+                .next(s3)
                 .end()
                 .build();
     }
@@ -214,6 +248,36 @@ public class ImportDataSetJobConfiguration {
 
         return stepBuilderFactory.get("step2").<DataSetData, InputData<DataSetData>> chunk(10)
                 .reader(plannedJustificationsProjectsReader())
+                .processor(processor)
+                .writer(writer)
+                .build();
+
+        // @formatter:on
+
+    }
+
+    /**
+     * Genera el tercer paso de la ejecucion del job
+     *
+     * @param stepBuilderFactory
+     *            Instancia de {@link StepBuilderFactory} para generar el {@link Step}
+     * @param reader
+     *            El {@link ItemReader} anteriormente configurado para la clase {@link Project}
+     * @param writer
+     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Project}
+     * @param processor
+     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Project}
+     * @return El {@link Step} construido
+     */
+    @Bean
+    @Qualifier("projectOriginsStep")
+    public Step projectOriginsStep(final StepBuilderFactory stepBuilderFactory, final ItemReader<DataSetData> reader,
+            final ItemWriter<InputData<DataSetData>> writer,
+            final ItemProcessor<DataSetData, InputData<DataSetData>> processor) {
+        // @formatter:off
+
+        return stepBuilderFactory.get("step3").<DataSetData, InputData<DataSetData>> chunk(10)
+                .reader(projectOriginsReader())
                 .processor(processor)
                 .writer(writer)
                 .build();
