@@ -58,10 +58,12 @@ public class ImportDataSetJobConfiguration {
     public Job importProjectsJob(final JobBuilderFactory jobs, @Qualifier("projectStep") final Step s1,
             @Qualifier("plannedJustificationsProjectsStep") final Step s2,
             @Qualifier("projectOriginsStep") final Step s3, @Qualifier("dateProjectsStep") final Step s4,
-            final JobExecutionListener listener) {
+            @Qualifier("investigationGroupsStep") final Step s5, final JobExecutionListener listener) {
         return jobs.get("importProjectsJob").incrementer(new RunIdIncrementer()).listener(listener)
                 // Import projects data
-                .flow(s1).next(s2).next(s3).next(s4).end().build();
+                .flow(s1).next(s2).next(s3).next(s4)
+                // Import investigation groups data
+                .next(s5).end().build();
     }
 
 }

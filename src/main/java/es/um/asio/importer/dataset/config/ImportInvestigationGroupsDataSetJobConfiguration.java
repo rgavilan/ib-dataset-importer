@@ -41,7 +41,7 @@ import es.um.asio.importer.marshaller.DataSetMarshaller;
 /**
  * Job que procesa ficheros XML y los manda a la cola Kafka
  */
-// @Configuration
+@Configuration
 public class ImportInvestigationGroupsDataSetJobConfiguration {
 
     /**
