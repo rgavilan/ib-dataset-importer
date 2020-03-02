@@ -16,6 +16,9 @@ app:
 spring:
   batch:
     initialize-schema: never
+    # Dont launch jobs automatically
+    # job:
+      # enabled: false
   main:
     allow-bean-definition-overriding: true
   kafka:

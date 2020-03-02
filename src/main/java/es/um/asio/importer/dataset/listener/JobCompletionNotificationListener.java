@@ -14,17 +14,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class JobCompletionNotificationListener extends JobExecutionListenerSupport {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
 
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	public void afterJob(JobExecution jobExecution) {
-		if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
-			LOGGER.info("!!! JOB FINISHED!");
-		} else {
-			LOGGER.info("Job did not finish. Current status is {}", jobExecution.getStatus());
-		}
-	}
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void afterJob(JobExecution jobExecution) {
+        if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
+            LOGGER.info("!!! JOB " + jobExecution.getJobInstance().getJobName() + " FINISHED!");
+        } else {
+            LOGGER.info("Job did not finish. Current status is {}", jobExecution.getStatus());
+        }
+    }
 }

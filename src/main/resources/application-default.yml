@@ -11,3 +11,7 @@ app:
 spring:
   batch:
     initialize-schema: always
+    # Dont launch jobs automatically
+    # job:
+      # enabled: false
+    
