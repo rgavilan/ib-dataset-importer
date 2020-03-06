@@ -22,7 +22,7 @@ import org.springframework.core.io.Resource;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.investigationGroup.InvestigationGroup;
+import es.um.asio.domain.investigationCenter.GroupContactData;
 import es.um.asio.importer.dataset.processor.DataItemProcessor;
 import es.um.asio.importer.dataset.writer.DataItemWriter;
 import es.um.asio.importer.marshaller.DataConverter;
@@ -33,7 +33,7 @@ import es.um.asio.importer.marshaller.DataSetMarshaller;
  * Job que procesa ficheros XML y los manda a la cola Kafka
  */
 @Configuration
-public class ImportInvestigationGroupsDataSetJobConfiguration {
+public class ImportInvestigationCentersDataSetJobConfiguration {
 
     /**
      * Data directory path
@@ -48,27 +48,25 @@ public class ImportInvestigationGroupsDataSetJobConfiguration {
      * @return Implementacion de {@link ItemReader}
      */
     @Bean
-    public ItemReader<DataSetData> investigationGroupsReader() {
+    public ItemReader<DataSetData> groupContactDatasReader() {
 
-        final Class<InvestigationGroup> targetClass = InvestigationGroup.class;
+        final Class<GroupContactData> targetClass = GroupContactData.class;
 
         final Map<String, String> propertiesBinding = new HashMap<>();
         propertiesBinding.put("IDGRUPOINVESTIGACION", "investigationGroupId");
-        propertiesBinding.put("DESCRIPCION", "description");
-        propertiesBinding.put("CODUNIDADADM", "administrationUnitCode");
-        propertiesBinding.put("EXCELENCIA", "excellency");
-        propertiesBinding.put("FECHACREACION", "creationDate");
-        propertiesBinding.put("FECHADESAPARICION", "extinctionDate");
+        propertiesBinding.put("NUMERO", "number");
+        propertiesBinding.put("CODTIPOFORMACONTACTO", "wayTypeContactCode");
+        propertiesBinding.put("VALOR", "value");
 
-        final DataConverter<InvestigationGroup> converter = new DataConverter<>();
-        converter.setFieldSetMapper(new DataSetFieldSetMapper<InvestigationGroup>(targetClass));
+        final DataConverter<GroupContactData> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<GroupContactData>(targetClass));
         converter.setPropertiesBinding(propertiesBinding);
 
-        final DataSetMarshaller<InvestigationGroup> ummarshaller = new DataSetMarshaller<>(targetClass);
+        final DataSetMarshaller<GroupContactData> ummarshaller = new DataSetMarshaller<>(targetClass);
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
-        reader.setResource(this.getFile("dataset/Grupos de investigación/Grupos de investigacion.xml"));
+        reader.setResource(this.getFile("dataset/Grupos de investigación/Datos contacto grupos.xml"));
         reader.setUnmarshaller(ummarshaller);
         reader.setFragmentRootElementName(DataSetMarshaller.DATA_RECORD);
 
@@ -81,7 +79,7 @@ public class ImportInvestigationGroupsDataSetJobConfiguration {
      * @return Instancia de {@link DataItemProcessor}
      */
     @Bean
-    public ItemProcessor<DataSetData, InputData<DataSetData>> investigationGroupsProcessor() {
+    public ItemProcessor<DataSetData, InputData<DataSetData>> investigationCentersProcessor() {
         return new DataItemProcessor();
     }
 
@@ -91,7 +89,7 @@ public class ImportInvestigationGroupsDataSetJobConfiguration {
      * @return instancia de {@link DataItemWriter}
      */
     @Bean
-    public ItemWriter<InputData<DataSetData>> investigationGroupsWriter() {
+    public ItemWriter<InputData<DataSetData>> investigationCentersWriter() {
         return new DataItemWriter();
     }
 
@@ -101,24 +99,24 @@ public class ImportInvestigationGroupsDataSetJobConfiguration {
      * @param stepBuilderFactory
      *            Instancia de {@link StepBuilderFactory} para generar el {@link Step}
      * @param reader
-     *            El {@link ItemReader} anteriormente configurado para la clase {@link InvestigationGroup}
+     *            El {@link ItemReader} anteriormente configurado para la clase {@link GroupContactData}
      * @param writer
-     *            El {@link ItemWriter} anteriormente configurado para la clase {@link InvestigationGroup}
+     *            El {@link ItemWriter} anteriormente configurado para la clase {@link GroupContactData}
      * @param processor
-     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link InvestigationGroup}
+     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link GroupContactData}
      * @return El {@link Step} construido
      */
     @Bean
-    @Qualifier("investigationGroupsStep")
-    public Step investigationGroupsStep(final StepBuilderFactory stepBuilderFactory,
-            final ItemReader<DataSetData> reader, final ItemWriter<InputData<DataSetData>> writer,
+    @Qualifier("groupContactDatasStep")
+    public Step groupContactDatasStep(final StepBuilderFactory stepBuilderFactory, final ItemReader<DataSetData> reader,
+            final ItemWriter<InputData<DataSetData>> writer,
             final ItemProcessor<DataSetData, InputData<DataSetData>> processor) {
         // @formatter:off
 
-        return stepBuilderFactory.get("step5").<DataSetData, InputData<DataSetData>> chunk(10)
-                .reader(investigationGroupsReader())
-                .processor(investigationGroupsProcessor())
-                .writer(investigationGroupsWriter())
+        return stepBuilderFactory.get("step6").<DataSetData, InputData<DataSetData>> chunk(10)
+                .reader(groupContactDatasReader())
+                .processor(investigationCentersProcessor())
+                .writer(investigationCentersWriter())
                 .build();
 
         // @formatter:on

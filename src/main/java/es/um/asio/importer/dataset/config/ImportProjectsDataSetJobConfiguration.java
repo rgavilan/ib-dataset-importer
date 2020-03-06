@@ -5,12 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.Step;
-import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
@@ -28,7 +24,7 @@ import org.springframework.core.io.Resource;
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
 import es.um.asio.domain.project.DateProjects;
-import es.um.asio.domain.project.PlannedJustificationsProjects;
+import es.um.asio.domain.project.PlannedJustificationsProject;
 import es.um.asio.domain.project.Project;
 import es.um.asio.domain.project.ProjectOrigins;
 import es.um.asio.importer.dataset.processor.DataItemProcessor;
@@ -91,7 +87,7 @@ public class ImportProjectsDataSetJobConfiguration {
     @Bean
     public ItemReader<DataSetData> plannedJustificationsProjectsReader() {
 
-        final Class<PlannedJustificationsProjects> targetClass = PlannedJustificationsProjects.class;
+        final Class<PlannedJustificationsProject> targetClass = PlannedJustificationsProject.class;
 
         final Map<String, String> propertiesBinding = new HashMap<>();
         propertiesBinding.put("IDPROYECTO", "projectId");
@@ -108,11 +104,11 @@ public class ImportProjectsDataSetJobConfiguration {
         propertiesBinding.put("FECHAPREVISTA", "expectedDate");
         propertiesBinding.put("OBSERVACIONES", "remarks");
 
-        final DataConverter<PlannedJustificationsProjects> converter = new DataConverter<>();
-        converter.setFieldSetMapper(new DataSetFieldSetMapper<PlannedJustificationsProjects>(targetClass));
+        final DataConverter<PlannedJustificationsProject> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<PlannedJustificationsProject>(targetClass));
         converter.setPropertiesBinding(propertiesBinding);
 
-        final DataSetMarshaller<PlannedJustificationsProjects> ummarshaller = new DataSetMarshaller<>(targetClass);
+        final DataSetMarshaller<PlannedJustificationsProject> ummarshaller = new DataSetMarshaller<>(targetClass);
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
