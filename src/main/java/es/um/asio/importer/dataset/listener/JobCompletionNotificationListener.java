@@ -42,13 +42,13 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
      */
     @Override
     public void afterJob(JobExecution jobExecution) {
+        ExitStatus existStatus = new ExitStatus(ExitStatusCodeEnum.valueOf(jobExecution.getExitStatus().getExitCode()));
+        // DataSetData existStatus = new ExitStatus(jobExecution.getExitStatus().getExitCode());
+        InputData<DataSetData> inputData = new InputData<DataSetData>(existStatus);
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug("Writing: {}", jobExecution.getExitStatus());
         }
-
-        ExitStatus existStatus = new ExitStatus(ExitStatusCodeEnum.valueOf(jobExecution.getExitStatus().getExitCode()));
-        InputData<DataSetData> inputData = new InputData<DataSetData>(existStatus);
-        // kafkaTemplate.send(topicName, inputData);
+        kafkaTemplate.send(topicName, inputData);
 
         if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
             LOGGER.info("!!! JOB " + jobExecution.getJobInstance().getJobName() + " FINISHED!");
