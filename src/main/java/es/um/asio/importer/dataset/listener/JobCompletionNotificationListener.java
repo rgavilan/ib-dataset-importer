@@ -43,7 +43,8 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
     @Override
     public void afterJob(JobExecution jobExecution) {
         ExitStatus existStatus = new ExitStatus(ExitStatusCodeEnum.valueOf(jobExecution.getExitStatus().getExitCode()));
-        // DataSetData existStatus = new ExitStatus(jobExecution.getExitStatus().getExitCode());
+        // DataSetData existStatus = new ExitStatus(ExitStatusCodeEnum.valueOf(jobExecution.getExitStatus().getExitCode()));
+        existStatus.setVersion(jobExecution.getId());
         InputData<DataSetData> inputData = new InputData<DataSetData>(existStatus);
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug("Writing: {}", jobExecution.getExitStatus());
