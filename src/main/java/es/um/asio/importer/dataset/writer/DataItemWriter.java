@@ -11,10 +11,10 @@ import org.springframework.kafka.core.KafkaTemplate;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.project.Project;
+import es.um.asio.domain.project.Proyecto;
 
 /**
- * Implementacion de {@link ItemWriter} para la clase {@link Project}.
+ * Implementacion de {@link ItemWriter} para la clase {@link Proyecto}.
  * Crea una entrada de log con cada uno de los objetos recibidos.
  */
 public class DataItemWriter implements ItemWriter<InputData<DataSetData>> {

@@ -22,7 +22,7 @@ import org.springframework.core.io.Resource;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.investigationGroup.InvestigationGroup;
+import es.um.asio.domain.investigationGroup.GrupoInvestigacion;
 import es.um.asio.importer.dataset.processor.DataItemProcessor;
 import es.um.asio.importer.dataset.writer.DataItemWriter;
 import es.um.asio.importer.marshaller.DataConverter;
@@ -50,21 +50,21 @@ public class ImportInvestigationGroupsDataSetJobConfiguration {
     @Bean
     public ItemReader<DataSetData> investigationGroupsReader() {
 
-        final Class<InvestigationGroup> targetClass = InvestigationGroup.class;
+        final Class<GrupoInvestigacion> targetClass = GrupoInvestigacion.class;
 
         final Map<String, String> propertiesBinding = new HashMap<>();
-        propertiesBinding.put("IDGRUPOINVESTIGACION", "investigationGroupId");
-        propertiesBinding.put("DESCRIPCION", "description");
-        propertiesBinding.put("CODUNIDADADM", "administrationUnitCode");
-        propertiesBinding.put("EXCELENCIA", "excellency");
-        propertiesBinding.put("FECHACREACION", "creationDate");
-        propertiesBinding.put("FECHADESAPARICION", "extinctionDate");
+        propertiesBinding.put("IDGRUPOINVESTIGACION", "idGrupoInvestigacion");
+        propertiesBinding.put("DESCRIPCION", "descripcion");
+        propertiesBinding.put("CODUNIDADADM", "codUnidadAdm");
+        propertiesBinding.put("EXCELENCIA", "excelencia");
+        propertiesBinding.put("FECHACREACION", "fechaCreacion");
+        propertiesBinding.put("FECHADESAPARICION", "fechaDesaparicion");
 
-        final DataConverter<InvestigationGroup> converter = new DataConverter<>();
-        converter.setFieldSetMapper(new DataSetFieldSetMapper<InvestigationGroup>(targetClass));
+        final DataConverter<GrupoInvestigacion> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<GrupoInvestigacion>(targetClass));
         converter.setPropertiesBinding(propertiesBinding);
 
-        final DataSetMarshaller<InvestigationGroup> ummarshaller = new DataSetMarshaller<>(targetClass);
+        final DataSetMarshaller<GrupoInvestigacion> ummarshaller = new DataSetMarshaller<>(targetClass);
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
@@ -101,11 +101,11 @@ public class ImportInvestigationGroupsDataSetJobConfiguration {
      * @param stepBuilderFactory
      *            Instancia de {@link StepBuilderFactory} para generar el {@link Step}
      * @param reader
-     *            El {@link ItemReader} anteriormente configurado para la clase {@link InvestigationGroup}
+     *            El {@link ItemReader} anteriormente configurado para la clase {@link GrupoInvestigacion}
      * @param writer
-     *            El {@link ItemWriter} anteriormente configurado para la clase {@link InvestigationGroup}
+     *            El {@link ItemWriter} anteriormente configurado para la clase {@link GrupoInvestigacion}
      * @param processor
-     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link InvestigationGroup}
+     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link GrupoInvestigacion}
      * @return El {@link Step} construido
      */
     @Bean

@@ -23,10 +23,10 @@ import org.springframework.core.io.Resource;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.project.DateProjects;
-import es.um.asio.domain.project.PlannedJustificationsProject;
-import es.um.asio.domain.project.Project;
-import es.um.asio.domain.project.ProjectOrigins;
+import es.um.asio.domain.project.FechaProyecto;
+import es.um.asio.domain.project.JustificacionPrevistaProyecto;
+import es.um.asio.domain.project.Proyecto;
+import es.um.asio.domain.project.OrigenProyecto;
 import es.um.asio.importer.dataset.processor.DataItemProcessor;
 import es.um.asio.importer.dataset.writer.DataItemWriter;
 import es.um.asio.importer.marshaller.DataConverter;
@@ -55,19 +55,19 @@ public class ImportProjectsDataSetJobConfiguration {
     @Primary
     public ItemReader<DataSetData> projectReader() {
 
-        final Class<Project> targetClass = Project.class;
+        final Class<Proyecto> targetClass = Proyecto.class;
 
         final Map<String, String> propertiesBinding = new HashMap<>();
-        propertiesBinding.put("IDPROYECTO", "projectId");
-        propertiesBinding.put("NOMBRE", "name");
-        propertiesBinding.put("PROYECTOFINALISTA", "finalistProject");
-        propertiesBinding.put("LIMITATIVO", "limitative");
+        propertiesBinding.put("IDPROYECTO", "idProyecto");
+        propertiesBinding.put("NOMBRE", "nombre");
+        propertiesBinding.put("PROYECTOFINALISTA", "proyectoFinalista");
+        propertiesBinding.put("LIMITATIVO", "limitativo");
 
-        final DataConverter<Project> converter = new DataConverter<>();
-        converter.setFieldSetMapper(new DataSetFieldSetMapper<Project>(targetClass));
+        final DataConverter<Proyecto> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<Proyecto>(targetClass));
         converter.setPropertiesBinding(propertiesBinding);
 
-        final DataSetMarshaller<Project> ummarshaller = new DataSetMarshaller<>(targetClass);
+        final DataSetMarshaller<Proyecto> ummarshaller = new DataSetMarshaller<>(targetClass);
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
@@ -87,28 +87,28 @@ public class ImportProjectsDataSetJobConfiguration {
     @Bean
     public ItemReader<DataSetData> plannedJustificationsProjectsReader() {
 
-        final Class<PlannedJustificationsProject> targetClass = PlannedJustificationsProject.class;
+        final Class<JustificacionPrevistaProyecto> targetClass = JustificacionPrevistaProyecto.class;
 
         final Map<String, String> propertiesBinding = new HashMap<>();
-        propertiesBinding.put("IDPROYECTO", "projectId");
-        propertiesBinding.put("NUMEROJUSTIFICACIONPREVISTA", "expectedJustificationNumber");
-        propertiesBinding.put("CODTIPOORIGEN", "typeOriginCode");
-        propertiesBinding.put("IDORIGENPROYECTO", "originProjectId");
-        propertiesBinding.put("TIPOJUSTIFICACION", "justificationType");
-        propertiesBinding.put("CLASEJUSTIFICACION", "justificationClass");
-        propertiesBinding.put("FECHAINICIODEVENGO", "startDateIncome");
-        propertiesBinding.put("FECHAFINDEVENGO", "endDateIncome");
-        propertiesBinding.put("FECHAINICIOCONTABILIZACION", "startDateAccounting");
-        propertiesBinding.put("FECHAINICIOPAGO", "startDatePayment");
-        propertiesBinding.put("FECHAFINPAGO", "endDatePayment");
-        propertiesBinding.put("FECHAPREVISTA", "expectedDate");
-        propertiesBinding.put("OBSERVACIONES", "remarks");
+        propertiesBinding.put("IDPROYECTO", "idProyecto");
+        propertiesBinding.put("NUMEROJUSTIFICACIONPREVISTA", "numeroJustificacionPrevista");
+        propertiesBinding.put("CODTIPOORIGEN", "codTipoOrigen");
+        propertiesBinding.put("IDORIGENPROYECTO", "idOrigenProyecto");
+        propertiesBinding.put("TIPOJUSTIFICACION", "tipoJustificacion");
+        propertiesBinding.put("CLASEJUSTIFICACION", "claseJustificacion");
+        propertiesBinding.put("FECHAINICIODEVENGO", "fechaInicioDevengo");
+        propertiesBinding.put("FECHAFINDEVENGO", "fechaFinDevengo");
+        propertiesBinding.put("FECHAINICIOCONTABILIZACION", "fechaInicioContabilizacion");
+        propertiesBinding.put("FECHAINICIOPAGO", "fechaInicioPago");
+        propertiesBinding.put("FECHAFINPAGO", "fechaFinPago");
+        propertiesBinding.put("FECHAPREVISTA", "fechaPrevista");
+        propertiesBinding.put("OBSERVACIONES", "observaciones");
 
-        final DataConverter<PlannedJustificationsProject> converter = new DataConverter<>();
-        converter.setFieldSetMapper(new DataSetFieldSetMapper<PlannedJustificationsProject>(targetClass));
+        final DataConverter<JustificacionPrevistaProyecto> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<JustificacionPrevistaProyecto>(targetClass));
         converter.setPropertiesBinding(propertiesBinding);
 
-        final DataSetMarshaller<PlannedJustificationsProject> ummarshaller = new DataSetMarshaller<>(targetClass);
+        final DataSetMarshaller<JustificacionPrevistaProyecto> ummarshaller = new DataSetMarshaller<>(targetClass);
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
@@ -128,18 +128,18 @@ public class ImportProjectsDataSetJobConfiguration {
     @Bean
     public ItemReader<DataSetData> projectOriginsReader() {
 
-        final Class<ProjectOrigins> targetClass = ProjectOrigins.class;
+        final Class<OrigenProyecto> targetClass = OrigenProyecto.class;
 
         final Map<String, String> propertiesBinding = new HashMap<>();
-        propertiesBinding.put("CODTIPOORIGEN", "typeOriginCode");
-        propertiesBinding.put("IDORIGENPROYECTO", "originProjectId");
-        propertiesBinding.put("DESCRIPCION", "description");
+        propertiesBinding.put("CODTIPOORIGEN", "codTipoOrigen");
+        propertiesBinding.put("IDORIGENPROYECTO", "idOrigenProyecto");
+        propertiesBinding.put("DESCRIPCION", "descripcion");
 
-        final DataConverter<ProjectOrigins> converter = new DataConverter<>();
-        converter.setFieldSetMapper(new DataSetFieldSetMapper<ProjectOrigins>(targetClass));
+        final DataConverter<OrigenProyecto> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<OrigenProyecto>(targetClass));
         converter.setPropertiesBinding(propertiesBinding);
 
-        final DataSetMarshaller<ProjectOrigins> ummarshaller = new DataSetMarshaller<>(targetClass);
+        final DataSetMarshaller<OrigenProyecto> ummarshaller = new DataSetMarshaller<>(targetClass);
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
@@ -159,22 +159,22 @@ public class ImportProjectsDataSetJobConfiguration {
     @Bean
     public ItemReader<DataSetData> dateProjectsReader() {
 
-        final Class<DateProjects> targetClass = DateProjects.class;
+        final Class<FechaProyecto> targetClass = FechaProyecto.class;
 
         final Map<String, String> propertiesBinding = new HashMap<>();
-        propertiesBinding.put("IDPROYECTO", "projectId");
-        propertiesBinding.put("NUMERO", "number");
-        propertiesBinding.put("FECHAINICIOEXPEDIENTE", "recordStartDate");
-        propertiesBinding.put("FECHAINICIOPROYECTO", "projectStartDate");
-        propertiesBinding.put("FECHAFINPROYECTO", "projectEndDate");
-        propertiesBinding.put("CODTIPOMOTIVOCAMBIOFECHA", "dateChangeReasonTypeCode");
-        propertiesBinding.put("MOTIVOCAMBIOFECHA", "dateChangeReason");
+        propertiesBinding.put("IDPROYECTO", "idProyecto");
+        propertiesBinding.put("NUMERO", "numero");
+        propertiesBinding.put("FECHAINICIOEXPEDIENTE", "fechaInicioExpediente");
+        propertiesBinding.put("FECHAINICIOPROYECTO", "fechaInicioProyecto");
+        propertiesBinding.put("FECHAFINPROYECTO", "fechaFinProyecto");
+        propertiesBinding.put("CODTIPOMOTIVOCAMBIOFECHA", "codTipoMotivoCambioFecha");
+        propertiesBinding.put("MOTIVOCAMBIOFECHA", "motivoCambioFecha");
 
-        final DataConverter<DateProjects> converter = new DataConverter<>();
-        converter.setFieldSetMapper(new DataSetFieldSetMapper<DateProjects>(targetClass));
+        final DataConverter<FechaProyecto> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<FechaProyecto>(targetClass));
         converter.setPropertiesBinding(propertiesBinding);
 
-        final DataSetMarshaller<DateProjects> ummarshaller = new DataSetMarshaller<>(targetClass);
+        final DataSetMarshaller<FechaProyecto> ummarshaller = new DataSetMarshaller<>(targetClass);
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
@@ -213,11 +213,11 @@ public class ImportProjectsDataSetJobConfiguration {
      * @param stepBuilderFactory
      *            Instancia de {@link StepBuilderFactory} para generar el {@link Step}
      * @param reader
-     *            El {@link ItemReader} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemReader} anteriormente configurado para la clase {@link Proyecto}
      * @param writer
-     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Proyecto}
      * @param processor
-     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Proyecto}
      * @return El {@link Step} construido
      */
     @Bean
@@ -243,11 +243,11 @@ public class ImportProjectsDataSetJobConfiguration {
      * @param stepBuilderFactory
      *            Instancia de {@link StepBuilderFactory} para generar el {@link Step}
      * @param reader
-     *            El {@link ItemReader} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemReader} anteriormente configurado para la clase {@link Proyecto}
      * @param writer
-     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Proyecto}
      * @param processor
-     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Proyecto}
      * @return El {@link Step} construido
      */
     @Bean
@@ -273,11 +273,11 @@ public class ImportProjectsDataSetJobConfiguration {
      * @param stepBuilderFactory
      *            Instancia de {@link StepBuilderFactory} para generar el {@link Step}
      * @param reader
-     *            El {@link ItemReader} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemReader} anteriormente configurado para la clase {@link Proyecto}
      * @param writer
-     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Proyecto}
      * @param processor
-     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Proyecto}
      * @return El {@link Step} construido
      */
     @Bean
@@ -303,11 +303,11 @@ public class ImportProjectsDataSetJobConfiguration {
      * @param stepBuilderFactory
      *            Instancia de {@link StepBuilderFactory} para generar el {@link Step}
      * @param reader
-     *            El {@link ItemReader} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemReader} anteriormente configurado para la clase {@link Proyecto}
      * @param writer
-     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemWriter} anteriormente configurado para la clase {@link Proyecto}
      * @param processor
-     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Project}
+     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link Proyecto}
      * @return El {@link Step} construido
      */
     @Bean

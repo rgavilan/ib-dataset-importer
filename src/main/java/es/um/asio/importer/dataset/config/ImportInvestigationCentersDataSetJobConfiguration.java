@@ -22,7 +22,7 @@ import org.springframework.core.io.Resource;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.investigationCenter.GroupContactData;
+import es.um.asio.domain.investigationCenter.DatosContactoGrupo;
 import es.um.asio.importer.dataset.processor.DataItemProcessor;
 import es.um.asio.importer.dataset.writer.DataItemWriter;
 import es.um.asio.importer.marshaller.DataConverter;
@@ -50,19 +50,19 @@ public class ImportInvestigationCentersDataSetJobConfiguration {
     @Bean
     public ItemReader<DataSetData> groupContactDatasReader() {
 
-        final Class<GroupContactData> targetClass = GroupContactData.class;
+        final Class<DatosContactoGrupo> targetClass = DatosContactoGrupo.class;
 
         final Map<String, String> propertiesBinding = new HashMap<>();
-        propertiesBinding.put("IDGRUPOINVESTIGACION", "investigationGroupId");
-        propertiesBinding.put("NUMERO", "number");
-        propertiesBinding.put("CODTIPOFORMACONTACTO", "wayTypeContactCode");
-        propertiesBinding.put("VALOR", "value");
+        propertiesBinding.put("IDGRUPOINVESTIGACION", "idGrupoInvestigacion");
+        propertiesBinding.put("NUMERO", "numero");
+        propertiesBinding.put("CODTIPOFORMACONTACTO", "codTipoFormaContacto");
+        propertiesBinding.put("VALOR", "valor");
 
-        final DataConverter<GroupContactData> converter = new DataConverter<>();
-        converter.setFieldSetMapper(new DataSetFieldSetMapper<GroupContactData>(targetClass));
+        final DataConverter<DatosContactoGrupo> converter = new DataConverter<>();
+        converter.setFieldSetMapper(new DataSetFieldSetMapper<DatosContactoGrupo>(targetClass));
         converter.setPropertiesBinding(propertiesBinding);
 
-        final DataSetMarshaller<GroupContactData> ummarshaller = new DataSetMarshaller<>(targetClass);
+        final DataSetMarshaller<DatosContactoGrupo> ummarshaller = new DataSetMarshaller<>(targetClass);
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
@@ -99,11 +99,11 @@ public class ImportInvestigationCentersDataSetJobConfiguration {
      * @param stepBuilderFactory
      *            Instancia de {@link StepBuilderFactory} para generar el {@link Step}
      * @param reader
-     *            El {@link ItemReader} anteriormente configurado para la clase {@link GroupContactData}
+     *            El {@link ItemReader} anteriormente configurado para la clase {@link DatosContactoGrupo}
      * @param writer
-     *            El {@link ItemWriter} anteriormente configurado para la clase {@link GroupContactData}
+     *            El {@link ItemWriter} anteriormente configurado para la clase {@link DatosContactoGrupo}
      * @param processor
-     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link GroupContactData}
+     *            El {@link ItemProcessor} anteriormente configurado para la clase {@link DatosContactoGrupo}
      * @return El {@link Step} construido
      */
     @Bean
