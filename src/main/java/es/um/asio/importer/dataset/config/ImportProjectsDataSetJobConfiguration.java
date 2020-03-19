@@ -23,10 +23,10 @@ import org.springframework.core.io.Resource;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.project.FechaProyecto;
-import es.um.asio.domain.project.JustificacionPrevistaProyecto;
-import es.um.asio.domain.project.Proyecto;
-import es.um.asio.domain.project.OrigenProyecto;
+import es.um.asio.domain.proyectos.FechaProyecto;
+import es.um.asio.domain.proyectos.JustificacionPrevistaProyecto;
+import es.um.asio.domain.proyectos.Proyecto;
+import es.um.asio.domain.proyectos.OrigenProyecto;
 import es.um.asio.importer.dataset.processor.DataItemProcessor;
 import es.um.asio.importer.dataset.writer.DataItemWriter;
 import es.um.asio.importer.marshaller.DataConverter;
