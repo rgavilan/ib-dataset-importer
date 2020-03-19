@@ -40,6 +40,6 @@ public class ImportDataSetJobConfiguration {
                 .next(s5)
                 // Import investigation centers data
                 .next(s6).end().build();
-    }
+    }    
 
 }
