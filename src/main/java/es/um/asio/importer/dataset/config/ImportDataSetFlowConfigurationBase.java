@@ -87,7 +87,7 @@ public abstract class ImportDataSetFlowConfigurationBase {
         final Map<String, String> propertiesBinding = new HashMap<>();
         for (Field field : type.getDeclaredFields()) {
             String fieldName = field.getName();
-            propertiesBinding.put(fieldName.toUpperCase(), fieldName);
+            propertiesBinding.put(fieldName, fieldName);
         }
         
         final DataConverter<T> converter = new DataConverter<>();
