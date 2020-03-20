@@ -50,7 +50,7 @@ public abstract class ImportDataSetFlowConfigurationBase {
      */
     protected <T extends DataSetData> Step createStep(Class<T> type, String filePath) {
         return this.stepBuilderFactory.get(type.getSimpleName().concat("Step"))
-                .<DataSetData, InputData<DataSetData>> chunk(10)
+                .<DataSetData, InputData<DataSetData>> chunk(1000)
                 .reader(baseReader(type, filePath))
                 .processor(getProcessor())
                 .writer(getWriter())
