@@ -1,14 +1,18 @@
 package es.um.asio.importer.dataset.config;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecutionListener;
-import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
+import org.springframework.batch.core.job.builder.FlowBuilder;
+import org.springframework.batch.core.job.flow.Flow;
+import org.springframework.batch.core.job.flow.support.SimpleFlow;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
-
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
 /**
  * Job que procesa ficheros XML y los manda a la cola Kafka
@@ -17,29 +21,23 @@ import org.springframework.context.annotation.Configuration;
 public class ImportDataSetJobConfiguration {
 
     /**
-     * Genera el {@link Job} de importacion de proyectos
+     * Genera el {@link Job} de importacion de todo el dataset
      *
-     * @param jobs
-     *            Instancia de {@link JobBuilderFactory} en la que se registran los job
-     * @param s1
-     *            Primer paso de la ejecucion
-     * @param listener
-     *            {@link JobExecutionListener} en el que se registra el avance y finalizacion
      * @return
      */
     @Bean
-    public Job importProjectsJob(final JobBuilderFactory jobs, @Qualifier("projectStep") final Step s1,
-            @Qualifier("plannedJustificationsProjectsStep") final Step s2,
-            @Qualifier("projectOriginsStep") final Step s3, @Qualifier("dateProjectsStep") final Step s4,
-            @Qualifier("investigationGroupsStep") final Step s5, @Qualifier("groupContactDatasStep") final Step s6,
-            final JobExecutionListener listener) {
-        return jobs.get("importProjectsJob").incrementer(new RunIdIncrementer()).listener(listener)
-                // Import projects data
-                .flow(s1).next(s2).next(s3).next(s4)
-                // Import investigation groups data
-                .next(s5)
-                // Import investigation centers data
-                .next(s6).end().build();
+    public Job importDataSetJob(final JobBuilderFactory jobs, final JobExecutionListener listener,
+            final List<ImportDataSetFlowConfigurationBase> flows) {  
+        return jobs.get("importDataSetJob")
+                .incrementer(new RunIdIncrementer()).listener(listener)
+                .start(importDataSetSplitFlow(flows.stream().map(x -> x.getFlow()).collect(Collectors.toList()).toArray(new Flow[0])))
+                .build().build();
     }    
-
+   
+    private Flow importDataSetSplitFlow(Flow ...flows) {
+        return new FlowBuilder<SimpleFlow>("importDataSetSplitFlow")
+            .split(new SimpleAsyncTaskExecutor())
+            .add(flows)
+            .build();
+    }  
 }
