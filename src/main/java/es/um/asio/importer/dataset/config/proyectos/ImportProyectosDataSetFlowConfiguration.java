@@ -14,7 +14,7 @@ import es.um.asio.domain.proyectos.FechaProyecto;
 import es.um.asio.domain.proyectos.FinanciacionProyecto;
 import es.um.asio.domain.proyectos.GastoPrevistoProyecto;
 import es.um.asio.domain.proyectos.GastoProyecto;
-import es.um.asio.domain.proyectos.ImporteGastoProyecto;
+import es.um.asio.domain.proyectos.ImporteProyecto;
 import es.um.asio.domain.proyectos.ImpuestoRepercutidoProyecto;
 import es.um.asio.domain.proyectos.IngresoProyecto;
 import es.um.asio.domain.proyectos.JustificacionPrevistaProyecto;
@@ -58,7 +58,7 @@ public class ImportProyectosDataSetFlowConfiguration extends ImportDataSetFlowCo
                 .next(createStep(FinanciacionProyecto.class,"dataset/Proyectos/Financiacion proyectos.xml"))      
                 .next(createStep(GastoPrevistoProyecto.class,"dataset/Proyectos/Gastos previstos proyectos.xml"))      
                 .next(createStep(GastoProyecto.class,"dataset/Proyectos/Gastos proyectos.xml"))      
-                .next(createStep(ImporteGastoProyecto.class,"dataset/Proyectos/Importes proyectos.xml"))      
+                .next(createStep(ImporteProyecto.class,"dataset/Proyectos/Importes proyectos.xml"))      
                 .next(createStep(ImpuestoRepercutidoProyecto.class,"dataset/Proyectos/Impuestos repercutidos proyectos.xml"))      
                 .next(createStep(IngresoProyecto.class,"dataset/Proyectos/Ingresos proyectos.xml"))      
                 .next(createStep(JustificacionPrevistaProyecto.class,"dataset/Proyectos/Justificaciones previstas proyectos.xml"))      
