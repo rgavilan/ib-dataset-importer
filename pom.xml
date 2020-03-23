@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.izertis.superpom</groupId>
 		<artifactId>izertis-superpom-parent-app</artifactId>
-		<version>1.1.0</version>
+		<version>1.1.1</version>
 	</parent>
 
 	<groupId>es.um.asio</groupId>
@@ -21,7 +21,7 @@
 	</scm>
 
 	<properties>
-		<dataset-domain-model.version>1.0-SNAPSHOT</dataset-domain-model.version>
+		<dataset-domain-model.version>1.0-SEMANTMURC-16-SNAPSHOT</dataset-domain-model.version>
 	</properties>
 
 	<dependencies>
