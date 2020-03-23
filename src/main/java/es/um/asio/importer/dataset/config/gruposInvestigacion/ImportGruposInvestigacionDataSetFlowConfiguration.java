@@ -16,6 +16,11 @@ import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 @Configuration
 public class ImportGruposInvestigacionDataSetFlowConfiguration  extends ImportDataSetFlowConfigurationBase {
     
+    @Override
+    protected String getFlowName() {
+        return "importGruposInvestigacionFlow";
+    }
+    
     /**
      * Genera el {@link Flow} de importacion de grupos de investigacion
      *
@@ -23,7 +28,7 @@ public class ImportGruposInvestigacionDataSetFlowConfiguration  extends ImportDa
      */
     @Override
     public Flow getFlow() {
-        return new FlowBuilder<SimpleFlow>("importGruposInvestigacionFlow")
+        return new FlowBuilder<SimpleFlow>(getFlowName())
                 .start(createStep(ConceptoGrupo.class,"dataset/Grupos de investigacion/Conceptos grupos.xml"))
                 .next(createStep(ConceptoInvestigador.class,"dataset/Grupos de investigacion/Conceptos investigadores.xml"))
                 .next(createStep(DatosContactoGrupo.class,"dataset/Grupos de investigacion/Datos contacto grupos.xml"))

@@ -42,6 +42,13 @@ public abstract class ImportDataSetFlowConfigurationBase {
      * @return
      */
     public abstract Flow getFlow();
+    
+    /**
+     * Devuelve el nombre del Flow creado
+     *
+     * @return
+     */
+    protected abstract String getFlowName();
  
     /**
      * Crea una instancia de {@link Step} para el tipo {@link type} recibido
@@ -49,7 +56,7 @@ public abstract class ImportDataSetFlowConfigurationBase {
      * @return Instancia de {@link Step}
      */
     protected <T extends DataSetData> Step createStep(Class<T> type, String filePath) {
-        return this.stepBuilderFactory.get(type.getSimpleName().concat("Step"))
+        return this.stepBuilderFactory.get(getFlowName().concat("-").concat(type.getSimpleName()).concat("Step"))
                 .<DataSetData, InputData<DataSetData>> chunk(1000)
                 .reader(baseReader(type, filePath))
                 .processor(getProcessor())

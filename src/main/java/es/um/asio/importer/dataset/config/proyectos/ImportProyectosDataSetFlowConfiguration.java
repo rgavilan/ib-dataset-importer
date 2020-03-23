@@ -36,6 +36,11 @@ import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 @Configuration
 public class ImportProyectosDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase { 
     
+    @Override
+    protected String getFlowName() {
+        return "importProyectosFlow";
+    }
+    
     /**
      * Genera el {@link Flow} de importacion de proyectos
      *
@@ -43,7 +48,7 @@ public class ImportProyectosDataSetFlowConfiguration extends ImportDataSetFlowCo
      */
     @Override
     public Flow getFlow() {
-        return new FlowBuilder<SimpleFlow>("importProyectosFlow")
+        return new FlowBuilder<SimpleFlow>(getFlowName())
                 .start(createStep(AnualidadProyecto.class,"dataset/Proyectos/Anualidades proyectos.xml"))                
                 .next(createStep(DatosAnualidadProyecto.class,"dataset/Proyectos/Datos anualidades proyectos.xml"))        
                 .next(createStep(DependenciaProyecto.class,"dataset/Proyectos/Dependencias proyectos.xml"))        
