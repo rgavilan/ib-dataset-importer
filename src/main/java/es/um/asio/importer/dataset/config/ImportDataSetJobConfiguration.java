@@ -33,7 +33,7 @@ public class ImportDataSetJobConfiguration {
             final List<ImportDataSetFlowConfigurationBase> flows) {  
         return jobs.get("importDataSetJob")
                 .incrementer(new RunIdIncrementer()).listener(listener)
-                .start(importDataSetSplitFlow(flows.stream().map(x -> x.getFlow()).collect(Collectors.toList()).toArray(new Flow[0])))
+                .start(importDataSetSplitFlow(flows.stream().map(ImportDataSetFlowConfigurationBase::getFlow).collect(Collectors.toList()).toArray(new Flow[0])))
                 .build().build();
     }    
    

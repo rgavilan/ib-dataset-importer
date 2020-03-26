@@ -11,7 +11,6 @@ import org.springframework.kafka.core.KafkaTemplate;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.proyectos.Proyecto;
 
 /**
  * Implementation of {@link ItemWriter} for {@link InputData<DataSetData>}.

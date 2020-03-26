@@ -5,8 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.core.annotation.BeforeStep;
 import org.springframework.batch.item.ItemProcessor;
-import org.springframework.batch.item.ItemWriter;
-
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
 
@@ -41,7 +39,7 @@ public class DataItemProcessor implements ItemProcessor<DataSetData, InputData<D
     public InputData<DataSetData> process(final DataSetData data) throws Exception {
         data.setVersion(jobExecutionId);
         log.info("Processing data ({})", data);
-        return new InputData<DataSetData>(data);
+        return new InputData<>(data);
     }
 
 }
