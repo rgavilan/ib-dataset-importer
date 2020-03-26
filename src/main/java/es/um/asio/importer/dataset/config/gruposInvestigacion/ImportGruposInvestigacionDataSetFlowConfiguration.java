@@ -13,18 +13,26 @@ import es.um.asio.domain.gruposInvestigacion.GrupoInvestigacion;
 import es.um.asio.domain.gruposInvestigacion.TipoParticipacionGrupo;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate GruposInvestigacion {@link Flow}
+ */
 @Configuration
 public class ImportGruposInvestigacionDataSetFlowConfiguration  extends ImportDataSetFlowConfigurationBase {
     
+    /**
+     * Gets the GruposInvestigacion flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importGruposInvestigacionFlow";
     }
     
     /**
-     * Genera el {@link Flow} de importacion de grupos de investigacion
+     * Gets GruposInvestigacion {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

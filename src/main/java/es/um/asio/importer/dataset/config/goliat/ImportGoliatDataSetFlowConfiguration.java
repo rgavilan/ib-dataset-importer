@@ -14,18 +14,26 @@ import es.um.asio.domain.goliat.WorkLog;
 import es.um.asio.domain.goliat.WorkPackage;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate Goliat {@link Flow}
+ */
 @Configuration
 public class ImportGoliatDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase {
-      
+    
+    /**
+     * Gets the Goliat flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importGoliatFlow";
     }
     
     /**
-     * Genera el {@link Flow} de goliat
+     * Gets Goliat {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

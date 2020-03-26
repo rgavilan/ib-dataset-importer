@@ -13,18 +13,26 @@ import es.um.asio.domain.actividades.ImpuestoRepercutidoActividad;
 import es.um.asio.domain.actividades.TipoActividad;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate Actividades {@link Flow}
+ */
 @Configuration
 public class ImportActividadesDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase {
-      
+    
+    /**
+     * Gets the Actividades flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importActividadesFlow";
     }
-    
+  
     /**
-     * Genera el {@link Flow} de actividades
+     * Gets Actividades {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

@@ -28,32 +28,43 @@ import es.um.asio.importer.marshaller.DataConverter;
 import es.um.asio.importer.marshaller.DataSetFieldSetMapper;
 import es.um.asio.importer.marshaller.DataSetMarshaller;
 
+/**
+ * Base class to generate a {@link Flow} that converts and send XML to Kafka topic
+ */
 public abstract class ImportDataSetFlowConfigurationBase {
    
     @Value("${app.data.path}")
     private String dataPath;    
 
+    /**
+     *  The step builder factory. 
+     *  */
     @Autowired
     private StepBuilderFactory stepBuilderFactory;
     
     /**
-     * Genera el {@link Flow} de importacion
+     * Generates the import {@link Flow}
      *
      * @return
      */
     public abstract Flow getFlow();
     
+  
     /**
-     * Devuelve el nombre del Flow creado
+     * Gets the {@link Flow} name 
      *
-     * @return
+     * @return the flow name
      */
     protected abstract String getFlowName();
  
+   
     /**
-     * Crea una instancia de {@link Step} para el tipo {@link type} recibido
+     * Creates an instance of {@link Step} for {@link type}
      *
-     * @return Instancia de {@link Step}
+     * @param <T> the generic type
+     * @param type the type
+     * @param filePath the XML file path
+     * @return the step
      */
     protected <T extends DataSetData> Step createStep(Class<T> type, String filePath) {
         return this.stepBuilderFactory.get(getFlowName().concat("-").concat(type.getSimpleName()).concat("Step"))
@@ -62,33 +73,35 @@ public abstract class ImportDataSetFlowConfigurationBase {
                 .processor(getProcessor())
                 .writer(getWriter())
                 .build();
-    }
-    
+    }    
+   
     /**
-     * Devuelve una instancia de {@link DataItemProcessor}
+     * Gets an instance of {@link DataItemProcessor}
      *
-     * @return Instancia de {@link DataItemProcessor}
+     * @return the processor
      */
     @Bean
     protected ItemProcessor<DataSetData, InputData<DataSetData>> getProcessor() {
         return new DataItemProcessor();
-    }
+    }    
     
     /**
-     * Devuelve una instancia de {@link DataItemWriter}
+     * Gets an instance of {@link DataItemWriter}
      *
-     * @return instancia de {@link DataItemWriter}
+     * @return the processor
      */
     @Bean
     protected ItemWriter<InputData<DataSetData>> getWriter() {
         return new DataItemWriter();
-    }   
-     
+    }
+  
     /**
-     * Devuelve la implementacion de {@link ItemReader} necesaria para la funcionalidad.
-     * Utiliza la clase {@link StaxEventItemReader} de Spring Batch para la logica de lectura.
+     * Gets the {@link ItemReader} implementation that reads the XML file and transform to {@link type}
      *
-     * @return Implementacion de {@link ItemReader}
+     * @param <T> the generic type
+     * @param type the type
+     * @param filePath the file path
+     * @return the item reader
      */
     protected <T extends DataSetData> ItemReader<DataSetData> baseReader(Class<T> type, String filePath) {        
         final Map<String, String> propertiesBinding = new HashMap<>();
@@ -96,7 +109,7 @@ public abstract class ImportDataSetFlowConfigurationBase {
             String fieldName = field.getName();
             propertiesBinding.put(fieldName, fieldName);
         }
-        
+
         final DataConverter<T> converter = new DataConverter<>();
         converter.setFieldSetMapper(new DataSetFieldSetMapper<T>(type));
         converter.setPropertiesBinding(propertiesBinding);

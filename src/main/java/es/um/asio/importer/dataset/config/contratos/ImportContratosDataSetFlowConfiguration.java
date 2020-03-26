@@ -16,18 +16,26 @@ import es.um.asio.domain.contratos.PatenteContratoProyecto;
 import es.um.asio.domain.contratos.ProrrogaContratoProyecto;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate Contratos {@link Flow}
+ */
 @Configuration
 public class ImportContratosDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase {
-      
+    
+    /**
+     * Gets the Contratos flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importContratosFlow";
     }
     
     /**
-     * Genera el {@link Flow} de contratos
+     * Gets Contratos {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

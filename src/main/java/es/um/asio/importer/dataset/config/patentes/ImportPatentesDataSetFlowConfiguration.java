@@ -14,18 +14,26 @@ import es.um.asio.domain.patentes.ProteccionPatente;
 import es.um.asio.domain.patentes.SectorIndustrialPatente;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate Patentes {@link Flow}
+ */
 @Configuration
 public class ImportPatentesDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase {
-      
+    
+    /**
+     * Gets the Patentes flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importPatentesFlow";
     }
     
     /**
-     * Genera el {@link Flow} de patentes
+     * Gets Patentes {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

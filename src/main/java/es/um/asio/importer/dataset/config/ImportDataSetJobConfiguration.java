@@ -15,15 +15,18 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
 /**
- * Job que procesa ficheros XML y los manda a la cola Kafka
+ * Job that processes XML files and sends them to Kafka topic
  */
 @Configuration
 public class ImportDataSetJobConfiguration {
-
+    
     /**
-     * Genera el {@link Job} de importacion de todo el dataset
+     * Generates {@link Job} for imports all XML files
      *
-     * @return
+     * @param jobs the jobs
+     * @param listener the listener
+     * @param flows the flows
+     * @return the job
      */
     @Bean
     public Job importDataSetJob(final JobBuilderFactory jobs, final JobExecutionListener listener,
@@ -34,6 +37,12 @@ public class ImportDataSetJobConfiguration {
                 .build().build();
     }    
    
+    /**
+     * Generates the {@link Flow} with dataset import
+     *
+     * @param flows the flows
+     * @return the flow
+     */
     private Flow importDataSetSplitFlow(Flow ...flows) {
         return new FlowBuilder<SimpleFlow>("importDataSetSplitFlow")
             .split(new SimpleAsyncTaskExecutor())

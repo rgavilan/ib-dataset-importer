@@ -33,18 +33,26 @@ import es.um.asio.domain.proyectos.TipoOrigenProyecto;
 import es.um.asio.domain.proyectos.TipoRechazoJustificacion;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate Proyectos {@link Flow}
+ */
 @Configuration
 public class ImportProyectosDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase { 
     
+    /**
+     * Gets the Proyectos flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importProyectosFlow";
     }
     
     /**
-     * Genera el {@link Flow} de importacion de proyectos
+     * Gets Proyectos {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

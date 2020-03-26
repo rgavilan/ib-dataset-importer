@@ -43,18 +43,26 @@ import es.um.asio.domain.paginas.SolicitudCambioGrupoInvestigacion;
 import es.um.asio.domain.paginas.TesisDirigidaUMUNoRegistrada;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate Paginas {@link Flow}
+ */
 @Configuration
 public class ImportPaginasDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase {
-      
+    
+    /**
+     * Gets the Paginas flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importPaginasFlow";
     }
     
     /**
-     * Genera el {@link Flow} de paginas
+     * Gets Paginas {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

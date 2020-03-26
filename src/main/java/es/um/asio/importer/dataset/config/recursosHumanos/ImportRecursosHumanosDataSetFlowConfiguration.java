@@ -18,18 +18,26 @@ import es.um.asio.domain.recursosHumanos.TipoRecursosHumanos;
 import es.um.asio.domain.recursosHumanos.UnidadRecursosHumanos;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate RecursosHumanos {@link Flow}
+ */
 @Configuration
 public class ImportRecursosHumanosDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase {
-      
+    
+    /**
+     * Gets the RecursosHumanos flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importRecursosHumanosFlow";
     }
     
     /**
-     * Genera el {@link Flow} de recursos humanos
+     * Gets RecursosHumanos {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

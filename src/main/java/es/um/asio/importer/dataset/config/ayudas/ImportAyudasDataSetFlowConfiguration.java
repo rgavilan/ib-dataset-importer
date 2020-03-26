@@ -28,18 +28,26 @@ import es.um.asio.domain.ayudas.UnidadAyuda;
 import es.um.asio.domain.ayudas.UnidadGestoraUnidadAyuda;
 import es.um.asio.importer.dataset.config.ImportDataSetFlowConfigurationBase;
 
+/**
+ * Class to generate Ayudas {@link Flow}
+ */
 @Configuration
 public class ImportAyudasDataSetFlowConfiguration extends ImportDataSetFlowConfigurationBase {
-      
+    
+    /**
+     * Gets the Ayudas flow name.
+     *
+     * @return the flow name
+     */
     @Override
     protected String getFlowName() {
         return "importAyudasFlow";
     }
     
     /**
-     * Genera el {@link Flow} de ayudas
+     * Gets Ayudas {@link Flow}
      *
-     * @return
+     * @return the flow
      */
     @Override
     public Flow getFlow() {

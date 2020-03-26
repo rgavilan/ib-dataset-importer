@@ -6,6 +6,7 @@ import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.listener.JobExecutionListenerSupport;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -18,7 +19,8 @@ import es.um.asio.domain.exitStatus.ExitStatusCodeEnum;
 import es.um.asio.importer.dataset.writer.DataItemWriter;
 
 /**
- * Implementacion de {@link JobExecutionListener} para el registro del avance
+ * Implementation of {@link JobExecutionListenerSupport} responsible for sending the exit status result
+ * to Kafka topic.
  */
 @Component
 public class JobCompletionNotificationListener extends JobExecutionListenerSupport {
