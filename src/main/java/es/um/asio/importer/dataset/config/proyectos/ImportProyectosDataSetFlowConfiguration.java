@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import es.um.asio.domain.proyectos.AnualidadProyecto;
 import es.um.asio.domain.proyectos.DatosAnualidadProyecto;
 import es.um.asio.domain.proyectos.DependenciaProyecto;
+import es.um.asio.domain.proyectos.EquipoProyecto;
 import es.um.asio.domain.proyectos.FacturaEmitirProyecto;
 import es.um.asio.domain.proyectos.FacturaProyecto;
 import es.um.asio.domain.proyectos.FechaProyecto;
@@ -59,7 +60,8 @@ public class ImportProyectosDataSetFlowConfiguration extends ImportDataSetFlowCo
         return new FlowBuilder<SimpleFlow>(getFlowName())
                 .start(createStep(AnualidadProyecto.class,"dataset/Proyectos/Anualidades proyectos.xml"))                
                 .next(createStep(DatosAnualidadProyecto.class,"dataset/Proyectos/Datos anualidades proyectos.xml"))        
-                .next(createStep(DependenciaProyecto.class,"dataset/Proyectos/Dependencias proyectos.xml"))        
+                .next(createStep(DependenciaProyecto.class,"dataset/Proyectos/Dependencias proyectos.xml"))
+                .next(createStep(EquipoProyecto.class,"dataset/Proyectos/Equipos proyectos.xml"))
                 .next(createStep(FacturaEmitirProyecto.class,"dataset/Proyectos/Facturas emitir proyectos.xml"))      
                 .next(createStep(FacturaProyecto.class,"dataset/Proyectos/Facturas proyectos.xml"))      
                 .next(createStep(FechaProyecto.class,"dataset/Proyectos/Fechas proyectos.xml"))      
