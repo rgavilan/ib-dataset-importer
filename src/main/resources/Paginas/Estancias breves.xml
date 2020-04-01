@@ -1,0 +1,1229 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (ESTA_SOLB_NUMERO,ESTA_NUMERO,IDPERSONA?,SOLB_TITUPROYECTO?,ESTA_PAIS_CODIGO?,ESTA_COM_CODIGO?,ESTA_CIUDAD?,ESTA_CENTRO?,IDPERSONA_1?,DURACION_PREVISTA?,ESTA_FECHAIDAPREVIS?,ESTA_PRESUPVIAJE?,ESTA_OBJETO_ESTANCIA?,ESTA_CONCEDIDOESTANCIA?,ESTA_TOTCONCEDIDO?,ESTA_ESTADO?)+>
+  <!ELEMENT ESTA_SOLB_NUMERO (#PCDATA)>
+  <!ELEMENT ESTA_NUMERO (#PCDATA)>
+  <!ELEMENT IDPERSONA (#PCDATA)>
+  <!ELEMENT SOLB_TITUPROYECTO (#PCDATA)>
+  <!ELEMENT ESTA_PAIS_CODIGO (#PCDATA)>
+  <!ELEMENT ESTA_COM_CODIGO (#PCDATA)>
+  <!ELEMENT ESTA_CIUDAD (#PCDATA)>
+  <!ELEMENT ESTA_CENTRO (#PCDATA)>
+  <!ELEMENT IDPERSONA_1 (#PCDATA)>
+  <!ELEMENT DURACION_PREVISTA (#PCDATA)>
+  <!ELEMENT ESTA_FECHAIDAPREVIS (#PCDATA)>
+  <!ELEMENT ESTA_PRESUPVIAJE (#PCDATA)>
+  <!ELEMENT ESTA_OBJETO_ESTANCIA (#PCDATA)>
+  <!ELEMENT ESTA_CONCEDIDOESTANCIA (#PCDATA)>
+  <!ELEMENT ESTA_TOTCONCEDIDO (#PCDATA)>
+  <!ELEMENT ESTA_ESTADO (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8180</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>4935</IDPERSONA>
+    <SOLB_TITUPROYECTO>ESTUDIO TRANSVERSAL Y COMPARADO DE LA LITERATURA DE VIRGILIO PI&#209;ERA EN EL AMBITO DE LA TRADICION CLASICA</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>011</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO>01</ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Granada</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidad de Granada</ESTA_CENTRO>
+    <IDPERSONA_1>26572</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2010/09/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>90</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Trabajar sobre teor&#237;a y pr&#225;ctica del teatro con la profesora Grande, especialista en teatro, con el fin de su aplicaci&#243;n a la dramaturgia de Virgilio Pi&#241;era.&#13;&#10;Complementar mi formaci&#243;n y conocer las teor&#237;as y metodolog&#237;as vigentes. &#13;&#10;Acudir a Cursos o Seminarios interesantes para el desarrollo de mi tesis.&#13;&#10;Desplazarme a otros centros de Investigaci&#243;n &#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2100</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2190</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8750</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>6933</IDPERSONA>
+    <SOLB_TITUPROYECTO>COMPETENCIA EN EL USO DE CORPUS: ESTUDIO SEMIEXPERIMENTAL SOBRE EL USO DE RECURSOS BASADOS EN CORPUS EN EL AULA</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>006</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Lancaster</ESTA_CIUDAD>
+    <ESTA_CENTRO>Lancaster University</ESTA_CENTRO>
+    <IDPERSONA_1>2145</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2011/10/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>435</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Realizar un trabajo de investigaci&#243;n relevante para mi formaci&#243;n y para el desarrollo de mi tesis doctoral en la Universidad de Lancaster bajo la supervisi&#243;n del Profesor A. McEnery.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2565</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3000</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8750</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>6933</IDPERSONA>
+    <SOLB_TITUPROYECTO>COMPETENCIA EN EL USO DE CORPUS: ESTUDIO SEMIEXPERIMENTAL SOBRE EL USO DE RECURSOS BASADOS EN CORPUS EN EL AULA</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>007</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Limerick</ESTA_CIUDAD>
+    <ESTA_CENTRO>Centre for Applied Language Studies - University of Limerick</ESTA_CENTRO>
+    <IDPERSONA_1>2145</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2012/09/21 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>540</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Realizar un trabajo de investigaci&#243;n relevante para mi formaci&#243;n y para el desarrollo de mi tesis doctoral en el Centre for Applied Language Studies de la Universidad de Limerick bajo la supervisi&#243;n de la Profesora Angela Chambers.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>460</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>1000</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8378</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>6594</IDPERSONA>
+    <SOLB_TITUPROYECTO>Papel de la luz sobre el desarrollo temprano del reloj biol&#243;gico de la lubina y sus ritmos de alimentaci&#243;n diurnos/noctu</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>004</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Karlsruhe</ESTA_CIUDAD>
+    <ESTA_CENTRO>Heidelber University, Institute of Toxicology and Genetics</ESTA_CENTRO>
+    <IDPERSONA_1>2161</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2011/02/13 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>160</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Esta estancia consta de tres objetivos b&#225;sicos:&#13;&#10;1. Estudiar el crecimiento y la calidad de la puesta del pez cebra bajo alimentaci&#243;n a demanda.&#13;&#10;2. Explorar el comportamiento alimentario en medaka.&#13;&#10;3. Analizar la influencia luces de diferentes longitudes de onda en la maduraci&#243;n del sistema circadiano de pez cebra y medaka.&#13;&#10;&#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4360</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9753</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7797</IDPERSONA>
+    <SOLB_TITUPROYECTO>Mecanismos gen&#233;ticos implicados en la resistencia antibi&#243;tica de cepas de Mycoplasma agalactiae de origen caprino</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Lyon</ESTA_CIUDAD>
+    <ESTA_CENTRO>ANSES - Laboratoire Lyon</ESTA_CENTRO>
+    <IDPERSONA_1>2296</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2017/01/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>450</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Variabilidad gen&#233;tica de micoplasmas asociados a la agalaxia contagiosa y su relaci&#243;n con la din&#225;mica de la infecci&#243;n y la resistencia antibi&#243;tica.&#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>3510</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3960</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9753</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>7797</IDPERSONA>
+    <SOLB_TITUPROYECTO>Mecanismos gen&#233;ticos implicados en la resistencia antibi&#243;tica de cepas de Mycoplasma agalactiae de origen caprino</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>LYON</ESTA_CIUDAD>
+    <ESTA_CENTRO>ANSES - LABORATOIRE DE LYON</ESTA_CENTRO>
+    <IDPERSONA_1>2296</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/01/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>458,66</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudio de los mecanismos de resistencia a tetraciclinas de los mycoplasmas pertenecientes al cluster mycoides. Se estudiar&#225; la importancia del transporte activo de este grupo de antibi&#243;ticos y el aumento de la resistencia debido a la formaci&#243;n de biofilms. &#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4004,13</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4462,79</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9696</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7634</IDPERSONA>
+    <SOLB_TITUPROYECTO>Influencia de las hormonas esteroideas de la gestaci&#243;n durante la infecci&#243;n por Chlamydia abortus en modelo murino</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>004</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Jena</ESTA_CIUDAD>
+    <ESTA_CENTRO>Friedrich-Loeffler Institut</ESTA_CENTRO>
+    <IDPERSONA_1>277</IDPERSONA_1>
+    <DURACION_PREVISTA>1</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2017/07/28 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>600</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Objetivo general: determinar el efecto de la progesterona en la infecci&#243;n con Chlamydia abortus en ovejas, as&#237; como la eficacia de la vacunaci&#243;n. &#13;&#10;Objetivo espec&#237;fico durante esta estancia: identificar ep&#237;topos clamidiales en muestras de suero procedentes de ovejas vacunadas/no vacunadas; tratadas con progesterona/no tratadas e infectadas con Chlamydia abortus.&#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>600</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9961</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>89047</IDPERSONA>
+    <SOLB_TITUPROYECTO>La parodia en la narrativa y el cine</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>006</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Oxford</ESTA_CIUDAD>
+    <ESTA_CENTRO>Oxford University</ESTA_CENTRO>
+    <IDPERSONA_1>527</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2017/04/24 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>600</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>La formaci&#243;n y desarrollo investigador de la doctoranda en el campo de la teor&#237;a y cr&#237;tica literarias gracias a la tutela del Profesor Edwin Williamson &#40;reconocido especialista en Borges y Cervantes&#41; as&#237; como a la consulta bibliogr&#225;fica de los exclusivos fondos bibliotecarios de los que dispone la Universidad de Oxford.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>600</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9961</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>89047</IDPERSONA>
+    <SOLB_TITUPROYECTO>La parodia en la narrativa y el cine</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>006</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Bristol</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidad de Bristol</ESTA_CENTRO>
+    <IDPERSONA_1>527</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/04/09 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>414,23</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Los objetivos principales de la estancia son la consulta de los fondos bibliotecarios de la Universidad de Bristol para enriquecer la calidad bibliogr&#225;fica la tesis doctoral, la asistencia a los seminarios especializados que proporcionar&#225;n nuevas perspectivas de investigaci&#243;n y el perfeccionamiento de la capacidad de producci&#243;n cient&#237;fica en lengua inglesa.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4053,58</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4467,81</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9961</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>89047</IDPERSONA>
+    <SOLB_TITUPROYECTO>La parodia en la narrativa y el cine</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Venezia</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universit&#224; Ca&#39;Foscari</ESTA_CENTRO>
+    <IDPERSONA_1>527</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2019/06/20 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>209,16</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Esta estancia de investigaci&#243;n tiene como objeto principal la culminaci&#243;n del desarrollo investigador de la doctoranda, que aprovechar&#225; los excepcionales fondos bibliogr&#225;ficos de la Universit&#224; Ca&#39;Foscari de Venecia, as&#237; como sus seminarios doctorales especializados y el contacto con hispanistas de primer nivel en el &#225;mbito de la Teor&#237;a Literaria Contempor&#225;nea.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>209,16</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8382</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>6954</IDPERSONA>
+    <SOLB_TITUPROYECTO>DESARROLLO DE SENSORES E IONTOFORESIS. APLICACI&#211;N AL AN&#193;LISIS CL&#205;NICO, FARMACE&#218;TICO, DE CONTAMINANTES Y EN ALIMENTOS</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>011</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO>09</ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Tarragona</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universitat Rovira i Virgili</ESTA_CENTRO>
+    <IDPERSONA_1>540</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2011/09/28 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>90</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Aplicaci&#243;n de t&#233;cnicas quimiom&#233;tricas al estudio de se&#241;ales potenciom&#233;tricas y desarrollo de nuevos sensores basados en nanotubos de carbono.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2100</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2190</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8382</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>6954</IDPERSONA>
+    <SOLB_TITUPROYECTO>DESARROLLO DE SENSORES E IONTOFORESIS. APLICACI&#211;N AL AN&#193;LISIS CL&#205;NICO, FARMACE&#218;TICO, DE CONTAMINANTES Y EN ALIMENTOS</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>010</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Oporto</ESTA_CIUDAD>
+    <ESTA_CENTRO>Pharmacy Phaculty, Universidade do Porto</ESTA_CENTRO>
+    <IDPERSONA_1>540</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2012/09/11 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>301,02</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Desarrollo y aplicaci&#243;n de nuevos sensores potenciometricos insertados en sistemas de an&#225;lisis por inyecci&#243;n en flujo. Determinaci&#243;n anal&#237;tica de cationes y/o aniones de relevancia cl&#237;nica.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>698,98</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>1000</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8748</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>4077</IDPERSONA>
+    <SOLB_TITUPROYECTO>METODOLOGIA BASADA EN CIENCIA Y TECNOLOGIA DE LA WEB PARA ANALISIS Y DISE&#209;O DE CONTENIDOS EN MEDIOS DIGITALES</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Roma</ESTA_CIUDAD>
+    <ESTA_CENTRO>Facultad Ciencias de la Comunicaci&#243;n Universidad La Sapienza</ESTA_CENTRO>
+    <IDPERSONA_1>2644</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2011/06/30 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>256,54</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>   &#13;&#10;   Adquirir conocimiento conceptual y metodol&#243;gico sobre sistemas de medici&#243;n y evaluaci&#243;n de la calidad de los contenidos informativos en los peri&#243;dicos digitales.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4456,54</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8748</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>4077</IDPERSONA>
+    <SOLB_TITUPROYECTO>METODOLOGIA BASADA EN CIENCIA Y TECNOLOGIA DE LA WEB PARA ANALISIS Y DISE&#209;O DE CONTENIDOS EN MEDIOS DIGITALES</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Roma</ESTA_CIUDAD>
+    <ESTA_CENTRO>Facultad Ciencias de la Comunicaci&#243;n Universidad La Sapienza</ESTA_CENTRO>
+    <IDPERSONA_1>2644</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2012/07/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>236,8</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Adquirir conocimiento metodol&#243;gico sobre sistemas de medici&#243;n y evaluaci&#243;n de la calidad de contenidos informativos en peri&#243;dicos digitales de informaci&#243;n general de referencia.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2763,2</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3000</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8748</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>4</ESTA_NUMERO>
+    <IDPERSONA>4077</IDPERSONA>
+    <SOLB_TITUPROYECTO>METODOLOGIA BASADA EN CIENCIA Y TECNOLOGIA DE LA WEB PARA ANALISIS Y DISE&#209;O DE CONTENIDOS EN MEDIOS DIGITALES</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Roma</ESTA_CIUDAD>
+    <ESTA_CENTRO>Facultad Ciencias de la Comunicaci&#243;n Universidad La Sapienza</ESTA_CENTRO>
+    <IDPERSONA_1>2644</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2013/06/30 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>318,51</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Completar la investigaci&#243;n iniciada el a&#241;o anterior sobre el inter&#233;s noticioso de los ciberperi&#243;dicos de informaci&#243;n general y preparaci&#243;n para el Doctorado Internacional.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2181,49</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2500</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9229</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>6770</IDPERSONA>
+    <SOLB_TITUPROYECTO>Aplicaci&#243;n de t&#233;cnicas de ciencia de la web para la evoluci&#243;n de conceptos cient&#237;ficos de relevancia social.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>010</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Braga</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidade do Minho</ESTA_CENTRO>
+    <IDPERSONA_1>2644</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2013/08/31 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>371,64</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Mejorar la formaci&#243;n de la doctoranda sobre web sem&#225;ntica y, espec&#237;ficamente, el desarrollo de un perfil de aplicaci&#243;n a utilizar sobre la muestra de estudio, noticias publicadas en prensa.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2128,36</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2500</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9229</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>6770</IDPERSONA>
+    <SOLB_TITUPROYECTO>Aplicaci&#243;n de t&#233;cnicas de ciencia de la web para la evoluci&#243;n de conceptos cient&#237;ficos de relevancia social.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>508</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Belo Horizonte</ESTA_CIUDAD>
+    <ESTA_CENTRO>Escola de Ci&#234;ncia da Informa&#231;ao, Un. Federal Minas Gerais</ESTA_CENTRO>
+    <IDPERSONA_1>2644</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2014/09/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>1000</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Como parte de desarrollo de la tesis, el objeto de esta estancia es profundizar en los conocimientos necesarios para la creaci&#243;n de una ontolog&#237;a, proyecto de dise&#241;o y reutilizaci&#243;n de otras herramientas preexistentes en Internet</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>5200</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9229</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>6770</IDPERSONA>
+    <SOLB_TITUPROYECTO>Aplicaci&#243;n de t&#233;cnicas de ciencia de la web para la evoluci&#243;n de conceptos cient&#237;ficos de relevancia social.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>508</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Mar&#237;lia</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidade Estadual Paulista &#34;J&#250;lio de Mesquita Filho&#34; &#40;UN</ESTA_CENTRO>
+    <IDPERSONA_1>2644</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2015/06/14 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>1200</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Objetivos a satisfacer durante la estancia:&#13;&#10;- Ahondar en el conocimiento de diarios de informaci&#243;n general especialmente en Web 2.0. y Web 3.0.&#13;&#10;- Conocer el contexto pol&#237;tico-econ&#243;mico&#13;&#10;- Determinar t&#233;rminos m&#225;s destacados en pol&#237;tica-econom&#237;a mediante indizaci&#243;n y reaprovechamiento de metadatos de prensa &#13;&#10;- Analizar metodolog&#237;as existentes para el modelado de una ontolog&#237;a</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>1200</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>B</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9229</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>4</ESTA_NUMERO>
+    <IDPERSONA>6770</IDPERSONA>
+    <SOLB_TITUPROYECTO>Aplicaci&#243;n de t&#233;cnicas de ciencia de la web para la evoluci&#243;n de conceptos cient&#237;ficos de relevancia social.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>508</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Mar&#237;lia</ESTA_CIUDAD>
+    <ESTA_CENTRO>FACULTADE DE FILOSOFIA E CI&#202;NCIAS DA UNIVERSIDADE ESTADUAL P</ESTA_CENTRO>
+    <IDPERSONA_1>2644</IDPERSONA_1>
+    <DURACION_PREVISTA>38</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2016/03/17 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>818,66</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>El crecimiento de informaci&#243;n pol&#237;tica en Internet y su escasa estructuraci&#243;n se han desarrollado soluciones como las ontolog&#237;as. El objetivo de esta estancia es continuar con el modelado conceptual para la creaci&#243;n de una ontolog&#237;a especializada en pol&#237;tica y econom&#237;a, que facilite la descripci&#243;n sem&#225;ntica de documentos</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>1489,34</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2308</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9696</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7634</IDPERSONA>
+    <SOLB_TITUPROYECTO>Influencia de las hormonas esteroideas de la gestaci&#243;n durante la infecci&#243;n por Chlamydia abortus en modelo murino</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>004</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Jena</ESTA_CIUDAD>
+    <ESTA_CENTRO>Friedrich-Loeffler Institut</ESTA_CENTRO>
+    <IDPERSONA_1>2748</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2015/06/11 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>500</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudio de la respuesta transcripcional de Chlamydia abortus en muestras de cultivos celulares expuestos a diferentes concentraciones de estradiol y/o progesterona. En concreto, se analizar&#225; la expresi&#243;n de genes relacionados con el fen&#243;meno de persistencia clamidial mediante t&#233;cnicas de biolog&#237;a molecular como RT-PCR. Se estudiar&#225; la posibilidad de secuenciaci&#243;n &#40;Illumina&#41;.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4700</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9141</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7463</IDPERSONA>
+    <SOLB_TITUPROYECTO>Capacidad de colonizaci&#243;n y mecanismos de regulaci&#243;n osm&#243;tica en cole&#243;pteros acu&#225;ticos salinos</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>400</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>San Luis Obispo, CA</ESTA_CIUDAD>
+    <ESTA_CENTRO>California Polytechnic State University,Dept Biol Sciences</ESTA_CENTRO>
+    <IDPERSONA_1>2818</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2013/09/25 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>1200</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Objetivo : Aprendizaje y aplicaci&#243;n de t&#233;cnicas prote&#243;micas para caracterizar la respuesta prote&#243;mica frente al estr&#233;s t&#233;rmico y/o salino en un cole&#243;ptero acu&#225;tico t&#237;pico de los medios salinos continentales mediterr&#225;neos.&#13;&#10;&#13;&#10;Tareas :&#13;&#10;- Extracci&#243;n proteica y preparaci&#243;n de muestras para electroforesis&#13;&#10;- Electroforesis en gel bidimensional &#13;&#10;- Uso de software especializado de an&#225;lisis de imagen para detectar prote&#237;nas cuya abundancia var&#237;a en respuesta a la exposici&#243;n a condiciones de estr&#233;s &#13;&#10;- Espectrometr&#237;a de masas en t&#225;ndem &#40;MS/MS&#41; y uso de bases de datos de prote&#237;nas para determinar la identidad y funci&#243;n de las prote&#237;nas que experimentan los cambios de abundancia m&#225;s significativos. &#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>1300</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2500</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9141</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7463</IDPERSONA>
+    <SOLB_TITUPROYECTO>Capacidad de colonizaci&#243;n y mecanismos de regulaci&#243;n osm&#243;tica en cole&#243;pteros acu&#225;ticos salinos</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>006</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Plymouth</ESTA_CIUDAD>
+    <ESTA_CENTRO>School Marine Science and Engineering, Plymouth University</ESTA_CENTRO>
+    <IDPERSONA_1>2818</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2014/06/25 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>340,27</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Muestreo de insectos acu&#225;ticos &#40;Coleoptera:Hydrophilidae&#41; con poblaciones en Reino Unido,  experimentos de laboratorio para determinar la tolerancia a la sequ&#237;a y la capacidad de osmoregulaci&#243;n de distintas especies y an&#225;lisis filogen&#233;ticos para definir la relaci&#243;n evolutiva de estos dos rasgos biol&#243;gicos. </ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4540,27</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9141</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>7463</IDPERSONA>
+    <SOLB_TITUPROYECTO>Capacidad de colonizaci&#243;n y mecanismos de regulaci&#243;n osm&#243;tica en cole&#243;pteros acu&#225;ticos salinos</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>011</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO>09</ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>BARCELONA</ESTA_CIUDAD>
+    <ESTA_CENTRO>INSTITUTO DE BIOLOG&#205;A EVOLUTIVA &#40;CSIC-UPF&#41;</ESTA_CENTRO>
+    <IDPERSONA_1>2818</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2015/05/04 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>90</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Se combinar&#225;n experimentos fisiol&#243;gicos, secuenciaci&#243;n gen&#233;tica y an&#225;lisis filogen&#233;ticos para estudiar la relaci&#243;n evolutiva de distintos rasgos fisiol&#243;gicos relacionados con la adaptaci&#243;n a los medios acu&#225;ticos salinos y la aridez en un linaje de escarabajos acu&#225;ticos que habita este tipo de ecosistemas. </ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>90</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8156</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>6977</IDPERSONA>
+    <SOLB_TITUPROYECTO>Bases ecol&#243;gicas para el establecimiento de reg&#237;menes de caudales ambientales en los r&#237;os de la cuenca del Segura.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>400</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Seattle</ESTA_CIUDAD>
+    <ESTA_CENTRO>School of Aquatic &#38; Fishery Sciences &#40;Univ. of Washington&#41;.</ESTA_CENTRO>
+    <IDPERSONA_1>2818</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2010/09/27 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>1200</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>El Dr. Julian Olden est&#225; realizando el mismo trabajo que nosotros: aplicaci&#243;n del m&#233;todo ELOHA &#40;Arthington et al., 2006&#41; para la clasificaci&#243;n fluvial y el c&#225;lculo de caudales ecol&#243;gicos.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>5400</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8156</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>6977</IDPERSONA>
+    <SOLB_TITUPROYECTO>Bases ecol&#243;gicas para el establecimiento de reg&#237;menes de caudales ambientales en los r&#237;os de la cuenca del Segura.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>011</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO>06</ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Santander</ESTA_CIUDAD>
+    <ESTA_CENTRO>Instituto de Hidr&#225;ulica Ambiental de la Univ. de Cantabria</ESTA_CENTRO>
+    <IDPERSONA_1>2818</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2011/09/26 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>90</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Determinar la relaci&#243;n entre la hidrolog&#237;a y la geomorfolog&#237;a en la Cuenca del Segura aplicando el &#34;River H&#225;bitat Survey&#34; con las modificaciones del proyecto MARCE &#40;dirigido por Jos&#233; Barqu&#237;n&#41;.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2100</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2190</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10440</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>82506</IDPERSONA>
+    <SOLB_TITUPROYECTO> S&#237;ntesis de nuevos sistemas azaac&#233;nicos autoensamblables y estudio de la relaci&#243;n de su estructura con el transporte de</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>002</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Lovaina</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidad Cat&#243;lica de Lovaina &#40;KU Leuven&#41;</ESTA_CENTRO>
+    <IDPERSONA_1>2836</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2019/07/12 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>230</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>El principal objetivo de esta estancia es el aprendizaje  y manejo de un equipo de Microscop&#237;a de Efecto T&#250;nel &#40;Scanning Tunneling Microscopy, STM&#41;. Adem&#225;s, un segundo objetivo consistir&#237;a en caracterizar una serie de sistemas azafenac&#233;nicos capaces de establecer interacciones por puente de hidr&#243;geno.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>230</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9752</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7798</IDPERSONA>
+    <SOLB_TITUPROYECTO>Epidemiolog&#237;a anal&#237;tica y molecular de la infecci&#243;n por Mycoplasma agalactiae en sementales ovinos.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Lyon</ESTA_CIUDAD>
+    <ESTA_CENTRO>Anses - Laboratoire de Lyon</ESTA_CENTRO>
+    <IDPERSONA_1>7373</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2016/09/29 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>235,53</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudio de la variabilidad gen&#243;mica de micoplasmas asociados a la agalaxia contagiosa y su relaci&#243;n con la din&#225;mica de la infecci&#243;n y la resistencia antibi&#243;tica.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>3091,12</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3326,65</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9752</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7798</IDPERSONA>
+    <SOLB_TITUPROYECTO>Epidemiolog&#237;a anal&#237;tica y molecular de la infecci&#243;n por Mycoplasma agalactiae en sementales ovinos.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>LYON</ESTA_CIUDAD>
+    <ESTA_CENTRO>ANSES-LABORATOIRE DE LYON</ESTA_CENTRO>
+    <IDPERSONA_1>7373</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2017/01/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>450</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Variabilidad gen&#233;tica de micoplasmas asociados a la agalaxia contagiosa y su relaci&#243;n con la din&#225;mica de la infecci&#243;n y la resistencia antibi&#243;tica.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>450</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9752</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>7798</IDPERSONA>
+    <SOLB_TITUPROYECTO>Epidemiolog&#237;a anal&#237;tica y molecular de la infecci&#243;n por Mycoplasma agalactiae en sementales ovinos.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Lyon</ESTA_CIUDAD>
+    <ESTA_CENTRO>Anses-Laboratoire de Lyon</ESTA_CENTRO>
+    <IDPERSONA_1>7373</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/01/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>458,66</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudio de la resistencia a tetraciclinas en Mycoplasma agalactiae.&#13;&#10;El objeto de esta estancia es estudiar los mecanismos moleculares y adaptativos de resistencia a las tetraciclinas en aislamientos de M. agalactiae. </ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4004,13</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4462,79</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9753</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7797</IDPERSONA>
+    <SOLB_TITUPROYECTO>Mecanismos gen&#233;ticos implicados en la resistencia antibi&#243;tica de cepas de Mycoplasma agalactiae de origen caprino</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Lyon</ESTA_CIUDAD>
+    <ESTA_CENTRO>Anses - Laboratoire de Lyon</ESTA_CENTRO>
+    <IDPERSONA_1>7373</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2016/09/29 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>235,53</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudio de la variabilidad gen&#243;mica de micoplasmas asociados a la agalaxia contagiosa y su relaci&#243;n con la din&#225;mica de la infecci&#243;n y la resistencia antibi&#243;tica.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>3091,12</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3326,65</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9155</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7494</IDPERSONA>
+    <SOLB_TITUPROYECTO>VALIDACI&#211;N DE OPCIONES DIAGN&#211;STICAS Y NUEVAS ESTRATEGIAS DE CONTROL DE LA AGALAXIA CONTAGIOSA  EN EL GANADO CAPRINO</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Sassari</ESTA_CIUDAD>
+    <ESTA_CENTRO>Istituto Zooprofilattico Sperimentale Della Sardegna</ESTA_CENTRO>
+    <IDPERSONA_1>7373</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2013/09/30 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>394,43</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Aprendizaje y realizaci&#243;n de t&#233;cnicas de caracterizaci&#243;n proteica y producci&#243;n de prote&#237;nas recombinantes de Mycoplasma mycoides subsp. capri, como etapa previa al posible desarrolo de una prueba serol&#243;gica diagn&#243;stica de agalaxia contagiosa.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2105,57</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2500</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9102</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7333</IDPERSONA>
+    <SOLB_TITUPROYECTO>Diferenciaci&#243;n de la calidad de la carne de cordero Segure&#241;o producido en r&#233;gimen semi-extensivo bajo IGP</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>800</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Sidney</ESTA_CIUDAD>
+    <ESTA_CENTRO>CSIRO</ESTA_CENTRO>
+    <IDPERSONA_1>738</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2013/07/15 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>1200</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Aprender el funcionamiento de la t&#233;cnica Cromatograf&#237;a de Gases - Olfactometr&#237;a &#40;GC-O&#41; de cara a estudiar y comprender de forma m&#225;s completa el aroma de la carne de cordero</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>1300</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2500</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9102</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7333</IDPERSONA>
+    <SOLB_TITUPROYECTO>Diferenciaci&#243;n de la calidad de la carne de cordero Segure&#241;o producido en r&#233;gimen semi-extensivo bajo IGP</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>011</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO>15</ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Pamplona</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidad de Navarra</ESTA_CENTRO>
+    <IDPERSONA_1>738</IDPERSONA_1>
+    <DURACION_PREVISTA>45</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2014/10/06 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>85</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>An&#225;lisis de productos derivados de la oxidaci&#243;n del colesterol &#40;COPs&#41; en carne cocinada de corderos alimentados con diferentes dietas</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>85</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9102</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>7333</IDPERSONA>
+    <SOLB_TITUPROYECTO>Diferenciaci&#243;n de la calidad de la carne de cordero Segure&#241;o producido en r&#233;gimen semi-extensivo bajo IGP</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Bolonia</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidad de Bolonia</ESTA_CENTRO>
+    <IDPERSONA_1>738</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2015/08/17 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>500</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Determinaci&#243;n del efecto de la suplementaci&#243;n diet&#233;tica con polifenoles del romero en la producci&#243;n de &#243;xidos del colesterol &#40;COPs&#41; en carne de cordero cocinada</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4700</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9523</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7768</IDPERSONA>
+    <SOLB_TITUPROYECTO>Los Marinos de la Monarqu&#237;a Espa&#241;ola: formaci&#243;n y consolidaci&#243;n de una &#233;lite  en un proceso de cambio social &#40;1717-1865&#41;</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Urbino</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universit&#224; degli studi di Urbino</ESTA_CENTRO>
+    <IDPERSONA_1>2968</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2015/03/03 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>253,83</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Por un lado la ampliaci&#243;n y profundizaci&#243;n de conocimientos relativos a historia de la familia, de g&#233;nero, grupos sociales y cambio social en la Europa Moderna y Contempor&#225;nea. Por otro adquirir habilidades investigadoras y familiarizarse con otros m&#233;todos de trabajo que son obligatorios para fomentar la innovaci&#243;n en la tesis</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4453,83</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9523</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7768</IDPERSONA>
+    <SOLB_TITUPROYECTO>Los Marinos de la Monarqu&#237;a Espa&#241;ola: formaci&#243;n y consolidaci&#243;n de una &#233;lite  en un proceso de cambio social &#40;1717-1865&#41;</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>006</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Cambridge</ESTA_CIUDAD>
+    <ESTA_CENTRO>University of Cambridge</ESTA_CENTRO>
+    <IDPERSONA_1>2968</IDPERSONA_1>
+    <DURACION_PREVISTA>81</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2016/10/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>360</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Bajo la direcci&#243;n de Sarah Pearsall en la Facultad de Historia de Cambridge. Tiene como objetivos profundizar en el conocimiento y en las habilidades investigadoras relacionadas con la historia de la familia, historia de g&#233;nero, historia atl&#225;ntica, cambio social y la perspectiva comparada.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2947,5</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3307,5</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9523</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>7768</IDPERSONA>
+    <SOLB_TITUPROYECTO>Los Marinos de la Monarqu&#237;a Espa&#241;ola: formaci&#243;n y consolidaci&#243;n de una &#233;lite  en un proceso de cambio social &#40;1717-1865&#41;</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>010</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Lisboa</ESTA_CIUDAD>
+    <ESTA_CENTRO>Instituto de Ci&#234;ncias Sociais - Universidade de Lisboa</ESTA_CENTRO>
+    <IDPERSONA_1>2968</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2017/06/05 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>254,71</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Por un lado, la ampliaci&#243;n y profundizaci&#243;n de conocimientos relativos a historia de la familia, de g&#233;nero, grupos sociales y cambio social en la Europa Moderna y Contempor&#225;nea. Por otro, adquirir habilidades investigadoras y familiarizarse con otros m&#233;todos de trabajo que son obligatorios para fomentar la innovaci&#243;n en la tesis</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>254,71</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9197</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7324</IDPERSONA>
+    <SOLB_TITUPROYECTO>Migraci&#243;n e identidad cultural mediterr&#225;nea en el Sureste de la Pen&#237;nsula Ib&#233;rica &#40;ss. XIV-XVI&#41;: tratamiento y an&#225;lisis</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>ROMA</ESTA_CIUDAD>
+    <ESTA_CENTRO>PONTIFICIA UNIVERSIT&#192; GREGORIANA</ESTA_CENTRO>
+    <IDPERSONA_1>3001</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2015/05/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>166,38</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Se pretende un aprendizaje de otras metodolog&#237;as ligadas a nuestro trabajo, esencialmente desde la perspectiva de la Paleograf&#237;a y Diplom&#225;tica, mediante la adquisici&#243;n de competencias que ayuden a mejorar la elaboraci&#243;n y el cierre de nuestro corpus documental, con visitas al Archivo Secreto Vaticano.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4100</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4266,38</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10314</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>55856</IDPERSONA>
+    <SOLB_TITUPROYECTO>La figura de Naus&#237;caa en la &#34;Odisea&#34; y su tradici&#243;n literaria</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Mil&#225;n </ESTA_CIUDAD>
+    <ESTA_CENTRO>Universit&#224; Cattolica del Sacro Cuore</ESTA_CENTRO>
+    <IDPERSONA_1>3002</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/09/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>442,92</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Durante la estancia se realizar&#225; la revisi&#243;n y an&#225;lisis del cap&#237;tulo primero de la Tesis Doctoral, &#191;Naus&#237;caa y el episodio de los Feacios en la Odisea de Homero&#191;, as&#237; como el cotejo bibliogr&#225;fico del mismo, bajo la orientaci&#243;n del Profesor Mario Cantilena. </ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4050,71</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4493,63</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10030</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>89968</IDPERSONA>
+    <SOLB_TITUPROYECTO>Identificaci&#243;n y validaci&#243;n de nuevos marcadores de pron&#243;stico y dianas terap&#233;uticas para la psoriasis.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>004</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Colonia</ESTA_CIUDAD>
+    <ESTA_CENTRO>Institute of Zoology - Developmental Biology, Biocenter </ESTA_CENTRO>
+    <IDPERSONA_1>3005</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2019/01/13 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>118,14</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>En un modelo de pez cebra que desarrolla psoriasis, se pretende estudiar como la inhibici&#243;n farmacol&#243;gica de Nampt/Parp afecta a la piel respecto a:&#13;&#10;&#13;&#10;- Agregaci&#243;n de queratinocitos, posterior proliferaci&#243;n y propiedades mesenquimales&#13;&#10;- Tipo de muerte celular&#13;&#10;- Reparaci&#243;n de heridas en inflamaci&#243;n aguda vs cr&#243;nica&#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>118,14</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10431</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>49673</IDPERSONA>
+    <SOLB_TITUPROYECTO>Estrategias para avanzar en el control de la Leishmaniosis: evaluaci&#243;n de un prototipo vacunal y estudio de la diversida</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>624</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Rehovot</ESTA_CIUDAD>
+    <ESTA_CENTRO>The Koret School of Veterinary Medicine</ESTA_CENTRO>
+    <IDPERSONA_1>7516</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2020/01/19 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>550</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudio coinfecciones Leishmania-otros par&#225;sitos:&#13;&#10;-An&#225;lisis de plasma &#40;para detectar anticuerpos mediante t&#233;cnicas serol&#243;gicas&#41; y ADN de sangre, bazo, ganglio y piel &#40;para detectar secuencias de nucle&#243;tidos espec&#237;ficas de pat&#243;genos mediante PCR&#41; de perros, gatos y carn&#237;voros silvestres.&#13;&#10;-Estudio epidemiol&#243;gico y redacci&#243;n de art&#237;culo cient&#237;fico.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>550</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10565</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>84656</IDPERSONA>
+    <SOLB_TITUPROYECTO>La difusi&#243;n espacial de las &#225;reas urbanizadas: el caso de la aglomeraci&#243;n urbana de Murcia</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>512</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>SANTIAGO DE CHILE</ESTA_CIUDAD>
+    <ESTA_CENTRO>PONTIFICIA UNIVERSIDAD CAT&#211;LICA DE CHILE</ESTA_CENTRO>
+    <IDPERSONA_1>5251</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2019/03/16 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>1200</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>El objetivo principal de la estancia de investigaci&#243;n para la que se solicita la ayuda recae tanto en mejorar mi formaci&#243;n c&#243;mo en adquirir y perfeccionar las diversas t&#233;cnicas y metodolog&#237;as que se aplicar&#225;n en la elaboraci&#243;n y correcto desarrollo del proyecto para el cual se concedi&#243; el contrato predoctoral</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>1200</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10212</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>83595</IDPERSONA>
+    <SOLB_TITUPROYECTO>Dise&#241;o y s&#237;ntesis de nuevos complejos de Ir&#40;III&#41; luminiscentes con propiedades antitumorales</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>038</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Viena</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidad de Viena &#40;Univesrit&#228;t wien&#41;.</ESTA_CENTRO>
+    <IDPERSONA_1>1008</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2019/07/30 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>600</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>The aim of this research stay is the synthesis and characterization of Pt&#40;IV&#41; derivatives carrying such alternative albumin-binding units. Subsequently the albumin binding kinetics in physiological conditions will be investigated. The results will be compared to the conventional maleimide conjugation approach to elucidate any advantages, differences and drawbacks.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>600</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9664</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>8259</IDPERSONA>
+    <SOLB_TITUPROYECTO>Teatro Abierto, paradigma del teatro argentino contempor&#225;neo.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>004</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Berl&#237;n</ESTA_CIUDAD>
+    <ESTA_CENTRO>Lateinamerika-Institut, Freie Universit&#228;t de Berl&#237;n</ESTA_CENTRO>
+    <IDPERSONA_1>1068</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2015/09/15 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>230,67</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Profundizar en conocimientos necesarios en la investigaci&#243;n hacia la Tesis Doctoral, pudiendo ahondar, gracias a esta estancia, en los di&#225;logos teatrales entre Europa y Argentina en relaci&#243;n a Teatro Abierto. Se acceder&#225; a material bibliogr&#225;fico imprescindible, as&#237; como se podr&#225;n realizar actividades de doctorado que enriquezcan la formaci&#243;n investigadora.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4430,67</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9664</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>8259</IDPERSONA>
+    <SOLB_TITUPROYECTO>Teatro Abierto, paradigma del teatro argentino contempor&#225;neo.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>400</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Nueva York</ESTA_CIUDAD>
+    <ESTA_CENTRO>City University of New York y Martin E. Segal Theatre Center</ESTA_CENTRO>
+    <IDPERSONA_1>1068</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2017/03/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>842</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Mejorar mi formaci&#243;n en uno de los centros de investigaci&#243;n teatral m&#225;s notorios internacionalmente, trabajando all&#237; con la Dra. Jean Graham-Jones, una de las principales investigadoras de teatro argentino del siglo XX. Se acceder&#225; a material bibliogr&#225;fico imprescindible y se realizar&#225;n actividades y encuentros para enriquecer la formaci&#243;n investigadora.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>3511,6</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4353,6</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9664</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>8259</IDPERSONA>
+    <SOLB_TITUPROYECTO>Teatro Abierto, paradigma del teatro argentino contempor&#225;neo.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>528</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>BUENOS AIRES</ESTA_CIUDAD>
+    <ESTA_CENTRO>Instituto de Literatura Hispanoamericana de la UBA</ESTA_CENTRO>
+    <IDPERSONA_1>1068</IDPERSONA_1>
+    <DURACION_PREVISTA>1</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/02/05 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>1183,81</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>OBSERVACIONES: Total 39 d&#237;as &#40;5/02-15/03&#41;. El objetivo de esta estancia es finalizar el proyecto de Tesis Doctoral sobre Teatro Abierto, gracias a la consulta de archivos y materiales in&#233;ditos, de bibliograf&#237;a espec&#237;fica hallable en la UBA y a la realizaci&#243;n de entrevistas con participantes del evento, culminando as&#237; nuestra investigaci&#243;n.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>1183,81</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9833</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7921</IDPERSONA>
+    <SOLB_TITUPROYECTO>LOS POEMAS EN PROSA DE JOS&#201; ANTONIO RAMOS SUCRE: CREACIONES INTEMPORALES</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Par&#237;s</ESTA_CIUDAD>
+    <ESTA_CENTRO>SAL &#40;CRIMIC&#41; Paris Sorbonne</ESTA_CENTRO>
+    <IDPERSONA_1>1068</IDPERSONA_1>
+    <DURACION_PREVISTA>2</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2017/06/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>28358</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Profundizar en la poes&#237;a hispanoamericana comparada y, especialmente, en la de Ramos Sucre mediante los vol&#250;menes de la Biblioth&#232;que nationale de France, la Marcel Bataillon y la Sorbonne, y participar en los eventos acad&#233;micos del S&#233;minaire Am&#233;rique Latine en el Centre de Recherches Interdisciplinaires sur les Mondes Ib&#233;riques Contemporains.&#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2383,28</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>30741,28</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9833</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>7921</IDPERSONA>
+    <SOLB_TITUPROYECTO>LOS POEMAS EN PROSA DE JOS&#201; ANTONIO RAMOS SUCRE: CREACIONES INTEMPORALES</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Venecia</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universit&#224; Ca Foscari</ESTA_CENTRO>
+    <IDPERSONA_1>1068</IDPERSONA_1>
+    <DURACION_PREVISTA>2</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/06/30 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>189,2</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Durante esta estancia se pule la redacci&#243;n de la tesis doctoral sobre la poes&#237;a de Jos&#233; Antonio Ramos Sucre en relaci&#243;n con Homero, Dante, Shakespeare, Cervantes y Goethe, y se profundiza como en el conocimiento de la literatura hispanoamericana gracias a las actividades de la Catedra de Letterature Ispanoamericane.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>2726,08</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2915,28</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9811</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>49116</IDPERSONA>
+    <SOLB_TITUPROYECTO>An&#225;lisis de la relaci&#243;n entre los valores toxicol&#243;gicos de sangre, plasma y tejido &#243;seo</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>004</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>BONN</ESTA_CIUDAD>
+    <ESTA_CENTRO>INSTITUTO DE MEDICINA LEGAL, UNIVERSIDAD DE BONN</ESTA_CENTRO>
+    <IDPERSONA_1>1083</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2016/07/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>257</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Objetivo: el conocimiento de nuevas t&#233;cnicas y el perfeccionamiento de otras, en el trabajo de laboratorio de medicina legal y forense.&#13;&#10;La doctoranda se adentrar&#225; en el trabajo del Instituto, realizando an&#225;lisis toxicol&#243;gicos en distintas matrices procedentes de cad&#225;veres. Tambi&#233;n realizar&#225; estudios bioqu&#237;micos complementarios de aplicaci&#243;n al diagn&#243;stico postmortem. </ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>3085,75</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3342,75</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9970</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7616</IDPERSONA>
+    <SOLB_TITUPROYECTO>AVANCES EN EL ESTUDIO DE CRP, ADIPONECTINA Y MIELOPEROXIDASA EN LA OBESIDAD CANINA</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Padua</ESTA_CIUDAD>
+    <ESTA_CENTRO>CLINICA E LABORATORIO VETERINARIO PRIVATO SAN MARCO SRL UNIP</ESTA_CENTRO>
+    <IDPERSONA_1>3224</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/06/10 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>200</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudiar los cambios bioqu&#237;micos y enfermedades secundarias en perros que sufren s&#237;ndrome metab&#243;lico. Para ello se seleccionar&#225;n pacientes que acudan al hospital San Marco &#40;Padua&#41; con s&#237;ndrome metab&#243;lico. Se evaluar&#225; su perfil bioqu&#237;mico y las enfermedades concurrentes que puedan tener en el momento de la presentaci&#243;n o en el futuro.&#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4120</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4320</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10146</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>23740</IDPERSONA>
+    <SOLB_TITUPROYECTO>Producir, consumir, comerciar: din&#225;micas econ&#243;micas e interacci&#243;n social en la Primera Edad del Hierro en el SE Ib&#233;rico.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Burdeos</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universit&#233; Bordeaux Montaigne</ESTA_CENTRO>
+    <IDPERSONA_1>3237</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/09/14 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>395</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Se persigue cumplir los objetivos V, VI, VII y VIII de mi proyecto doctoral, centrados en el estudio de los hornos alfareros ind&#237;genas del Sureste peninsular a nivel tecnol&#243;gico y tipol&#243;gico, y el aprendizaje de t&#233;cnicas anal&#237;ticas arqueom&#233;tricas dentro de un laboratorio especializado en este tipo de estructuras productivas.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4055,5</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4450,5</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10146</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>23740</IDPERSONA>
+    <SOLB_TITUPROYECTO>Producir, consumir, comerciar: din&#225;micas econ&#243;micas e interacci&#243;n social en la Primera Edad del Hierro en el SE Ib&#233;rico.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>006</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Sheffield</ESTA_CIUDAD>
+    <ESTA_CENTRO>Department of Archaeology, University of Sheffield.</ESTA_CENTRO>
+    <IDPERSONA_1>3237</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2019/09/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>433,84</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Se persigue cumplir los objetivos III, IV y VIII de mi proyecto doctoral a partir de mi formaci&#243;n en un laboratorio destacado a nivel internacional en la realizaci&#243;n e interpretaci&#243;n de an&#225;lisis petrogr&#225;ficos y l&#225;mina delgada, complementos fundamentales para la arqueometr&#237;a de materiales cer&#225;micos que se aborda en mi tesis.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>433,84</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10146</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>23740</IDPERSONA>
+    <SOLB_TITUPROYECTO>Producir, consumir, comerciar: din&#225;micas econ&#243;micas e interacci&#243;n social en la Primera Edad del Hierro en el SE Ib&#233;rico.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>009</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Atenas</ESTA_CIUDAD>
+    <ESTA_CENTRO>National Centre for Scientific Research Demokritos</ESTA_CENTRO>
+    <IDPERSONA_1>3237</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2020/04/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>463,35</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Formaci&#243;n en t&#233;cnicas de caracterizaci&#243;n fisicoqu&#237;mica y mec&#225;nica de materiales cer&#225;micos y material de estructuras alfareras que puedan ser aplicados a los contextos trabajados en mi tesis doctoral sobre el Bronce Final - Hierro Antiguo del Sureste ib&#233;rico.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>463,35</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10160</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>23162</IDPERSONA>
+    <SOLB_TITUPROYECTO>ACTIVIDAD F&#205;SICA, DEPORTE Y SALUD</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>055</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Kaunas</ESTA_CIUDAD>
+    <ESTA_CENTRO>Lithuania Sport University</ESTA_CENTRO>
+    <IDPERSONA_1>3325</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2019/09/15 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>600</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>La estancia tiene como objeto avanzar en la l&#237;nea tem&#225;tica de la tesis doctoral sobre motivaci&#243;n, compromiso y satisfacci&#243;n del voluntariado deportivo, profundizando la aplicaci&#243;n del estudio a &#225;mbito europeo y crear nuevas sinergias de colaboraci&#243;n con un grupo especialista en gesti&#243;n deportiva como el de la universidad receptora.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>600</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>B</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9155</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7494</IDPERSONA>
+    <SOLB_TITUPROYECTO>VALIDACI&#211;N DE OPCIONES DIAGN&#211;STICAS Y NUEVAS ESTRATEGIAS DE CONTROL DE LA AGALAXIA CONTAGIOSA  EN EL GANADO CAPRINO</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Sassari</ESTA_CIUDAD>
+    <ESTA_CENTRO>Istituto Zooprofilattico Sperimentale della Sardegna</ESTA_CENTRO>
+    <IDPERSONA_1>1279</IDPERSONA_1>
+    <DURACION_PREVISTA>83</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2014/01/07 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>448,03</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Uso de las t&#233;cnicas aprendidas en la estancia anterior para la producci&#243;n de prote&#237;nas antig&#233;nicas recombinantes de Mycoplasmas mycoides subsp. capri, de cara al desarrollo de un test diagn&#243;stico serol&#243;gico.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4150</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4598,03</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8599</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>3</ESTA_NUMERO>
+    <IDPERSONA>6460</IDPERSONA>
+    <SOLB_TITUPROYECTO>VALIDACI&#211;N DE OPCIONES DIAGN&#211;STICAS Y NUEVAS ESTRATEGIAS DE CONTROL DE LA AGALAXIA CONTAGIOSA  EN EL GANADO CAPRINO</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Toulouse</ESTA_CIUDAD>
+    <ESTA_CENTRO>Ecole Nationale V&#233;t&#233;rinaire de Toulouse</ESTA_CENTRO>
+    <IDPERSONA_1>1279</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2014/01/07 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>329,84</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Mycoplasma agalactiae es el principal agente etiol&#243;gico de la agalaxia contagiosa caprina, enfermedad con grandes repercusiones socioecon&#243;micas en este sector. Se pretende continuar con el tipaje molecular de diferentes cepas aisladas en la Regi&#243;n de Murcia con el objetivo de tener un estudio evolutivo robusto de las cepas circulantes. </ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4529,84</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8165</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7036</IDPERSONA>
+    <SOLB_TITUPROYECTO>La influencia de la dimensi&#243;n socio-cognitiva de la escritura en la evoluci&#243;n de las metas de aprendizaje del ingl&#233;s</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>003</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Amsterdam</ESTA_CIUDAD>
+    <ESTA_CENTRO>University of Amsterdam.Center for Language &#38; Communication</ESTA_CENTRO>
+    <IDPERSONA_1>1280</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2010/09/20 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>350</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Formaci&#243;n te&#243;rica y metodologica en el analisis de datos de procesos de produccion escrita. Asesoramiento en el analisis de los datos ya recogidos por parte de expertos en el area del proyecto de investigacion. Ambas tareas son fundamentales para el desarrollo de la investigacion planteada.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4550</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8943</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7455</IDPERSONA>
+    <SOLB_TITUPROYECTO>S&#237;ntesis y secreci&#243;n de amino&#225;cido oxidasas en Marinomonas mediterranea.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Banyuls Sur Mer</ESTA_CIUDAD>
+    <ESTA_CENTRO>Observatoire Oc&#233;anologique de Banyuls-sur-mer</ESTA_CENTRO>
+    <IDPERSONA_1>3479</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2014/01/14 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>111,7</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>El principal objetivo es comprobar si los microorganismos Nisaea denitrificans y Thalasaobaculum salexigens aislados en este laboratorio poseen alguna actividad L-amino&#225;cido oxidasa. Adem&#225;s se har&#225;n experimentos para estudiar la distribuci&#243;n ecol&#243;gica de los microorganismos que contienen hom&#243;logos a LodA/GoxA. La estancia sentar&#225; las bases de posibles nuevas colaboraciones.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4311,7</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10507</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>56822</IDPERSONA>
+    <SOLB_TITUPROYECTO>DESARROLLO Y EVOLUCI&#211;N DEL ESPA&#209;OL DE LAS NUEVAS TECNOLOG&#205;AS: E-LEARNING  O UN NUEVO ESTADIO METODOL&#211;GICO EN LA ENSE&#209;ANZ</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>400</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Fairfax</ESTA_CIUDAD>
+    <ESTA_CENTRO>George Mason University</ESTA_CENTRO>
+    <IDPERSONA_1>8050</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2019/09/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>1008</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>El objetivo es investigar conjuntamente con la Dra. Esperanza Rom&#225;n-Mendoza, especialista de reconocido prestigio en las humanidades digitales. Adem&#225;s, me permitir&#225; acceder a los fondos bibliogr&#225;ficos de la George Mason University, observar los cursos online ofrecidos en dicha universidad y los m&#233;todos de ense&#241;anza e investigaci&#243;n utilizados en Estados Unidos.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>0</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>1008</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>S</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9999</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>47874</IDPERSONA>
+    <SOLB_TITUPROYECTO>Conectividad de h&#225;bitats en depredadores apicales en &#193;reas Marinas Mediterr&#225;neas</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Trapani</ESTA_CIUDAD>
+    <ESTA_CENTRO>IAMC &#40;Institute for Coastal Marine Environment&#41;</ESTA_CENTRO>
+    <IDPERSONA_1>1416</IDPERSONA_1>
+    <DURACION_PREVISTA>3</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/09/22 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>434,03</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Analizar 8 meses de datos obtenidos con telemetr&#237;a ac&#250;stica para una especie de mero salvaje &#40;Epinephelus marginatus&#41;. El objetivo &#250;ltimo ser&#237;a estudiar el efecto que cambios ambientales o de gesti&#243;n de una reserva marina protegida podr&#237;an tener sobre el comportamiento &#40;movilidad y actividad&#41; de esta emblem&#225;tica y vulnerable especie.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4051,6</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4485,63</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>10010</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>83896</IDPERSONA>
+    <SOLB_TITUPROYECTO>S&#237;ntesis y encapsulaci&#243;n de compuestos bioactivos hidrof&#243;bicos. Evaluaci&#243;n in vivo sobre Caenorhabditis elegans.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Tur&#237;n</ESTA_CIUDAD>
+    <ESTA_CENTRO>Universidad de Tur&#237;n</ESTA_CENTRO>
+    <IDPERSONA_1>3670</IDPERSONA_1>
+    <DURACION_PREVISTA>1</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2018/06/28 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>400</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Los objetivos son: i&#41; aprender a sintetizar el pol&#237;mero de gran aplicabilidad conocido como cyclodextrin-nanosponge y ii&#41; estudiar la posible formulaci&#243;n de complejos con &#233;l y la obtenci&#243;n de una constante de encapsulaci&#243;n analito/nanoesponja. &#201;sto, est&#225; directamente relacionado con los objetivos de mi tesis doctoral.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>1445</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>1845</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9332</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7458</IDPERSONA>
+    <SOLB_TITUPROYECTO>El impacto de la globalizaci&#243;n econ&#243;mica y del fen&#243;meno de la descentralizaci&#243;n productiva en Derecho Seguridad Social</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>005</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>BOLONIA</ESTA_CIUDAD>
+    <ESTA_CENTRO>ALMA MATER STUDIORUM - UNIVERSITA</ESTA_CENTRO>
+    <IDPERSONA_1>1678</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2016/03/21 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>439</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudio comparado de las excepciones al aumento de la edad de jubilaci&#243;n en la legislaci&#243;n italiana para colectivos de trabadores singulares&#40;trabajos penosos, fuerzas de seguridad, exposici&#243;n al amianto, etc&#41;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>3040,28</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3479,28</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9121</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7486</IDPERSONA>
+    <SOLB_TITUPROYECTO>Estudio de la interacci&#243;n de gametos con especial referencia a la OVGP-1 &#40;oviductina&#41;.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>030</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Estocolmo</ESTA_CIUDAD>
+    <ESTA_CENTRO>Karolinska Institutet</ESTA_CENTRO>
+    <IDPERSONA_1>4016</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2013/09/12 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>600</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Expresi&#243;n y purificaci&#243;n de la prote&#237;na OVGP1 recombinante nativa de cerda y coneja, as&#237; como de dos prote&#237;nas truncadas de cerda. El objetivo de la purificaci&#243;n es la realizaci&#243;n de estudios bioqu&#237;micos y funcionales de las mismas.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>1900</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>2500</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9121</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>2</ESTA_NUMERO>
+    <IDPERSONA>7486</IDPERSONA>
+    <SOLB_TITUPROYECTO>Estudio de la interacci&#243;n de gametos con especial referencia a la OVGP-1 &#40;oviductina&#41;.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>030</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Estocolmo</ESTA_CIUDAD>
+    <ESTA_CENTRO>Karolinska Institutet</ESTA_CENTRO>
+    <IDPERSONA_1>4016</IDPERSONA_1>
+    <DURACION_PREVISTA>74</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2014/01/14 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>212,98</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Completar la purificaci&#243;n de las prote&#237;nas recombinantes oviductales OVGP1 de cerda y coneja, as&#237; como de la prote&#237;na truncada OVGP1 D de cerda. Realizaremos estudios biol&#243;gicos con las prote&#237;nas puras para determinar la funci&#243;n biol&#243;gica de cada una de las regiones descritas en ellas.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>3700</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>3912,98</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8909</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>6969</IDPERSONA>
+    <SOLB_TITUPROYECTO>Papel de la oviductina &#40;OVGP1&#41; en la eficiencia de la fecundaci&#243;n in vitro porcina y bovina.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>001</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Tours</ESTA_CIUDAD>
+    <ESTA_CENTRO>INRA</ESTA_CENTRO>
+    <IDPERSONA_1>4016</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2012/09/01 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>470</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Estudio del efecto de prote&#237;nas oviductales en la fecundaci&#243;n in vitro en la especie porcina y equina.&#13;&#10;</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>530</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>1000</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>9117</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>7451</IDPERSONA>
+    <SOLB_TITUPROYECTO>Geometr&#237;a Lorentziana y m&#233;tricas de Finsler</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>004</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Magdeburg</ESTA_CIUDAD>
+    <ESTA_CENTRO>Institut fur Algebra und Geometrie</ESTA_CENTRO>
+    <IDPERSONA_1>6213</IDPERSONA_1>
+    <DURACION_PREVISTA>84</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2015/01/14 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>274,51</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Investigar la p-diferencia de cuerpos convexos, uno de los temas claves de la tesis. La profesora Eugenia Saor&#237;n, supervisora de la estancia, es una de las principales expertas mundiales en este tema.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>4200</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>4474,51</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>C</ESTA_ESTADO>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ESTA_SOLB_NUMERO>8392</ESTA_SOLB_NUMERO>
+    <ESTA_NUMERO>1</ESTA_NUMERO>
+    <IDPERSONA>6982</IDPERSONA>
+    <SOLB_TITUPROYECTO>Cronobiolog&#237;a de la Esquizofrenia. Papel de la Luminoterapia.</SOLB_TITUPROYECTO>
+    <ESTA_PAIS_CODIGO>011</ESTA_PAIS_CODIGO>
+    <ESTA_COM_CODIGO></ESTA_COM_CODIGO>
+    <ESTA_CIUDAD>Barcelona</ESTA_CIUDAD>
+    <ESTA_CENTRO>Clinica del Sue&#241;o Estivill</ESTA_CENTRO>
+    <IDPERSONA_1>145448</IDPERSONA_1>
+    <DURACION_PREVISTA>21</DURACION_PREVISTA>
+    <ESTA_FECHAIDAPREVIS>2010/04/26 00:00:00</ESTA_FECHAIDAPREVIS>
+    <ESTA_PRESUPVIAJE>0</ESTA_PRESUPVIAJE>
+    <ESTA_OBJETO_ESTANCIA>Aprendizaje de las t&#233;cnicas de polisomnograf&#237;a para analizar la eficiencia y calidad del sue&#241;o.</ESTA_OBJETO_ESTANCIA>
+    <ESTA_CONCEDIDOESTANCIA>525</ESTA_CONCEDIDOESTANCIA>
+    <ESTA_TOTCONCEDIDO>525</ESTA_TOTCONCEDIDO>
+    <ESTA_ESTADO>B</ESTA_ESTADO>
+  </DATA_RECORD>
+</main>

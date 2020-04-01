@@ -11,11 +11,10 @@ import org.springframework.kafka.core.KafkaTemplate;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.project.Project;
 
 /**
- * Implementacion de {@link ItemWriter} para la clase {@link Project}.
- * Crea una entrada de log con cada uno de los objetos recibidos.
+ * Implementation of {@link ItemWriter} for {@link InputData<DataSetData>}.
+ * Send data to Kafka topic.
  */
 public class DataItemWriter implements ItemWriter<InputData<DataSetData>> {
     
@@ -36,6 +35,10 @@ public class DataItemWriter implements ItemWriter<InputData<DataSetData>> {
     @Value("${app.kafka.input-topic-name}")
     private String topicName;
 
+    
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public void write(List<? extends InputData<DataSetData>> datas) throws Exception {
 	    logger.info("Project writer called");
