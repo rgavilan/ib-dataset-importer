@@ -34,7 +34,7 @@ public class CvnReader implements ItemReader<Cvn> {
      * @return the Cvn
      */
     @Override
-    public Cvn read()  {       
+    public Cvn read()  {
         if(cvnChangesIsNotInitialized()) {
             fetchCvnChanges();
         }

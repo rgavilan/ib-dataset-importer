@@ -13,7 +13,7 @@ app:
   data:
     path:    
   services:
-    cvn-service: ${http://curriculumpruebas.um.es/curriculum/rest/v1/auth}    
+    cvn-service: http://curriculumpruebas.um.es/curriculum/rest/v1/auth  
 
 # Spring configuration
 spring:

@@ -22,11 +22,11 @@ import org.springframework.core.io.Resource;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.importer.dataset.processor.DataItemProcessor;
-import es.um.asio.importer.dataset.writer.DataItemWriter;
 import es.um.asio.importer.marshaller.DataConverter;
 import es.um.asio.importer.marshaller.DataSetFieldSetMapper;
 import es.um.asio.importer.marshaller.DataSetMarshaller;
+import es.um.asio.importer.processor.DataItemProcessor;
+import es.um.asio.importer.writer.DataItemWriter;
 
 /**
  * Base class to generate a {@link Flow} that converts and send XML to Kafka topic
