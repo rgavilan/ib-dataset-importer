@@ -18,5 +18,5 @@ public class CvnChanges{
     /**
      * The cvns identifiers that have changed.
      */
-    private long[] ids;
+    private Long[] ids;
 }

@@ -22,8 +22,8 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 import java.util.Calendar;
 
 import es.um.asio.domain.cvn.Cvn;
-import es.um.asio.domain.cvn.CvnChanges;
 import es.um.asio.importer.cnv.config.CvnConfiguration;
+import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.service.impl.CvnServiceImpl;
 
 

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import es.um.asio.domain.cvn.Cvn;
-import es.um.asio.domain.cvn.CvnChanges;
+import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.service.CvnService;
 
 /**
