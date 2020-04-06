@@ -4,6 +4,7 @@ package es.um.asio.importer.cnv.service.impl;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -26,9 +27,13 @@ public class CvnServiceImpl implements CvnService {
     @Autowired
     private RestTemplate restTemplate;
     
+    @Value("${app.services.cvn-service}")
+    private String baseUrl;
+    
     public CvnServiceImpl() {}
-    public CvnServiceImpl(RestTemplate restTemplate) {
+    public CvnServiceImpl(RestTemplate restTemplate, String baseUrl) {
         this.restTemplate = restTemplate;
+        this.baseUrl = baseUrl;
     }
   
     /**
@@ -36,7 +41,7 @@ public class CvnServiceImpl implements CvnService {
      */
     @Override
     public CvnChanges findAllChangesByDate(Date from) {      
-        String uri = "http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes";
+        String uri = baseUrl + "/changes";
         if(from != null) {
             String dateFormatted = new SimpleDateFormat("yyyy-MM-dd").format(from);
             uri = uri + "?date=" + dateFormatted;
@@ -50,7 +55,7 @@ public class CvnServiceImpl implements CvnService {
      */
     @Override
     public Cvn findById(Long id) {
-        String uri = "http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=" + id.toString();
+        String uri = baseUrl + "/cvn?id=" + id.toString();
         HttpEntity<Cvn> entity = new HttpEntity<>(getHeaders());        
         return restTemplate.exchange(uri, HttpMethod.GET, entity, Cvn.class).getBody();
     }

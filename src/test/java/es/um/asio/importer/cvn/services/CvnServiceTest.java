@@ -1,5 +1,6 @@
 package es.um.asio.importer.cvn.services;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,11 +32,21 @@ import es.um.asio.importer.cnv.service.impl.CvnServiceImpl;
 public class CvnServiceTest {        
  
     @Autowired
-    public RestTemplate restTemplate;
+    public RestTemplate restTemplate;   
+  
+    private CvnServiceImpl cvnService;
+    private MockRestServiceServer mockServer;
+    
+    @Before
+    public void setUp() {
+        cvnService = new CvnServiceImpl(restTemplate, "http://curriculumpruebas.um.es/curriculum/rest/v1/auth");
+        mockServer = MockRestServiceServer.createServer(restTemplate);
+    }
+    
+
     
     @Test
     public void whenfindAllChangesByDateIsCalled_thenReturnsCvnChanges() {
-        var mockServer = MockRestServiceServer.createServer(restTemplate);        
         mockServer.expect(ExpectedCount.once(),
                 requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes?date=2020-03-25"))
                 .andExpect(method(HttpMethod.GET))
@@ -43,7 +54,6 @@ public class CvnServiceTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(givenAJsonWithListOfIds()));              
         
-        CvnServiceImpl cvnService = new CvnServiceImpl(restTemplate); 
         CvnChanges cvnChanges = cvnService.findAllChangesByDate(new Calendar.Builder().setDate(2020, 03 -1 , 25).build().getTime());
         
         mockServer.verify();
@@ -53,7 +63,6 @@ public class CvnServiceTest {
     
     @Test
     public void whenfindAllChangesByDateWithNullDateIsCalled_thenReturnsCvnChanges() {
-        var mockServer = MockRestServiceServer.createServer(restTemplate);        
         mockServer.expect(ExpectedCount.once(),
                 requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes"))
                 .andExpect(method(HttpMethod.GET))
@@ -61,7 +70,6 @@ public class CvnServiceTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .body(givenAJsonWithListOfIds()));              
         
-        CvnServiceImpl cvnService = new CvnServiceImpl(restTemplate); 
         CvnChanges cvnChanges = cvnService.findAllChangesByDate(null);
         
         mockServer.verify();
@@ -70,17 +78,13 @@ public class CvnServiceTest {
     }
     
     @Test
-    public void whenFindByIdIsCalled_thenReturnsCvn() {
-        RestTemplate restTemplate = new RestTemplate(); 
-        var mockServer = MockRestServiceServer.createServer(restTemplate);        
+    public void whenFindByIdIsCalled_thenReturnsCvn() {    
         mockServer.expect(ExpectedCount.once(),
                 requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
                 .andExpect(method(HttpMethod.GET))
                 .andRespond(withStatus(HttpStatus.OK)
                 .contentType(MediaType.APPLICATION_XML)
-                .body(givenACvnXmlWithOneCvnItemBean()));              
-        
-        CvnServiceImpl cvnService = new CvnServiceImpl(restTemplate);
+                .body(givenACvnXmlWithOneCvnItemBean())); 
         
         Cvn cvn = cvnService.findById(1L);
         
