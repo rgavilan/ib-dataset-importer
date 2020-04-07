@@ -11,8 +11,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.model.CvnChanges;
+import es.um.asio.importer.cnv.model.beans.CvnRootBean;
 import es.um.asio.importer.cnv.reader.CvnReader;
 import es.um.asio.importer.cnv.service.CvnService;
 

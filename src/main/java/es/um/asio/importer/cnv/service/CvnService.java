@@ -1,8 +1,8 @@
 package es.um.asio.importer.cnv.service;
 
 import java.util.Date;
-import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.model.CvnChanges;
+import es.um.asio.importer.cnv.model.beans.CvnRootBean;
 
 /**
  * The Interface CvnService.

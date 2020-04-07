@@ -11,8 +11,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.model.CvnChanges;
+import es.um.asio.importer.cnv.model.beans.CvnRootBean;
 import es.um.asio.importer.cnv.service.CvnService;
 
 /**

@@ -6,8 +6,8 @@ import java.util.Queue;
 
 import org.springframework.batch.item.ItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
-import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.model.CvnChanges;
+import es.um.asio.importer.cnv.model.beans.CvnRootBean;
 import es.um.asio.importer.cnv.service.CvnService;
 
 /**

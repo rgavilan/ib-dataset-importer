@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.cvn.CvnRootBean;
+import es.um.asio.importer.cnv.model.beans.CvnRootBean;
 import es.um.asio.importer.cnv.reader.CvnReader;
 import es.um.asio.importer.processor.DataItemProcessor;
 import es.um.asio.importer.writer.DataItemWriter;
