@@ -6,14 +6,14 @@ import java.util.Queue;
 
 import org.springframework.batch.item.ItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
-import es.um.asio.domain.cvn.Cvn;
+import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.service.CvnService;
 
 /**
- *  Gets the {@link ItemReader} implementation that retrieves the CVN-XML files and transform to {@link Cvn}
+ *  Gets the {@link ItemReader} implementation that retrieves the CVN-XML files and transform to {@link CvnRootBean}
  */
-public class CvnReader implements ItemReader<Cvn> {
+public class CvnReader implements ItemReader<CvnRootBean> {
     
     private Queue<Long> cvnsIdsChanges;
    
@@ -34,7 +34,7 @@ public class CvnReader implements ItemReader<Cvn> {
      * @return the Cvn
      */
     @Override
-    public Cvn read()  {
+    public CvnRootBean read()  {
         if(cvnChangesIsNotInitialized()) {
             fetchCvnChanges();
         }
@@ -67,8 +67,8 @@ public class CvnReader implements ItemReader<Cvn> {
      *
      * @return the cvn
      */
-    private Cvn findNextCvn() {
-        Cvn cvn = null;
+    private CvnRootBean findNextCvn() {
+        CvnRootBean cvn = null;
         Long cvnId = cvnsIdsChanges.poll();
         if(cvnId != null) {
             cvn = cvnService.findById(cvnId);

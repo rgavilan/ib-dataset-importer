@@ -13,8 +13,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.cvn.Cvn;
+import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.reader.CvnReader;
 import es.um.asio.importer.processor.DataItemProcessor;
 import es.um.asio.importer.writer.DataItemWriter;
@@ -47,7 +48,7 @@ public class ImportCvnJobConfiguration {
      * @return the processor
      */
     @Bean
-    protected ItemReader<Cvn> getReader() {
+    protected ItemReader<CvnRootBean> getReader() {
         return new CvnReader();
     }    
     
@@ -59,8 +60,8 @@ public class ImportCvnJobConfiguration {
      */
     @SuppressWarnings("unchecked")
     @Bean
-    protected ItemProcessor<Cvn, InputData<Cvn>> getProcessor() {
-       return (ItemProcessor<Cvn, InputData<Cvn>>) new DataItemWriter();
+    protected ItemProcessor<CvnRootBean, InputData<DataSetData>> getProcessor() {
+       return (ItemProcessor<CvnRootBean, InputData<DataSetData>>) new DataItemWriter();
     }    
    
   
@@ -71,8 +72,8 @@ public class ImportCvnJobConfiguration {
       */
      @SuppressWarnings("unchecked")
      @Bean
-     protected ItemWriter<InputData<Cvn>> getWriter() {
-         return (ItemWriter<InputData<Cvn>>) new DataItemProcessor();
+     protected ItemWriter<InputData<DataSetData>> getWriter() {
+         return (ItemWriter<InputData<DataSetData>>) new DataItemProcessor();
      }
   
      
@@ -87,8 +88,8 @@ public class ImportCvnJobConfiguration {
       */
      @Bean
      @Qualifier("CvnStep")
-     public Step cvnStep(final StepBuilderFactory stepBuilderFactory, final ItemReader<Cvn> reader) {       
-         return stepBuilderFactory.get("cvnStep").<Cvn, InputData<Cvn>> chunk(10)
+     public Step cvnStep(final StepBuilderFactory stepBuilderFactory, final ItemReader<CvnRootBean> reader) {       
+         return stepBuilderFactory.get("cvnStep").<CvnRootBean, InputData<DataSetData>> chunk(10)
                  .reader(reader)
                  .processor(getProcessor())
                  .writer(getWriter())

@@ -11,7 +11,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import es.um.asio.domain.cvn.Cvn;
+import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.service.CvnService;
 
@@ -54,10 +54,10 @@ public class CvnServiceImpl implements CvnService {
      * {@inheritDoc}
      */
     @Override
-    public Cvn findById(Long id) {
+    public CvnRootBean findById(Long id) {
         String uri = baseUrl + "/cvn?id=" + id.toString();
-        HttpEntity<Cvn> entity = new HttpEntity<>(getHeaders());        
-        return restTemplate.exchange(uri, HttpMethod.GET, entity, Cvn.class).getBody();
+        HttpEntity<CvnRootBean> entity = new HttpEntity<>(getHeaders());        
+        return restTemplate.exchange(uri, HttpMethod.GET, entity, CvnRootBean.class).getBody();
     }
     
     /**

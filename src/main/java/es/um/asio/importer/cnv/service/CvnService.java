@@ -1,7 +1,7 @@
 package es.um.asio.importer.cnv.service;
 
 import java.util.Date;
-import es.um.asio.domain.cvn.Cvn;
+import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.model.CvnChanges;
 
 /**
@@ -24,5 +24,5 @@ public interface CvnService {
      * @param id the id
      * @return the cvn
      */
-    Cvn findById(Long id);
+    CvnRootBean findById(Long id);
 }

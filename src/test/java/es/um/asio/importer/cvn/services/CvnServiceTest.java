@@ -22,7 +22,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 import java.util.Calendar;
 
-import es.um.asio.domain.cvn.Cvn;
+import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.config.CvnConfiguration;
 import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.service.impl.CvnServiceImpl;
@@ -75,14 +75,14 @@ public class CvnServiceTest {
     }
     
     @Test
-    public void whenFindByIdIsCalled_thenReturnsCvn() {    
+    public void whenFindByIdIsCalled_thenReturnsCvn() {          
         mockServer.expect(ExpectedCount.once(),
                 requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
                 .andExpect(method(HttpMethod.GET))
                 .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
                 .andRespond(withSuccess(givenACvnXmlWithOneCvnItemBean(),MediaType.APPLICATION_XML));  
         
-        Cvn cvn = cvnService.findById(1L);
+        CvnRootBean cvn = cvnService.findById(1L);
         
         mockServer.verify();        
         assertNotNull(cvn);
@@ -92,7 +92,7 @@ public class CvnServiceTest {
     
     private String givenACvnXmlWithOneCvnItemBean() {
         return "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"yes\"?>\r\n" + 
-                "<CVN\r\n" + 
+                "<CvnRootBean\r\n" + 
                 "    xmlns=\"http://codes.cvn.fecyt.es/beans\">" +
                 " <CvnItemBean>\r\n" + 
                 "        <Code>000.020.000.000</Code>\r\n" + 
@@ -109,7 +109,7 @@ public class CvnServiceTest {
                 "            <Value>1.3.0</Value>\r\n" + 
                 "        </CvnString>\r\n" + 
                 "    </CvnItemBean>\r\n" + 
-                "</CVN>";
+                "</CvnRootBean>";
     }
     
     private String givenAJsonWithListOfIds() {

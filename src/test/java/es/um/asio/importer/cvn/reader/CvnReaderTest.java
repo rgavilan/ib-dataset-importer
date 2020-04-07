@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import es.um.asio.domain.cvn.Cvn;
+import es.um.asio.domain.cvn.CvnRootBean;
 import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.reader.CvnReader;
 import es.um.asio.importer.cnv.service.CvnService;
@@ -119,9 +119,9 @@ public class CvnReaderTest {
             cvnChanges.setIds(new Long[] {1L});
             return cvnChanges;
         });
-        Mockito.when(mockCvnService.findById(1L)).thenReturn(new Cvn());
+        Mockito.when(mockCvnService.findById(1L)).thenReturn(new CvnRootBean());
         
-        Cvn cvn = cvnReader.read();
+        CvnRootBean cvn = cvnReader.read();
         
         assertNotNull(cvn);
     }
@@ -133,11 +133,11 @@ public class CvnReaderTest {
             cvnChanges.setIds(new Long[] {1L, 2L});
             return cvnChanges;
         });
-        Mockito.when(mockCvnService.findById(Mockito.any())).thenReturn(new Cvn());
+        Mockito.when(mockCvnService.findById(Mockito.any())).thenReturn(new CvnRootBean());
         
-        Cvn cvn1 = cvnReader.read();
-        Cvn cvn2 = cvnReader.read();
-        Cvn cvn3 = cvnReader.read();
+        CvnRootBean cvn1 = cvnReader.read();
+        CvnRootBean cvn2 = cvnReader.read();
+        CvnRootBean cvn3 = cvnReader.read();
         
         assertNotNull(cvn1);
         assertNotNull(cvn2);
