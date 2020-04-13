@@ -4,11 +4,16 @@ package es.um.asio.importer.cvn.mapper;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertNotNull;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+
+import org.jeasy.random.EasyRandom;
+import org.jeasy.random.EasyRandomParameters;
+import org.jeasy.random.api.Randomizer;
 import org.junit.Test;
 import org.mapstruct.factory.Mappers;
 
@@ -27,6 +32,15 @@ public class CvnRootBeanMapperTest {
         CvnRootBean cvn = new CvnRootBean();
         
         var cvnMapped = mapper.map(cvn);
+        
+        assertNotNull(cvnMapped);
+    }
+    
+    @Test
+    public void whenMapAComplexCvnRootBean_thenMapToNotNullMappedEntity() {        
+        CvnRootBean complexCvn = givenAComplexCvnRootBean();
+        
+        var cvnMapped = mapper.map(complexCvn);
         
         assertNotNull(cvnMapped);
     }
@@ -86,10 +100,29 @@ public class CvnRootBeanMapperTest {
         assertThat(dateDayMonthYearMapped).isEqualTo(expectedDate);
     }
     
-    
     private XMLGregorianCalendar givenAXMLGregorianCalendar(Date date) throws DatatypeConfigurationException {
         GregorianCalendar calendar = new GregorianCalendar();       
         calendar.setTime(date);
         return DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+    }
+    
+    private CvnRootBean givenAComplexCvnRootBean() {
+        EasyRandomParameters parameters = new EasyRandomParameters().randomize(XMLGregorianCalendar.class, new Randomizer<XMLGregorianCalendar>() {
+            @Override
+            public XMLGregorianCalendar getRandomValue() {
+                GregorianCalendar calendar = new GregorianCalendar();       
+                calendar.setTime(Calendar.getInstance().getTime());
+                try {
+                    return DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+                } catch (DatatypeConfigurationException e) {
+                    return null;
+                }
+            }})
+            .randomizationDepth(3)
+            .objectPoolSize(1000);//to not reuse instances
+        EasyRandom generator = new EasyRandom(parameters);
+        CvnRootBean cvnRootBean = generator.nextObject(CvnRootBean.class);
+        
+        return cvnRootBean;
     }
 }
