@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.5-b05 . --><xs:schema xmlns:tns="http://codes.cvn.fecyt.es/beans" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://codes.cvn.fecyt.es/beans">
+
+<xs:element name="CvnRootBean" type="tns:CvnRootBean"></xs:element>
+
+<xs:complexType name="CvnRootBean">
+<xs:sequence>
+<xs:element name="CvnItemBean" type="tns:CvnItemBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CvnItemBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="CvnAuthorBean" type="tns:CvnAuthorBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnBoolean" type="tns:CvnBoolean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnCodeGroup" type="tns:CvnCodeGroup" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnDateDayMonthYear" type="tns:CvnDateDayMonthYear" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnDateMonthYear" type="tns:CvnDateMonthYear" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnDateYear" type="tns:CvnDateYear" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnDouble" type="tns:CvnDouble" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnDuration" type="tns:CvnDuration" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnEntityBean" type="tns:CvnEntityBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnExternalPKBean" type="tns:CvnExternalPKBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnFamilyNameBean" type="tns:CvnFamilyNameBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnPageBean" type="tns:CvnPageBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnPhoneBean" type="tns:CvnPhoneBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnPhotoBean" type="tns:CvnPhotoBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnRichText" type="tns:CvnRichText" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnString" type="tns:CvnString" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnTitleBean" type="tns:CvnTitleBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+<xs:element name="CvnVolumeBean" type="tns:CvnVolumeBean" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnBean">
+<xs:sequence>
+<xs:element name="Code" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CvnAuthorBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="CvnFamilyNameBean" type="tns:CvnFamilyNameBean" minOccurs="0"></xs:element>
+<xs:element name="GivenName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="Signature" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="SignatureOrder" type="xs:int" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnFamilyNameBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="FirstFamilyName" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="SecondFamilyName" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnBoolean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Value" type="xs:boolean" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnCodeGroup">
+<xs:complexContent>
+<xs:extension base="tns:CvnItemBean">
+<xs:sequence></xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnDateDayMonthYear">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Value" type="xs:dateTime" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnDateMonthYear">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Value" type="xs:dateTime" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnDateYear">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Value" type="xs:dateTime" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnDouble">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Value" type="xs:double" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnDuration">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Value" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnEntityBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Id" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="Name" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnExternalPKBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Type" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="Value" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="Others" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnPageBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="FinalPage" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="InitialPage" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnPhoneBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Extension" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="InternationalCode" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="Number" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="Type" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnPhotoBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="BytesInBase64" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="MimeType" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnRichText">
+<xs:complexContent>
+<xs:extension base="tns:CvnString">
+<xs:sequence></xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnString">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Value" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnTitleBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Identification" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="Name" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+
+<xs:complexType name="CvnVolumeBean">
+<xs:complexContent>
+<xs:extension base="tns:CvnBean">
+<xs:sequence>
+<xs:element name="Number" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="Volume" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:extension>
+</xs:complexContent>
+</xs:complexType>
+</xs:schema>
