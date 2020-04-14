@@ -12,7 +12,7 @@
 
 	<groupId>es.um.asio</groupId>
 	<artifactId>dataset-importer</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0-SEMANTMURC-114-SNAPSHOT</version>
 	<name>UM - ASIO - dataset-importer</name>
 	<description>UM - ASIO - dataset-importer</description>
 
@@ -21,7 +21,7 @@
 	</scm>
 
 	<properties>
-		<dataset-domain-model.version>1.0-SNAPSHOT</dataset-domain-model.version>
+		<dataset-domain-model.version>1.0-SEMANTMURC-114-SNAPSHOT</dataset-domain-model.version>
 	</properties>
 
 	<dependencies>
