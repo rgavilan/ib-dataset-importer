@@ -108,7 +108,8 @@ public abstract class ImportDataSetFlowConfigurationBase {
         for (Field field : type.getDeclaredFields()) {
             String fieldName = field.getName();
             propertiesBinding.put(fieldName, fieldName);
-        }
+        }        
+        propertiesBinding.put(DataSetMarshaller.ACCION_ENTIDAD, "operation");   
 
         final DataConverter<T> converter = new DataConverter<>();
         converter.setFieldSetMapper(new DataSetFieldSetMapper<T>(type));
