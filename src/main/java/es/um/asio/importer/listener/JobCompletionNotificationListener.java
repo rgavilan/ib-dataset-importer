@@ -12,8 +12,7 @@ import org.springframework.stereotype.Component;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.importResult.ExitStatus;
-import es.um.asio.domain.importResult.ExitStatusCode;
+import es.um.asio.importer.util.ImportResultUtil;
 
 /**
  * Implementation of {@link JobExecutionListenerSupport} responsible for sending the exit status result
@@ -40,10 +39,10 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
      * {@inheritDoc}
      */
     @Override
-    public void afterJob(JobExecution jobExecution) {
-        ExitStatus existStatus = new ExitStatus(ExitStatusCode.valueOf(jobExecution.getExitStatus().getExitCode()));
-        existStatus.setVersion(jobExecution.getId());
-        InputData<DataSetData> inputData = new InputData<>(existStatus);
+    public void afterJob(JobExecution jobExecution) {        
+        
+        InputData<DataSetData> inputData = new InputData<>(ImportResultUtil.createFrom(jobExecution));
+       
         if (LOGGER.isDebugEnabled()) {
             LOGGER.debug("Writing: {}", jobExecution.getExitStatus());
         }
