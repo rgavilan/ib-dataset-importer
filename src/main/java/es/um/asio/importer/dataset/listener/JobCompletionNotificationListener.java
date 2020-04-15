@@ -12,8 +12,8 @@ import org.springframework.stereotype.Component;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
-import es.um.asio.domain.exitStatus.ExitStatus;
-import es.um.asio.domain.exitStatus.ExitStatusCode;
+import es.um.asio.domain.importResult.ExitStatus;
+import es.um.asio.domain.importResult.ExitStatusCode;
 
 /**
  * Implementation of {@link JobExecutionListenerSupport} responsible for sending the exit status result

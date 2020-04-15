@@ -9,22 +9,22 @@ import org.springframework.batch.item.file.transform.FieldSet;
 import org.springframework.validation.BindException;
 
 import es.um.asio.abstractions.domain.Operation;
-import es.um.asio.importer.helper.DummyDataSetData;
+import es.um.asio.importer.helper.DummyOperationableDataSetData;
 
 public class DataSetFieldSetMapperTest {
     
-    private DataSetFieldSetMapper<DummyDataSetData> mapper;
+    private DataSetFieldSetMapper<DummyOperationableDataSetData> mapper;
     
     @Before
     public void setUp() {
-        mapper  = new DataSetFieldSetMapper<DummyDataSetData>(DummyDataSetData.class);
+        mapper = new DataSetFieldSetMapper<DummyOperationableDataSetData>(DummyOperationableDataSetData.class);
     }
 
     @Test
     public void whenMapOperationWithADDStringValue_thenConvertsToInsertOperation() throws BindException {
         FieldSet fieldSet = new DefaultFieldSet(new String[] { "ADD"}, new String[] { "operation"});
        
-        DummyDataSetData result =  mapper.mapFieldSet(fieldSet);
+        DummyOperationableDataSetData result =  mapper.mapFieldSet(fieldSet);
     
         assertThat(result.getOperation()).isEqualTo(Operation.INSERT);
     }
@@ -33,7 +33,7 @@ public class DataSetFieldSetMapperTest {
     public void whenMapOperationWithIncorrectStringValue_thenConvertsToInsertOperation() throws BindException {
         FieldSet fieldSet = new DefaultFieldSet(new String[] { "incorrect value"}, new String[] { "operation"});
        
-        DummyDataSetData result =  mapper.mapFieldSet(fieldSet);
+        DummyOperationableDataSetData result =  mapper.mapFieldSet(fieldSet);
     
         assertThat(result.getOperation()).isEqualTo(Operation.INSERT);
     }
@@ -42,7 +42,7 @@ public class DataSetFieldSetMapperTest {
     public void whenMapOperationWithEmptyStringValue_thenConvertsToInsertOperation() throws BindException {
         FieldSet fieldSet = new DefaultFieldSet(new String[] { ""}, new String[] { "operation"});
        
-        DummyDataSetData result =  mapper.mapFieldSet(fieldSet);
+        DummyOperationableDataSetData result =  mapper.mapFieldSet(fieldSet);
     
         assertThat(result.getOperation()).isEqualTo(Operation.INSERT);
     }
@@ -51,7 +51,7 @@ public class DataSetFieldSetMapperTest {
     public void whenMapOperationWithNullValue_thenConvertsToInsertOperation() throws BindException {
         FieldSet fieldSet = new DefaultFieldSet(new String[] { null }, new String[] { "operation"});
        
-        DummyDataSetData result =  mapper.mapFieldSet(fieldSet);
+        DummyOperationableDataSetData result =  mapper.mapFieldSet(fieldSet);
     
         assertThat(result.getOperation()).isEqualTo(Operation.INSERT);
     }
@@ -60,7 +60,7 @@ public class DataSetFieldSetMapperTest {
     public void whenMapWithoutOperationField_thenConvertsToInsertOperation() throws BindException {
         FieldSet fieldSet = new DefaultFieldSet(new String[] { "dummy value" }, new String[] { "dummyProperty"});
        
-        DummyDataSetData result =  mapper.mapFieldSet(fieldSet);
+        DummyOperationableDataSetData result =  mapper.mapFieldSet(fieldSet);
     
         assertThat(result.getOperation()).isEqualTo(Operation.INSERT);
     }
@@ -69,7 +69,7 @@ public class DataSetFieldSetMapperTest {
     public void whenMapOperationWithMODIFYStringValue_thenConvertsToUpdateOperation() throws BindException {
         FieldSet fieldSet = new DefaultFieldSet(new String[] { "MODIFY"}, new String[] { "operation"});
        
-        DummyDataSetData result =  mapper.mapFieldSet(fieldSet);
+        DummyOperationableDataSetData result =  mapper.mapFieldSet(fieldSet);
     
         assertThat(result.getOperation()).isEqualTo(Operation.UPDATE);
     }
@@ -78,7 +78,7 @@ public class DataSetFieldSetMapperTest {
     public void whenMapOperationWithDELETEStringValue_thenConvertsToDeleteOperation() throws BindException {
         FieldSet fieldSet = new DefaultFieldSet(new String[] { "DELETE"}, new String[] { "operation"});
        
-        DummyDataSetData result =  mapper.mapFieldSet(fieldSet);
+        DummyOperationableDataSetData result =  mapper.mapFieldSet(fieldSet);
     
         assertThat(result.getOperation()).isEqualTo(Operation.DELETE);
     }
