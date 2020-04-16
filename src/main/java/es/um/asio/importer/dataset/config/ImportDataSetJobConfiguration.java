@@ -14,6 +14,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 
+import es.um.asio.importer.constants.Constants;
+
 /**
  * Job that processes XML files and sends them to Kafka topic
  */
@@ -31,7 +33,7 @@ public class ImportDataSetJobConfiguration {
     @Bean
     public Job importDataSetJob(final JobBuilderFactory jobs, final JobExecutionListener listener,
             final List<ImportDataSetFlowConfigurationBase> flows) {  
-        return jobs.get("importDataSetJob")
+        return jobs.get(Constants.DATASET_JOB_NAME)
                 .incrementer(new RunIdIncrementer()).listener(listener)
                 .start(importDataSetSplitFlow(flows.stream().map(ImportDataSetFlowConfigurationBase::getFlow).collect(Collectors.toList()).toArray(new Flow[0])))
                 .build().build();

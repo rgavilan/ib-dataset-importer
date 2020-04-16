@@ -19,6 +19,8 @@ import es.um.asio.importer.cnv.model.beans.CvnRootBean;
 import es.um.asio.importer.cnv.reader.CvnReader;
 import es.um.asio.importer.processor.DataItemProcessor;
 import es.um.asio.importer.writer.DataItemWriter;
+import es.um.asio.importer.constants.Constants;
+
 
 /**
  * Job that processes CVNs and sends them to Kafka topic
@@ -36,7 +38,7 @@ public class ImportCvnJobConfiguration {
      */
     @Bean
     public Job importCvnJob(final JobBuilderFactory jobs, @Qualifier("CvnStep") final Step s1, final JobExecutionListener listener) {  
-        return jobs.get("importCvnJob")
+        return jobs.get(Constants.CVN_JOB_NAME)
                 .incrementer(new RunIdIncrementer()).listener(listener)
                 .start(s1)
                 .build();
