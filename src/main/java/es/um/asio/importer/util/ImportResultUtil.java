@@ -2,9 +2,9 @@ package es.um.asio.importer.util;
 
 import org.springframework.batch.core.JobExecution;
 
-import es.um.asio.domain.importResult.ExitStatusCode;
+import es.um.asio.abstractions.domain.ExitStatusCode;
+import es.um.asio.abstractions.domain.JobType;
 import es.um.asio.domain.importResult.ImportResult;
-import es.um.asio.domain.importResult.JobType;
 import es.um.asio.importer.constants.Constants;
 
 /**
