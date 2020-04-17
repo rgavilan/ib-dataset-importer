@@ -26,17 +26,16 @@ public class CvnImportInfoServiceImpl implements CvnImportInfoService {
     @Autowired
     private RestTemplate restTemplate;
     
-    @Value("${app.services.input-processor-service}")
-    private String baseUrl;
+    @Value("${app.services.input-processor.endpoint-import-search}")
+    private String endPointSearch;
     
     /**
      * {@inheritDoc}
      */
     @Override
     public Date findDateOfLastImport() {
-        String uri = baseUrl + "/import-result/search?jobType=CVN&exitStatusCode=COMPLETED&page=0&size=1&sort=startTime,desc";    
-        ParameterizedTypeReference<RestPageImpl<ImportResultDto>> responseType = new ParameterizedTypeReference<RestPageImpl<ImportResultDto>>() { };
-         
+        String uri = endPointSearch + "?jobType=CVN&exitStatusCode=COMPLETED&page=0&size=1&sort=startTime,desc";    
+        ParameterizedTypeReference<RestPageImpl<ImportResultDto>> responseType = new ParameterizedTypeReference<RestPageImpl<ImportResultDto>>() { };         
         RestPageImpl<ImportResultDto> importResultsPaged = restTemplate.exchange(uri, HttpMethod.GET, null, responseType).getBody(); 
         
         if(importResultsPaged.isEmpty()) {

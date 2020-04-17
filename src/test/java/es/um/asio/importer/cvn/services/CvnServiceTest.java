@@ -54,7 +54,8 @@ public class CvnServiceTest {
     
     @Before
     public void setUp() {
-        ReflectionTestUtils.setField(cvnService, "baseUrl", "http://curriculumpruebas.um.es/curriculum/rest/v1/auth");
+        ReflectionTestUtils.setField(cvnService, "endPointChanges", "http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes");
+        ReflectionTestUtils.setField(cvnService, "endPointCvn", "http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn");
         mockServer = MockRestServiceServer.createServer(restTemplate);
     }
     

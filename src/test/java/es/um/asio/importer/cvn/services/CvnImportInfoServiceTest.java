@@ -50,7 +50,7 @@ public class CvnImportInfoServiceTest {
     
     @Before
     public void setUp() {
-        ReflectionTestUtils.setField(cvnImportInfoService, "baseUrl", "http://localhost:8080");
+        ReflectionTestUtils.setField(cvnImportInfoService, "endPointSearch", "http://localhost:8080/import-result/search");
         mockServer = MockRestServiceServer.createServer(restTemplate);
     }
     

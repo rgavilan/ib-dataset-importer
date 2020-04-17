@@ -11,10 +11,15 @@ app:
     input-topic-name: input-data
     create-topics: false
   data:
-    path: 
-  services:
-    cvn-service: http://curriculumpruebas.um.es/curriculum/rest/v1/auth  
-    input-processor-service: http://localhost:8080
+    path:
+  services:    
+    cvn: 
+      endpoint: http://curriculumpruebas.um.es/curriculum/rest/v1/auth
+      endpoint-cvn: ${app.services.cvn.endpoint}/cvn
+      endpoint-changes: ${app.services.cvn.endpoint}/changes
+    input-processor:
+      endpoint: http://localhost:8080
+      endpoint-import-search: ${app.services.input-processor.endpoint}/import-result/search?
 
 # Spring configuration
 spring:
