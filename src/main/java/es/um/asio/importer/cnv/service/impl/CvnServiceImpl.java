@@ -29,12 +29,7 @@ public class CvnServiceImpl implements CvnService {
     
     @Value("${app.services.cvn-service}")
     private String baseUrl;
-    
-    public CvnServiceImpl() {}
-    public CvnServiceImpl(RestTemplate restTemplate, String baseUrl) {
-        this.restTemplate = restTemplate;
-        this.baseUrl = baseUrl;
-    }
+ 
   
     /**
      * {@inheritDoc}

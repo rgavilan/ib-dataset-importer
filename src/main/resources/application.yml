@@ -11,9 +11,10 @@ app:
     input-topic-name: input-data
     create-topics: false
   data:
-    path:    
+    path: 
   services:
     cvn-service: http://curriculumpruebas.um.es/curriculum/rest/v1/auth  
+    input-processor-service: http://localhost:8080
 
 # Spring configuration
 spring:
