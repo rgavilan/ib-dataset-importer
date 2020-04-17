@@ -1,14 +1,15 @@
 package es.um.asio.importer.cnv;
 
+import java.util.Arrays;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
-import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.support.CompositeItemProcessor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
 import es.um.asio.importer.cnv.model.beans.CvnRootBean;
+import es.um.asio.importer.cnv.processor.CvnToDomainCvnProcessor;
 import es.um.asio.importer.cnv.reader.CvnReader;
 import es.um.asio.importer.processor.DataItemProcessor;
 import es.um.asio.importer.writer.DataItemWriter;
@@ -25,7 +27,7 @@ import es.um.asio.importer.constants.Constants;
 /**
  * Job that processes CVNs and sends them to Kafka topic
  */
-//@Configuration
+@Configuration
 public class ImportCvnJobConfiguration {
     
     /**
@@ -43,6 +45,40 @@ public class ImportCvnJobConfiguration {
                 .start(s1)
                 .build();
     }
+    
+    
+    /**
+     * Gets CVN step.
+     *
+     * @param stepBuilderFactory the step builder factory
+     * @param reader the reader
+     * @param writer the writer
+     * @param processor the processor
+     * @return the step
+     */
+    @SuppressWarnings("unchecked")
+    @Bean
+    @Qualifier("CvnStep")
+    public Step cvnStep(final StepBuilderFactory stepBuilderFactory) {       
+        return stepBuilderFactory.get("cvnStep").<CvnRootBean, InputData<DataSetData>> chunk(10)
+                .reader(getReader())
+                .processor(getProcessor())              
+                .writer(getWriter())
+                .build();
+      }
+    
+    /**
+     * Composite CVN processor.
+     *
+     * @return the composite item processor
+     */
+    @SuppressWarnings({ "rawtypes", "unchecked" })   
+    public CompositeItemProcessor getProcessor() {
+        CompositeItemProcessor processor = new CompositeItemProcessor();
+        processor.setDelegates(Arrays.asList(new CvnToDomainCvnProcessor(),new DataItemProcessor()));
+
+        return processor;
+    }
    
     /**
      * Gets the instance of {@link CvnReader}
@@ -54,47 +90,14 @@ public class ImportCvnJobConfiguration {
         return new CvnReader();
     }    
     
-    
-    /**
-     * Gets the processor.
-     *
-     * @return the processor
-     */
-    @SuppressWarnings("unchecked")
-    @Bean
-    protected ItemProcessor<CvnRootBean, InputData<DataSetData>> getProcessor() {
-       return (ItemProcessor<CvnRootBean, InputData<DataSetData>>) new DataItemWriter();
-    }    
-   
-  
      /**
       * Gets the writer.
       *
       * @return the writer
       */
-     @SuppressWarnings("unchecked")
      @Bean
      protected ItemWriter<InputData<DataSetData>> getWriter() {
-         return (ItemWriter<InputData<DataSetData>>) new DataItemProcessor();
+         return new DataItemWriter();
      }
-  
-     
-     /**
-      * Gets CVN step.
-      *
-      * @param stepBuilderFactory the step builder factory
-      * @param reader the reader
-      * @param writer the writer
-      * @param processor the processor
-      * @return the step
-      */
-     @Bean
-     @Qualifier("CvnStep")
-     public Step cvnStep(final StepBuilderFactory stepBuilderFactory, final ItemReader<CvnRootBean> reader) {       
-         return stepBuilderFactory.get("cvnStep").<CvnRootBean, InputData<DataSetData>> chunk(10)
-                 .reader(reader)
-                 .processor(getProcessor())
-                 .writer(getWriter())
-                 .build();
-       }
+ 
 }
