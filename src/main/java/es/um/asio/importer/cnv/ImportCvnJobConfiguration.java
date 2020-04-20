@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package es.um.asio.importer.cnv;
 
 import java.util.Arrays;
@@ -7,6 +10,7 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.support.CompositeItemProcessor;
@@ -29,7 +33,7 @@ import es.um.asio.importer.constants.Constants;
  */
 @Configuration
 public class ImportCvnJobConfiguration {
-    
+  
     /**
      * Generates {@link Job} for imports CVN files
      *
@@ -62,7 +66,7 @@ public class ImportCvnJobConfiguration {
     public Step cvnStep(final StepBuilderFactory stepBuilderFactory) {       
         return stepBuilderFactory.get("cvnStep").<CvnRootBean, InputData<DataSetData>> chunk(10)
                 .reader(getReader())
-                .processor(getProcessor())              
+                .processor(getCompositeProcessor())              
                 .writer(getWriter())
                 .build();
       }
@@ -72,12 +76,33 @@ public class ImportCvnJobConfiguration {
      *
      * @return the composite item processor
      */
-    @SuppressWarnings({ "rawtypes", "unchecked" })   
-    public CompositeItemProcessor getProcessor() {
+    @Bean
+    @SuppressWarnings({ "rawtypes", "unchecked" })    
+    protected CompositeItemProcessor getCompositeProcessor() {
         CompositeItemProcessor processor = new CompositeItemProcessor();
-        processor.setDelegates(Arrays.asList(new CvnToDomainCvnProcessor(),new DataItemProcessor()));
+        processor.setDelegates(Arrays.asList(getCvnToDomainCvnProcessor(),getDataItemProcessor()));
 
         return processor;
+    }
+    
+    /**
+     * Gets the data item processor.
+     *
+     * @return the data item processor
+     */
+    @Bean
+    protected ItemProcessor<DataSetData, InputData<DataSetData>> getDataItemProcessor(){
+        return new DataItemProcessor();
+    }
+    
+    /**
+     * Gets the cvn to domain cvn processor.
+     *
+     * @return the cvn to domain cvn processor
+     */
+    @Bean
+    protected ItemProcessor<CvnRootBean, es.um.asio.domain.cvn.CvnRootBean> getCvnToDomainCvnProcessor(){
+        return new CvnToDomainCvnProcessor();
     }
    
     /**
