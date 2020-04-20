@@ -1,7 +1,4 @@
-/*
- * 
- */
-package es.um.asio.importer.cnv;
+package es.um.asio.importer.cnv.config;
 
 import java.util.Arrays;
 import org.springframework.batch.core.Job;
