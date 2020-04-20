@@ -4,6 +4,7 @@ import java.io.File;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.batch.core.Step;
@@ -67,7 +68,7 @@ public abstract class ImportDataSetFlowConfigurationBase {
      * @return the step
      */
     protected <T extends DataSetData> Step createStep(Class<T> type, String filePath) {
-        return this.stepBuilderFactory.get(getFlowName().concat("-").concat(type.getSimpleName()).concat("Step"))
+        return this.stepBuilderFactory.get(getFlowName().concat("-").concat(type.getSimpleName()).concat("-").concat(UUID.randomUUID().toString()))
                 .<DataSetData, InputData<DataSetData>> chunk(1000)
                 .reader(baseReader(type, filePath))
                 .processor(getProcessor())
