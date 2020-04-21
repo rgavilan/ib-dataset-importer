@@ -28,9 +28,9 @@ Para iniciar el entorno de desarrollo se necesita cumplir los siguientes requisi
 - app.data.path:Directorio en el que se encuentran los XML para la carga de datos, en caso de estar vacío se tomarán del classpath. Valor por defecto vacío
 - spring.kafka.bootstrap-servers: Dirección del servidor bootstrap de Kafka. Valor por defecto: localhost:29092
 - app.services.cvn.endpoint: Dirección del servidor para obtener los CVN. Valor por defecto: http://curriculumpruebas.um.es/curriculum/rest/v1/auth
-- app.services.cvn.mockup.enabled: Booleano para indicar si se utilizan servicios mock para obtener los CVN.
+- app.services.cvn.mockup.enabled: Booleano para indicar si se utilizan servicios mock para obtener los CVN. Valor por defecto: true
 - app.services.input-processor.endpoint: Dirección del servidor para obtener los datos de importaciones anteriores. Valor por defecto: localhost:8080
-- app.services.input-processor.mockup.enabled: Booleano para indicar si se utilizan servicios mock para obtener los resultados de las importaciones anteriores.
+- app.services.input-processor.mockup.enabled: Booleano para indicar si se utilizan servicios mock para obtener los resultados de las importaciones anteriores. Valor por defecto: true
 
 ## Cómo crear un nuevo Job
 
@@ -69,5 +69,6 @@ Será preciso configurar las siguientes variables de entorno cuando se instale e
 |`APP_DATA_PATH`|Ubicación de los ficheros XML de entrada. En caso de estar vacío se toman del classpath| |
 | `SPRING_BATCH_INITIALIZE_SCHEMA` | Indica si se deben inicializar los esquemas de Spring Batch. Valores admisibles: `always` y `never` | never |
 |`APP_SERVICES_CVN_ENDPOINT`| URL del servicio para obtener CVN | http://curriculumpruebas.um.es/curriculum/rest/v1/auth |
+|`APP_SERVICES_CVN_MOCKUP_ENABLED`| Indica si se deben utilizar servicios mock para obtener los CVN. Valores admisibles: `true` y `false` | true |
 |`APP_SERVICES_INPUT-PROCESSOR_ENDPOINT`| URL del servicio para obtener datos de importaciones anteriores | localhost:8080 |
-
+|`APP_SERVICES_INPUT-PROCESSOR_MOCKUP_ENABLED`| Indica si se deben utilizar servicios mock para obtener datos de importaciones anteriores. Valores admisibles: `true` y `false` | true |
