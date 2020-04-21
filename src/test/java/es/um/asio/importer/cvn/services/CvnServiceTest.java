@@ -5,9 +5,12 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
@@ -25,22 +28,34 @@ import java.util.Calendar;
 import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.model.beans.CvnRootBean;
 import es.um.asio.importer.cnv.config.CvnConfiguration;
+import es.um.asio.importer.cnv.service.CvnService;
 import es.um.asio.importer.cnv.service.impl.CvnServiceImpl;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {CvnConfiguration.class})
+@SpringBootTest(classes = {CvnConfiguration.class, CvnServiceTest.CvnServiceTestConfiguration.class})
 public class CvnServiceTest {        
- 
+    
     @Autowired
-    public RestTemplate restTemplate;   
+    private CvnService cvnService;
+    
+    @Autowired
+    private RestTemplate restTemplate;   
   
-    private CvnServiceImpl cvnService;
     private MockRestServiceServer mockServer;
+    
+    @TestConfiguration
+    static class CvnServiceTestConfiguration {
+        @Bean
+        public CvnService cvnService() {
+            return new CvnServiceImpl();
+        }
+    }
     
     @Before
     public void setUp() {
-        cvnService = new CvnServiceImpl(restTemplate, "http://curriculumpruebas.um.es/curriculum/rest/v1/auth");
+        ReflectionTestUtils.setField(cvnService, "endPointChanges", "http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes");
+        ReflectionTestUtils.setField(cvnService, "endPointCvn", "http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn");
         mockServer = MockRestServiceServer.createServer(restTemplate);
     }
     

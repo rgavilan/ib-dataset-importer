@@ -2,31 +2,53 @@ package es.um.asio.importer.cvn.reader;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-import org.junit.Before;
+import java.util.Date;
+
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.boot.test.context.TestConfiguration;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.model.beans.CvnRootBean;
 import es.um.asio.importer.cnv.reader.CvnReader;
+import es.um.asio.importer.cnv.service.CvnImportInfoService;
 import es.um.asio.importer.cnv.service.CvnService;
 
+@RunWith(SpringRunner.class)
 public class CvnReaderTest {
     
+    /**
+     *  The cvn reader.
+    */
+    @Autowired
     CvnReader cvnReader;
+    
+    @MockBean
     CvnService mockCvnService;
     
-    @Before
-    public void setUp() {
-        mockCvnService = mock(CvnService.class);
-        cvnReader = new CvnReader(mockCvnService);
-    }
+    @MockBean
+    CvnImportInfoService mockCvnImportInfoService;    
+  
     
+    @TestConfiguration
+    static class CvnReaderConfiguration {
+        @Bean
+        @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+        public CvnReader cvnReader() {
+            return new CvnReader();
+        }
+    }
     
     @Test
     public void whenReadIsCalled_thenFindAllChangesByDateIsCalledOnce() {        
@@ -142,6 +164,25 @@ public class CvnReaderTest {
         assertNotNull(cvn1);
         assertNotNull(cvn2);
         assertNull(cvn3);
+    }
+    
+    @Test
+    public void whenFindDateOfLastImportReturnsNull_thenFindAllChangesByDateIsCalledWithNullDate() {   
+        Mockito.when(mockCvnImportInfoService.findDateOfLastImport()).thenReturn(null);
+        
+        cvnReader.read();
+        
+        verify(mockCvnService).findAllChangesByDate(null);
+    }
+    
+    @Test
+    public void whenFindDateOfLastImportReturnsADate_thenFindAllChangesByDateIsCalledWithThisDate() {   
+        Date lastImportDate = new Date();
+        Mockito.when(mockCvnImportInfoService.findDateOfLastImport()).thenReturn(lastImportDate);
+        
+        cvnReader.read();
+        
+        verify(mockCvnService).findAllChangesByDate(lastImportDate);
     }
     
 }

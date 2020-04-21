@@ -27,21 +27,18 @@ public class CvnServiceImpl implements CvnService {
     @Autowired
     private RestTemplate restTemplate;
     
-    @Value("${app.services.cvn-service}")
-    private String baseUrl;
-    
-    public CvnServiceImpl() {}
-    public CvnServiceImpl(RestTemplate restTemplate, String baseUrl) {
-        this.restTemplate = restTemplate;
-        this.baseUrl = baseUrl;
-    }
+    @Value("${app.services.cvn.endpoint-changes}")
+    private String endPointChanges;
+ 
+    @Value("${app.services.input-processor.endpoint}")
+    private String endPointCvn;
   
     /**
      * {@inheritDoc}
      */
     @Override
     public CvnChanges findAllChangesByDate(Date from) {      
-        String uri = baseUrl + "/changes";
+        String uri = endPointChanges;
         if(from != null) {
             String dateFormatted = new SimpleDateFormat("yyyy-MM-dd").format(from);
             uri = uri + "?date=" + dateFormatted;
@@ -55,7 +52,7 @@ public class CvnServiceImpl implements CvnService {
      */
     @Override
     public CvnRootBean findById(Long id) {
-        String uri = baseUrl + "/cvn?id=" + id.toString();
+        String uri = endPointCvn + "?id=" + id.toString();
         HttpEntity<CvnRootBean> entity = new HttpEntity<>(getHeaders());        
         return restTemplate.exchange(uri, HttpMethod.GET, entity, CvnRootBean.class).getBody();
     }

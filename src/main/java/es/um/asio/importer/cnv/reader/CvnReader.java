@@ -1,6 +1,7 @@
 package es.um.asio.importer.cnv.reader;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -8,6 +9,7 @@ import org.springframework.batch.item.ItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import es.um.asio.importer.cnv.model.CvnChanges;
 import es.um.asio.importer.cnv.model.beans.CvnRootBean;
+import es.um.asio.importer.cnv.service.CvnImportInfoService;
 import es.um.asio.importer.cnv.service.CvnService;
 
 /**
@@ -23,10 +25,12 @@ public class CvnReader implements ItemReader<CvnRootBean> {
     @Autowired
     private CvnService cvnService;
     
-    public CvnReader() {}
-    public CvnReader(CvnService cvnService) {
-        this.cvnService = cvnService;
-    }
+    /** 
+     * The cvn import info service.
+     */
+    @Autowired
+    private CvnImportInfoService cvnImportInfoService;
+    
 
     /**
      *  Retrieves the CVN-XML files and transform to {@link Cvn}
@@ -55,8 +59,9 @@ public class CvnReader implements ItemReader<CvnRootBean> {
      * Fetch cvn changes.
      */
     private void fetchCvnChanges(){
+        Date dateFrom = cvnImportInfoService.findDateOfLastImport();
         cvnsIdsChanges = new LinkedList<>();
-        CvnChanges cvnChanges = cvnService.findAllChangesByDate(null);
+        CvnChanges cvnChanges = cvnService.findAllChangesByDate(dateFrom);
         if(cvnChanges!=null && cvnChanges.getIds()!=null && cvnChanges.getIds().length > 0) {
             cvnsIdsChanges.addAll(Arrays.asList(cvnChanges.getIds()));
         }
