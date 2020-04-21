@@ -22,6 +22,7 @@ import org.springframework.core.io.Resource;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
+import es.um.asio.importer.dataset.reader.XmlEventItemReader;
 import es.um.asio.importer.marshaller.DataConverter;
 import es.um.asio.importer.marshaller.DataSetFieldSetMapper;
 import es.um.asio.importer.marshaller.DataSetMarshaller;
@@ -68,7 +69,7 @@ public abstract class ImportDataSetFlowConfigurationBase {
      */
     protected <T extends DataSetData> Step createStep(Class<T> type, String filePath) {
         return this.stepBuilderFactory.get(getFlowName().concat("-").concat(type.getSimpleName()).concat("Step"))
-                .<DataSetData, InputData<DataSetData>> chunk(1000)
+                .<DataSetData, InputData<DataSetData>> chunk(1000)                
                 .reader(baseReader(type, filePath))
                 .processor(getProcessor())
                 .writer(getWriter())
@@ -118,7 +119,7 @@ public abstract class ImportDataSetFlowConfigurationBase {
         final DataSetMarshaller<T> ummarshaller = new DataSetMarshaller<>(type);
         ummarshaller.setConverters(converter);
 
-        final StaxEventItemReader<DataSetData> reader = new StaxEventItemReader<>();
+        final StaxEventItemReader<DataSetData> reader = new XmlEventItemReader<>();
         reader.setResource(this.getFile(filePath));
         reader.setUnmarshaller(ummarshaller);
         reader.setFragmentRootElementName(DataSetMarshaller.DATA_RECORD);
