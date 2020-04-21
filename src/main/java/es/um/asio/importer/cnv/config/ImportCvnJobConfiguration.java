@@ -1,6 +1,5 @@
 package es.um.asio.importer.cnv.config;
 
-import java.util.Arrays;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.Step;
@@ -10,7 +9,6 @@ import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
-import org.springframework.batch.item.support.CompositeItemProcessor;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,9 +16,8 @@ import org.springframework.context.annotation.Configuration;
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
 import es.um.asio.importer.cnv.model.beans.CvnRootBean;
-import es.um.asio.importer.cnv.processor.CvnToDomainCvnProcessor;
+import es.um.asio.importer.cnv.processor.CvnItemProcessor;
 import es.um.asio.importer.cnv.reader.CvnReader;
-import es.um.asio.importer.processor.DataItemProcessor;
 import es.um.asio.importer.writer.DataItemWriter;
 import es.um.asio.importer.constants.Constants;
 
@@ -57,49 +54,25 @@ public class ImportCvnJobConfiguration {
      * @param processor the processor
      * @return the step
      */
-    @SuppressWarnings("unchecked")
     @Bean
     @Qualifier("CvnStep")
     public Step cvnStep(final StepBuilderFactory stepBuilderFactory) {       
         return stepBuilderFactory.get("cvnStep").<CvnRootBean, InputData<DataSetData>> chunk(10)
                 .reader(getReader())
-                .processor(getCompositeProcessor())              
+                .processor(getCvnItemProcessor())              
                 .writer(getWriter())
                 .build();
       }
+        
     
     /**
-     * Composite CVN processor.
+     * Gets the cvn item processor.
      *
-     * @return the composite item processor
+     * @return the cvn item processor
      */
     @Bean
-    @SuppressWarnings({ "rawtypes", "unchecked" })    
-    protected CompositeItemProcessor getCompositeProcessor() {
-        CompositeItemProcessor processor = new CompositeItemProcessor();
-        processor.setDelegates(Arrays.asList(getCvnToDomainCvnProcessor(),getDataItemProcessor()));
-
-        return processor;
-    }
-    
-    /**
-     * Gets the data item processor.
-     *
-     * @return the data item processor
-     */
-    @Bean
-    protected ItemProcessor<DataSetData, InputData<DataSetData>> getDataItemProcessor(){
-        return new DataItemProcessor();
-    }
-    
-    /**
-     * Gets the cvn to domain cvn processor.
-     *
-     * @return the cvn to domain cvn processor
-     */
-    @Bean
-    protected ItemProcessor<CvnRootBean, es.um.asio.domain.cvn.CvnRootBean> getCvnToDomainCvnProcessor(){
-        return new CvnToDomainCvnProcessor();
+    protected ItemProcessor<CvnRootBean, InputData<DataSetData>> getCvnItemProcessor(){
+        return new CvnItemProcessor();
     }
    
     /**
