@@ -6,9 +6,10 @@ Importador de datos del DataSet de Murcia para el proyecto Backend SGI (ASIO). S
 
 Se han configurado los siguientes Jobs:
 
-- `importProjectJob`: job encargado de simular datos de de tipo "Proyecto"
+- `importDataSetJob`: job encargado de procesar datos a partir de los XML del dataset
+- `importCvnJob`: job encargado de procesar CVN a partir de los servicios web
 
-Estos jobs se encargan de leer el fichero XML correspondiente, generar un JSON con los datos y posteriormente insertarlo en un topic de Kafka.
+Estos jobs se encargan de leer los datos correspondientes, generar un JSON con los datos y posteriormente insertarlo en un topic de Kafka.
 
 ## OnBoarding
 
@@ -24,8 +25,12 @@ Para iniciar el entorno de desarrollo se necesita cumplir los siguientes requisi
 ##  Parámetros de configuración
 
 - app.kafka.input-topic-name: Nombre del topic para los datos de entrada. Valor por defecto: input-data
-- app.data.path:Directorio en el que se encuentran los CSV para la carga de datos, en caso de estar vacío se tomarán del classpath. Valor por defecto vacío
+- app.data.path:Directorio en el que se encuentran los XML para la carga de datos, en caso de estar vacío se tomarán del classpath. Valor por defecto vacío
 - spring.kafka.bootstrap-servers: Dirección del servidor bootstrap de Kafka. Valor por defecto: localhost:29092
+- app.services.cvn.endpoint: Dirección del servidor para obtener los CVN. Valor por defecto: http://curriculumpruebas.um.es/curriculum/rest/v1/auth
+- app.services.cvn.mockup.enabled: Booleano para indicar si se utilizan servicios mock para obtener los CVN.
+- app.services.input-processor.endpoint: Dirección del servidor para obtener los datos de importaciones anteriores. Valor por defecto: localhost:8080
+- app.services.input-processor.mockup.enabled: Booleano para indicar si se utilizan servicios mock para obtener los resultados de las importaciones anteriores.
 
 ## Cómo crear un nuevo Job
 
@@ -61,6 +66,8 @@ Será preciso configurar las siguientes variables de entorno cuando se instale e
 |`APP_KAFKA_INPUT_TOPIC_NAME`|Nombre del topic de Kafka de entrada|input-data|
 |`APP_KAFKA_CREATE_TOPICS`|Flag que indica si debe crear automáticamente los topics de Kafka. Valores admisibles `true` y `false`|false|
 | `SPRING_KAFKA_BOOTSTRAP_SERVERS` | URL del servicio de Kafka para los productores | localhost:29092 |
-|`APP_DATA_PATH`|Ubicación de los ficheros CSV de entrada. En caso de estar vacío se toman del classpath| |
-|`APP_DATA_INITIAL`|Flag booleano que indica si se debe cargar el dataset inicial. Valores admisibles `true` y `false`|false|
+|`APP_DATA_PATH`|Ubicación de los ficheros XML de entrada. En caso de estar vacío se toman del classpath| |
 | `SPRING_BATCH_INITIALIZE_SCHEMA` | Indica si se deben inicializar los esquemas de Spring Batch. Valores admisibles: `always` y `never` | never |
+|`APP_SERVICES_CVN_ENDPOINT`| URL del servicio para obtener CVN | http://curriculumpruebas.um.es/curriculum/rest/v1/auth |
+|`APP_SERVICES_INPUT-PROCESSOR_ENDPOINT`| URL del servicio para obtener datos de importaciones anteriores | localhost:8080 |
+
