@@ -21,7 +21,7 @@ public class CvnItemProcessor implements ItemProcessor<CvnRootBean,InputData<Dat
     /**
      * Logger
      */
-    private static final Logger log = LoggerFactory.getLogger(CvnItemProcessor.class);
+    private static final Logger logger = LoggerFactory.getLogger(CvnItemProcessor.class);
 
     
     /**
@@ -51,7 +51,7 @@ public class CvnItemProcessor implements ItemProcessor<CvnRootBean,InputData<Dat
         DataSetData domainCvn = mapper.map(cvnRootBean);        
         domainCvn.setVersion(jobExecutionId);
         
-        log.info("Processing data ({})", domainCvn);
+        logger.info("Processing data {}", domainCvn);
         return new InputData<>(domainCvn);
     }
 

@@ -41,13 +41,9 @@ public class DataItemWriter implements ItemWriter<InputData<DataSetData>> {
 	 */
 	@Override
 	public void write(List<? extends InputData<DataSetData>> datas) throws Exception {
-	    logger.info("Project writer called");
-		
 		for(InputData<DataSetData> data : datas) {
-		    if(logger.isDebugEnabled()) {
-		        logger.debug("Writing: {}", data);
-		    }
-		    
+            logger.info("Send data to input-data kafka topic: {}", data);
+            
 		    kafkaTemplate.send(topicName, data);
 		}
 	}

@@ -21,7 +21,7 @@ import es.um.asio.importer.util.ImportResultUtil;
 @Component
 public class JobCompletionNotificationListener extends JobExecutionListenerSupport {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
+    private static final Logger logger = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
 
     /**
      * Kafka template.
@@ -34,6 +34,16 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
      */
     @Value("${app.kafka.input-topic-name}")
     private String topicName;
+    
+    
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void beforeJob(JobExecution jobExecution) {
+        logger.info("Job {} start", jobExecution.getJobInstance().getJobName());
+    }
+
 
     /**
      * {@inheritDoc}
@@ -41,17 +51,14 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
     @Override
     public void afterJob(JobExecution jobExecution) {        
         
-        InputData<DataSetData> inputData = new InputData<>(ImportResultUtil.createFrom(jobExecution));
+        InputData<DataSetData> inputData = new InputData<>(ImportResultUtil.createFrom(jobExecution));      
        
-        if (LOGGER.isDebugEnabled()) {
-            LOGGER.debug("Writing: {}", jobExecution.getExitStatus());
-        }
         kafkaTemplate.send(topicName, inputData);
 
         if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
-            LOGGER.info("JOB {} FINISHED!!!", jobExecution.getJobInstance().getJobName());
+            logger.info("Job {} has finished successfully", jobExecution.getJobInstance().getJobName());
         } else {
-            LOGGER.info("Job did not finish. Current status is {}", jobExecution.getStatus());
+            logger.info("Job {} has NOT finished successfully. Status is {}", jobExecution.getJobInstance().getJobName(), jobExecution.getExitStatus());
         }
     }
 }

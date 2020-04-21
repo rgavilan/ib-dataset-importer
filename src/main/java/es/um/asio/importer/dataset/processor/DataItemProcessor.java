@@ -17,7 +17,7 @@ public class DataItemProcessor implements ItemProcessor<DataSetData, InputData<D
     /**
      * Logger
      */
-    private static final Logger log = LoggerFactory.getLogger(DataItemProcessor.class);
+    private static final Logger logger = LoggerFactory.getLogger(DataItemProcessor.class);
 
     /**
      * The job execution id. 
@@ -38,7 +38,7 @@ public class DataItemProcessor implements ItemProcessor<DataSetData, InputData<D
     @Override
     public InputData<DataSetData> process(final DataSetData data) throws Exception {
         data.setVersion(jobExecutionId);
-        log.info("Processing data ({})", data);
+        logger.info("Processing data {}", data);
         return new InputData<>(data);
     }
 
