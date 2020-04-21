@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import es.um.asio.importer.util.RestPageImpl;
  * Service that provides information about CVN imports.
  */
 @Service
+@ConditionalOnProperty(prefix = "app.services.input-processor.mockup", name = "enabled", havingValue = "false", matchIfMissing = true)
 public class CvnImportInfoServiceImpl implements CvnImportInfoService {
 
     /** 

@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -19,6 +20,7 @@ import es.um.asio.importer.cnv.service.CvnService;
  * {@inheritDoc}
  */
 @Service
+@ConditionalOnProperty(prefix = "app.services.cvn.mockup", name = "enabled", havingValue = "false", matchIfMissing = true)
 public class CvnServiceImpl implements CvnService {
 
     /** 
