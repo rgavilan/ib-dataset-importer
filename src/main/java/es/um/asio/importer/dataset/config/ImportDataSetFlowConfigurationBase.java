@@ -68,7 +68,7 @@ public abstract class ImportDataSetFlowConfigurationBase {
      * @return the step
      */
     protected <T extends DataSetData> Step createStep(Class<T> type, String filePath) {
-        return this.stepBuilderFactory.get(getFlowName().concat("-").concat(type.getSimpleName()).concat("-").concat(UUID.randomUUID().toString()))
+        return this.stepBuilderFactory.get(type.getSimpleName().concat("-").concat(UUID.randomUUID().toString()))
                 .<DataSetData, InputData<DataSetData>> chunk(1000)
                 .reader(baseReader(type, filePath))                
                 .processor(getProcessor())
