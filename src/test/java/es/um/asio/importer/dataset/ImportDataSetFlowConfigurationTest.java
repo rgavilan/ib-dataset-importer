@@ -25,9 +25,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import es.um.asio.abstractions.domain.Operation;
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
 import es.um.asio.domain.importResult.ImportResult;
+import es.um.asio.domain.proyectos.Proyecto;
 import es.um.asio.importer.constants.Constants;
 import es.um.asio.importer.dataset.config.ImportDataSetJobConfiguration;
 import es.um.asio.importer.listener.JobCompletionNotificationListener;
@@ -86,7 +88,7 @@ public class ImportDataSetFlowConfigurationTest {
     
     @Test
     public void whenJobExecuted_thenSentAllXmlDataToKafka() {
-        int datasetElementsCount = 88;
+        int datasetElementsCount = 90;
         int goliatElementsCount = 6;
         int paginasElementsCount = 51;
         int personasElementsCount = 1;
@@ -95,5 +97,28 @@ public class ImportDataSetFlowConfigurationTest {
         verify(kafkaTemplate, times(totalElementsCount)).send(anyString(), argThat(inputData -> !(inputData.getData() instanceof ImportResult))); 
     } 
     
+    @Test
+    public void whenJobExecuted_thenSentDataWithOperationToKafka() {       
+        verify(kafkaTemplate).send(anyString(), argThat(inputData -> {
+                    if(inputData.getData() instanceof Proyecto) {
+                        Proyecto proyecto = (Proyecto)inputData.getData();
+                        return proyecto.getIdProyecto().equals(51L) && proyecto.getOperation().equals(Operation.INSERT);
+                    }
+                    return false; })); 
+        
+        verify(kafkaTemplate).send(anyString(), argThat(inputData -> {
+                    if(inputData.getData() instanceof Proyecto) {
+                        Proyecto proyecto = (Proyecto)inputData.getData();
+                        return proyecto.getIdProyecto().equals(53L) && proyecto.getOperation().equals(Operation.UPDATE);
+                    }
+                    return false; })); 
+        
+        verify(kafkaTemplate).send(anyString(), argThat(inputData -> {
+                    if(inputData.getData() instanceof Proyecto) {
+                        Proyecto proyecto = (Proyecto)inputData.getData();
+                        return proyecto.getIdProyecto().equals(144L) && proyecto.getOperation().equals(Operation.DELETE);
+                    }
+                    return false; })); 
+    } 
     
 }
