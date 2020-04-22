@@ -1,9 +1,11 @@
 package es.um.asio.importer.dataset.config;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.batch.core.Step;
@@ -12,12 +14,11 @@ import org.springframework.batch.core.job.flow.Flow;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.file.MultiResourceItemReader;
 import org.springframework.batch.item.xml.StaxEventItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 
 import es.um.asio.domain.DataSetData;
@@ -27,6 +28,7 @@ import es.um.asio.importer.dataset.reader.XmlEventItemReader;
 import es.um.asio.importer.marshaller.DataConverter;
 import es.um.asio.importer.marshaller.DataSetFieldSetMapper;
 import es.um.asio.importer.marshaller.DataSetMarshaller;
+import es.um.asio.importer.util.ResourceUtil;
 import es.um.asio.importer.writer.DataItemWriter;
 
 /**
@@ -68,9 +70,9 @@ public abstract class ImportDataSetFlowConfigurationBase {
      * @return the step
      */
     protected <T extends DataSetData> Step createStep(Class<T> type, String filePath) {
-        return this.stepBuilderFactory.get(getFlowName().concat("-").concat(type.getSimpleName()).concat("Step"))
-                .<DataSetData, InputData<DataSetData>> chunk(1000)                
-                .reader(baseReader(type, filePath))
+        return this.stepBuilderFactory.get(type.getSimpleName().concat("-").concat(UUID.randomUUID().toString()))
+                .<DataSetData, InputData<DataSetData>> chunk(1000)
+                .reader(baseReader(type, filePath))                
                 .processor(getProcessor())
                 .writer(getWriter())
                 .build();
@@ -120,27 +122,36 @@ public abstract class ImportDataSetFlowConfigurationBase {
         ummarshaller.setConverters(converter);
 
         final StaxEventItemReader<DataSetData> reader = new XmlEventItemReader<>();
-        reader.setResource(this.getFile(filePath));
         reader.setUnmarshaller(ummarshaller);
-        reader.setFragmentRootElementName(DataSetMarshaller.DATA_RECORD);
+        reader.setFragmentRootElementName(DataSetMarshaller.DATA_RECORD);        
+        
+        MultiResourceItemReader<DataSetData> multiReader = new MultiResourceItemReader<>();       
+        multiReader.setResources(getRelatedResources(filePath));
+        multiReader.setDelegate(reader);       
 
-        return reader;
+        return multiReader;
+    }
+
+ 
+    /**
+     * Returns the Resource that represents {@link filePath}, and all Resources related with {@link filePath}.
+     * Typically, related resources contains same file name as {@link filePath} but end with number.
+     * Example:
+     * test/filename.xml
+     * Related files: 
+     * test/filename2.xml
+     * test/filename3.xml
+     * @param path the path
+     * @return the related resources
+     */
+    private Resource[] getRelatedResources(final String path) {
+        boolean isClassPathResource = StringUtils.isBlank(this.dataPath);
+        String filePath = isClassPathResource ? path : new File(this.dataPath, path).getPath();        
+        try {
+            return ResourceUtil.getRelatedResources(filePath, isClassPathResource);
+        } catch (IOException e) {
+            return new Resource[] {ResourceUtil.getFile(filePath, isClassPathResource)};
+        }
     }
     
-    /**
-     * Gets the file.
-     *
-     * @return {@link Resource}.
-     */
-    private Resource getFile(final String filePath) {
-        Resource file;
-
-        if (StringUtils.isBlank(this.dataPath)) {
-            file = new ClassPathResource(filePath);
-        } else {
-            file = new FileSystemResource(new File(this.dataPath, filePath));
-        }
-
-        return file;
-    }
 }
