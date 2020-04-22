@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (IDDOCUMENTO?,TITULO?,DESCRIPCION?)+>
+  <!ELEMENT IDDOCUMENTO (#PCDATA)>
+  <!ELEMENT TITULO (#PCDATA)>
+  <!ELEMENT DESCRIPCION (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <IDDOCUMENTO>SRH-B-2015-10030</IDDOCUMENTO>
+    <TITULO>TLR agonists extend the functional lifespan of professional phagocytic granulocytes in the bony fish gilthead seabream and direct precursor differentiation towards the production of granulocytes.</TITULO>
+    <DESCRIPCION></DESCRIPCION>
+  </DATA_RECORD>
+</main>

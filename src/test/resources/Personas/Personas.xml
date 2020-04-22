@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (IDPERSONA)+>
+  <!ELEMENT IDPERSONA (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <IDPERSONA>1</IDPERSONA>
+  </DATA_RECORD>
+</main>
