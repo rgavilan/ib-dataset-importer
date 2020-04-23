@@ -14,4 +14,7 @@ spring:
     # Dont launch jobs automatically
     # job:
       # enabled: false
-    
+## Actuator
+management:
+  server:
+    port: 9320	    
