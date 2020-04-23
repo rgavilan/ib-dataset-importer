@@ -22,7 +22,7 @@ app:
     input-processor:
       mockup:
         enabled: true    
-      endpoint: http://localhost:8080
+      endpoint: http://localhost:9322
       endpoint-import-search: ${app.services.input-processor.endpoint}/import-result/search?
 
 # Spring configuration
