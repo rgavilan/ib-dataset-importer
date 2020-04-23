@@ -25,7 +25,7 @@ import es.um.asio.importer.constants.Constants;
 /**
  * Job that processes CVNs and sends them to Kafka topic
  */
-@Configuration
+//@Configuration
 public class ImportCvnJobConfiguration {
   
     /**
