@@ -25,11 +25,11 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 import java.util.Calendar;
 
-import es.um.asio.importer.cnv.model.CvnChanges;
-import es.um.asio.importer.cnv.model.beans.CvnRootBean;
-import es.um.asio.importer.cnv.config.CvnConfiguration;
-import es.um.asio.importer.cnv.service.CvnService;
-import es.um.asio.importer.cnv.service.impl.CvnServiceImpl;
+import es.um.asio.importer.cvn.model.CvnChanges;
+import es.um.asio.importer.cvn.model.beans.CvnRootBean;
+import es.um.asio.importer.cvn.config.CvnConfiguration;
+import es.um.asio.importer.cvn.service.CvnService;
+import es.um.asio.importer.cvn.service.impl.CvnServiceImpl;
 
 
 @RunWith(SpringRunner.class)

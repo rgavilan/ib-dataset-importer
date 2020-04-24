@@ -22,9 +22,9 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 import java.util.Date;
 
-import es.um.asio.importer.cnv.config.CvnConfiguration;
-import es.um.asio.importer.cnv.service.CvnImportInfoService;
-import es.um.asio.importer.cnv.service.impl.CvnImportInfoServiceImpl;
+import es.um.asio.importer.cvn.config.CvnConfiguration;
+import es.um.asio.importer.cvn.service.CvnImportInfoService;
+import es.um.asio.importer.cvn.service.impl.CvnImportInfoServiceImpl;
 
 
 @RunWith(SpringRunner.class)

@@ -30,12 +30,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
 import es.um.asio.domain.importResult.ImportResult;
-import es.um.asio.importer.cnv.config.ImportCvnJobConfiguration;
-import es.um.asio.importer.cnv.mapper.CvnRootBeanMapper;
-import es.um.asio.importer.cnv.model.CvnChanges;
-import es.um.asio.importer.cnv.model.beans.CvnRootBean;
-import es.um.asio.importer.cnv.service.CvnImportInfoService;
-import es.um.asio.importer.cnv.service.CvnService;
+import es.um.asio.importer.cvn.config.ImportCvnJobConfiguration;
+import es.um.asio.importer.cvn.mapper.CvnRootBeanMapper;
+import es.um.asio.importer.cvn.model.CvnChanges;
+import es.um.asio.importer.cvn.model.beans.CvnRootBean;
+import es.um.asio.importer.cvn.service.CvnImportInfoService;
+import es.um.asio.importer.cvn.service.CvnService;
 import es.um.asio.importer.constants.Constants;
 import es.um.asio.importer.listener.JobCompletionNotificationListener;
 

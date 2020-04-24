@@ -17,11 +17,11 @@ import org.jeasy.random.api.Randomizer;
 import org.junit.Test;
 import org.mapstruct.factory.Mappers;
 
-import es.um.asio.importer.cnv.mapper.CvnRootBeanMapper;
-import es.um.asio.importer.cnv.model.beans.CvnAuthorBean;
-import es.um.asio.importer.cnv.model.beans.CvnDateDayMonthYear;
-import es.um.asio.importer.cnv.model.beans.CvnItemBean;
-import es.um.asio.importer.cnv.model.beans.CvnRootBean;
+import es.um.asio.importer.cvn.mapper.CvnRootBeanMapper;
+import es.um.asio.importer.cvn.model.beans.CvnAuthorBean;
+import es.um.asio.importer.cvn.model.beans.CvnDateDayMonthYear;
+import es.um.asio.importer.cvn.model.beans.CvnItemBean;
+import es.um.asio.importer.cvn.model.beans.CvnRootBean;
 
 public class CvnRootBeanMapperTest {
     
