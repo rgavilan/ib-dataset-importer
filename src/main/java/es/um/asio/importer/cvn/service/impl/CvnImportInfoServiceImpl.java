@@ -3,6 +3,7 @@ package es.um.asio.importer.cvn.service.impl;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.ParameterizedTypeReference;
@@ -26,6 +27,7 @@ public class CvnImportInfoServiceImpl implements CvnImportInfoService {
      * The rest template. 
      * */
     @Autowired
+    @Qualifier("importRestTemplate")
     private RestTemplate restTemplate;
     
     @Value("${app.services.input-processor.endpoint-import-search}")

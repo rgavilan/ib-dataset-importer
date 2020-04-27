@@ -4,14 +4,18 @@ package es.um.asio.importer.cvn.service.impl;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import es.um.asio.importer.cvn.exception.GenericRequestException;
 import es.um.asio.importer.cvn.model.CvnChanges;
 import es.um.asio.importer.cvn.model.beans.CvnRootBean;
 import es.um.asio.importer.cvn.service.CvnService;
@@ -27,6 +31,7 @@ public class CvnServiceImpl implements CvnService {
      * The rest template. 
      * */
     @Autowired
+    @Qualifier("cvnRestTemplate")
     private RestTemplate restTemplate;
     
     @Value("${app.services.cvn.endpoint-changes}")
@@ -39,6 +44,7 @@ public class CvnServiceImpl implements CvnService {
      * {@inheritDoc}
      */
     @Override
+    @Retryable(value = { GenericRequestException.class }, maxAttempts = 3, backoff = @Backoff(delay = 3000) )
     public CvnChanges findAllChangesByDate(Date from) {      
         String uri = endPointChanges;
         if(from != null) {
@@ -53,6 +59,7 @@ public class CvnServiceImpl implements CvnService {
      * {@inheritDoc}
      */
     @Override
+    @Retryable(value = { GenericRequestException.class }, maxAttempts = 3, backoff = @Backoff(delay = 3000) )
     public CvnRootBean findById(Long id) {
         String uri = endPointCvn + "?id=" + id.toString();
         HttpEntity<CvnRootBean> entity = new HttpEntity<>(getHeaders());        
