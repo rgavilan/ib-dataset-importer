@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -19,11 +18,13 @@ import org.springframework.web.client.RestTemplate;
 import static org.junit.Assert.assertNotNull;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
+import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 import java.util.Date;
 
 import es.um.asio.importer.cvn.config.CvnConfiguration;
+import es.um.asio.importer.cvn.exception.LastImportRequestException;
 import es.um.asio.importer.cvn.service.CvnImportInfoService;
 import es.um.asio.importer.cvn.service.impl.CvnImportInfoServiceImpl;
 
@@ -33,7 +34,6 @@ import es.um.asio.importer.cvn.service.impl.CvnImportInfoServiceImpl;
 public class CvnImportInfoServiceTest {        
  
     @Autowired
-    @Qualifier("importRestTemplate")
     public RestTemplate restTemplate;   
   
     @Autowired
@@ -67,6 +67,27 @@ public class CvnImportInfoServiceTest {
         
         mockServer.verify();        
         assertNotNull(date);
+    }
+    
+    @Test(expected = LastImportRequestException.class)
+    public void whenFindDateOfLastImportReturnsServerError_thenThrowLastImportRequestException() {                   
+        mockServer.expect(ExpectedCount.manyTimes(),
+                requestTo("http://localhost:8080/import-result/search?jobType=CVN&exitStatusCode=COMPLETED&page=0&size=1&sort=startTime,desc"))
+                .andExpect(method(HttpMethod.GET))
+                .andRespond(withServerError());  
+        
+        cvnImportInfoService.findDateOfLastImport();
+    }
+    
+    
+    @Test(expected = LastImportRequestException.class)
+    public void whenFindDateOfLastImportReturnsServerError_thenRetry3Times() {       
+        mockServer.expect(ExpectedCount.times(3),
+                requestTo("http://localhost:8080/import-result/search?jobType=CVN&exitStatusCode=COMPLETED&page=0&size=1&sort=startTime,desc"))
+                .andExpect(method(HttpMethod.GET))
+                .andRespond(withServerError());  
+        
+        cvnImportInfoService.findDateOfLastImport();
     }
 
     private String givenAnImportResultPaged() {

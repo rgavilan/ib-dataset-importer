@@ -4,12 +4,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
@@ -21,12 +19,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.*;
 import static org.hamcrest.CoreMatchers.any;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.jupiter.api.Assertions.fail;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.header;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
-import static org.springframework.test.web.client.response.MockRestResponseCreators.withStatus;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 import java.util.Calendar;
@@ -35,9 +31,8 @@ import java.util.Date;
 import es.um.asio.importer.cvn.model.CvnChanges;
 import es.um.asio.importer.cvn.model.beans.CvnRootBean;
 import es.um.asio.importer.cvn.config.CvnConfiguration;
-import es.um.asio.importer.cvn.exception.AuthenticationRequestException;
-import es.um.asio.importer.cvn.exception.BadRequestException;
-import es.um.asio.importer.cvn.exception.GenericRequestException;
+import es.um.asio.importer.cvn.exception.CvnChangesRequestException;
+import es.um.asio.importer.cvn.exception.CvnRequestException;
 import es.um.asio.importer.cvn.service.CvnService;
 import es.um.asio.importer.cvn.service.impl.CvnServiceImpl;
 
@@ -50,7 +45,6 @@ public class CvnServiceTest {
     private CvnService cvnService;
     
     @Autowired
-    @Qualifier("cvnRestTemplate")
     private RestTemplate restTemplate;   
   
     private MockRestServiceServer mockServer;
@@ -115,85 +109,55 @@ public class CvnServiceTest {
         assertThat(cvn.getCvnItemBean().size()).isEqualTo(1);
     }
     
-    @Test(expected = BadRequestException.class)
-    public void whenFindAllChangesByDateRequest_Returns400_thenThrowBadRequestException() {          
-        mockServer.expect(ExpectedCount.once(),
+    
+    @Test(expected = CvnChangesRequestException.class)
+    public void whenfindAllChangesByDateReturnsServerError_thenThrowCvnChangesRequestException() {          
+        mockServer.expect(ExpectedCount.manyTimes(),
                 requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes?date=1970-01-01"))
                 .andExpect(method(HttpMethod.GET))
-                .andRespond(withStatus(HttpStatus.BAD_REQUEST));              
-        
-        cvnService.findAllChangesByDate(new Date(0));
-       
-        mockServer.verify();
-    }
-    
-    @Test(expected = BadRequestException.class)
-    public void whenFindByIdRequest_Returns400_thenThrowBadRequestException() {          
-        mockServer.expect(ExpectedCount.once(),
-                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
-                .andExpect(method(HttpMethod.GET))
-                .andRespond(withStatus(HttpStatus.BAD_REQUEST));              
-        
-        cvnService.findById(1L);
-       
-        mockServer.verify();
-    }
-    
-    @Test(expected = AuthenticationRequestException.class)
-    public void whenFindAllChangesByDateRequest_Returns403_thenThrowAuthenticationRequestException() {          
-        mockServer.expect(ExpectedCount.once(),
-                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes?date=1970-01-01"))
-                .andExpect(method(HttpMethod.GET))
-                .andRespond(withStatus(HttpStatus.FORBIDDEN));              
-        
-        cvnService.findAllChangesByDate(new Date(0));
-       
-        mockServer.verify();
-    }
-    
-    @Test(expected = AuthenticationRequestException.class)
-    public void whenFindByIdRequest_Returns403_thenThrowAuthenticationRequestException() {          
-        mockServer.expect(ExpectedCount.once(),
-                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
-                .andExpect(method(HttpMethod.GET))
-                .andRespond(withStatus(HttpStatus.FORBIDDEN));              
-        
-        cvnService.findById(1L);
-       
-        mockServer.verify();
-    }
-    
-    public void whenFindAllChangesByDate_ThrowGenericRequestException_thenRetry3Times() {
-        mockServer.expect(ExpectedCount.times(3),
-                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes?date=1970-01-01"))
-                .andExpect(method(HttpMethod.GET))
-                .andRespond(withServerError());              
-        
-        try {
-            cvnService.findAllChangesByDate(new Date(0));
-            fail("Expected a GenericRequestException to be thrown");
-        } catch (GenericRequestException genericRequestException) {
-            mockServer.verify();         
-
-        }       
-    }
-    
-    
-    public void whenFindByIdRequest_ThrowGenericRequestException_thenRetry3Times() {
-        mockServer.expect(ExpectedCount.times(3),
-                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
-                .andExpect(method(HttpMethod.GET))
+                .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
                 .andRespond(withServerError());
         
-        try {
-            cvnService.findById(1L);
-            fail("Expected a GenericRequestException to be thrown");
-        } catch (GenericRequestException genericRequestException) {
-            mockServer.verify();
-        }
-       
+        
+        cvnService.findAllChangesByDate(new Date(0));
     }
     
+    @Test(expected = CvnRequestException.class)
+    public void whenfindByIdIsReturnsServerError_thenThrowCvnRequestException() {          
+        mockServer.expect(ExpectedCount.manyTimes(),
+                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
+                .andExpect(method(HttpMethod.GET))
+                .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
+                .andRespond(withServerError());
+        
+        
+        cvnService.findById(1L);
+    }
+    
+    
+    @Test(expected = CvnChangesRequestException.class)
+    public void whenfindAllChangesByDateReturnsServerError_thenRetry3Times() {          
+        mockServer.expect(ExpectedCount.times(3),
+                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes?date=1970-01-01"))
+                .andExpect(method(HttpMethod.GET))
+                .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
+                .andRespond(withServerError());
+       
+        cvnService.findAllChangesByDate(new Date(0));
+    }
+    
+    
+    @Test(expected = CvnRequestException.class)
+    public void whenfindByIdIsReturnsServerError_thenRetry3Times() {          
+        mockServer.expect(ExpectedCount.times(3),
+                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
+                .andExpect(method(HttpMethod.GET))
+                .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
+                .andRespond(withServerError());
+        
+        
+        cvnService.findById(1L);
+    }
     
     
     private String givenACvnXmlWithOneCvnItemBean() {

@@ -15,9 +15,11 @@ import org.springframework.context.annotation.Configuration;
 
 import es.um.asio.domain.DataSetData;
 import es.um.asio.domain.InputData;
+import es.um.asio.importer.cvn.listener.CvnSkipListener;
 import es.um.asio.importer.cvn.model.beans.CvnRootBean;
 import es.um.asio.importer.cvn.processor.CvnItemProcessor;
 import es.um.asio.importer.cvn.reader.CvnReader;
+import es.um.asio.importer.cvn.skippolicy.CvnRequestExceptionSkipPolicy;
 import es.um.asio.importer.writer.DataItemWriter;
 import es.um.asio.importer.constants.Constants;
 
@@ -40,7 +42,7 @@ public class ImportCvnJobConfiguration {
     public Job importCvnJob(final JobBuilderFactory jobs, @Qualifier("CvnStep") final Step s1, final JobExecutionListener listener) {  
         return jobs.get(Constants.CVN_JOB_NAME)
                 .incrementer(new RunIdIncrementer()).listener(listener)
-                .start(s1)
+                .start(s1)                
                 .build();
     }
     
@@ -61,9 +63,12 @@ public class ImportCvnJobConfiguration {
                 .reader(getReader())
                 .processor(getCvnItemProcessor())              
                 .writer(getWriter())
+                .faultTolerant()
+                .skipPolicy(new CvnRequestExceptionSkipPolicy())
+                .listener(new CvnSkipListener())
                 .build();
       }
-        
+     
     
     /**
      * Gets the cvn item processor.
