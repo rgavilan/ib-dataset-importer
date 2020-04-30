@@ -16,20 +16,25 @@ import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.*;
 import static org.hamcrest.CoreMatchers.any;
 import static org.junit.Assert.assertNotNull;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.header;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.requestTo;
+import static org.springframework.test.web.client.response.MockRestResponseCreators.withServerError;
 import static org.springframework.test.web.client.response.MockRestResponseCreators.withSuccess;
 
 import java.util.Calendar;
+import java.util.Date;
 
-import es.um.asio.importer.cnv.model.CvnChanges;
-import es.um.asio.importer.cnv.model.beans.CvnRootBean;
-import es.um.asio.importer.cnv.config.CvnConfiguration;
-import es.um.asio.importer.cnv.service.CvnService;
-import es.um.asio.importer.cnv.service.impl.CvnServiceImpl;
+import es.um.asio.importer.cvn.model.CvnChanges;
+import es.um.asio.importer.cvn.model.beans.CvnRootBean;
+import es.um.asio.importer.cvn.config.CvnConfiguration;
+import es.um.asio.importer.cvn.exception.CvnChangesRequestException;
+import es.um.asio.importer.cvn.exception.CvnRequestException;
+import es.um.asio.importer.cvn.service.CvnService;
+import es.um.asio.importer.cvn.service.impl.CvnServiceImpl;
 
 
 @RunWith(SpringRunner.class)
@@ -102,6 +107,56 @@ public class CvnServiceTest {
         mockServer.verify();        
         assertNotNull(cvn);
         assertThat(cvn.getCvnItemBean().size()).isEqualTo(1);
+    }
+    
+    
+    @Test(expected = CvnChangesRequestException.class)
+    public void whenfindAllChangesByDateReturnsServerError_thenThrowCvnChangesRequestException() {          
+        mockServer.expect(ExpectedCount.manyTimes(),
+                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes?date=1970-01-01"))
+                .andExpect(method(HttpMethod.GET))
+                .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
+                .andRespond(withServerError());
+        
+        
+        cvnService.findAllChangesByDate(new Date(0));
+    }
+    
+    @Test(expected = CvnRequestException.class)
+    public void whenfindByIdIsReturnsServerError_thenThrowCvnRequestException() {          
+        mockServer.expect(ExpectedCount.manyTimes(),
+                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
+                .andExpect(method(HttpMethod.GET))
+                .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
+                .andRespond(withServerError());
+        
+        
+        cvnService.findById(1L);
+    }
+    
+    
+    @Test(expected = CvnChangesRequestException.class)
+    public void whenfindAllChangesByDateReturnsServerError_thenRetry3Times() {          
+        mockServer.expect(ExpectedCount.times(3),
+                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/changes?date=1970-01-01"))
+                .andExpect(method(HttpMethod.GET))
+                .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
+                .andRespond(withServerError());
+       
+        cvnService.findAllChangesByDate(new Date(0));
+    }
+    
+    
+    @Test(expected = CvnRequestException.class)
+    public void whenfindByIdIsReturnsServerError_thenRetry3Times() {          
+        mockServer.expect(ExpectedCount.times(3),
+                requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
+                .andExpect(method(HttpMethod.GET))
+                .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
+                .andRespond(withServerError());
+        
+        
+        cvnService.findById(1L);
     }
     
     

@@ -58,7 +58,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
         if (jobExecution.getStatus() == BatchStatus.COMPLETED) {
             logger.info("Job {} has finished successfully", jobExecution.getJobInstance().getJobName());
         } else {
-            logger.info("Job {} has NOT finished successfully. Status is {}", jobExecution.getJobInstance().getJobName(), jobExecution.getExitStatus());
+            logger.warn("Job {} has NOT finished successfully. Status is {}", jobExecution.getJobInstance().getJobName(), jobExecution.getExitStatus());
         }
     }
 }
