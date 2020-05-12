@@ -48,7 +48,7 @@ Para la configuración de la ejecución periodica de jobs, se utilizarán las he
 
 Simplemente habría que ordenarle ejecutar el comando necesario. Por ejemplo:
 
-	java -jar -Dspring.batch.job.names=importUserJob simulator-importer-0.0.1-SNAPSHOT.jar
+	java -jar -Dspring.batch.job.names=importCvnJob dataset-importer-1.0-SNAPSHOT.jar
 	
 No es necesario especificar la clase de inicio de la aplicación, ya que el fichero MANIFEST.MF generado ya contiene la información necesaria. Solamente se especificarán los parametros necesarios.
 
