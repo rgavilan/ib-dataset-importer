@@ -51,7 +51,7 @@ public class CvnItemProcessor implements ItemProcessor<CvnRootBean,InputData<Dat
         DataSetData domainCvn = mapper.map(cvnRootBean);        
         domainCvn.setVersion(jobExecutionId);
         
-        logger.info("Processing data {}", domainCvn);
+        logger.info("Processing CVN data cvn");
         return new InputData<>(domainCvn);
     }
 

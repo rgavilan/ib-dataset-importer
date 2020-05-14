@@ -42,7 +42,7 @@ public class DataItemWriter implements ItemWriter<InputData<DataSetData>> {
 	@Override
 	public void write(List<? extends InputData<DataSetData>> datas) throws Exception {
 		for(InputData<DataSetData> data : datas) {
-            logger.info("Send data to input-data kafka topic: {}", data);
+            logger.info("Send data to input-data kafka topic: {}", data.getClass());
             
 		    kafkaTemplate.send(topicName, data);
 		}

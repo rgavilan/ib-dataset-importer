@@ -38,7 +38,7 @@ public class DataItemProcessor implements ItemProcessor<DataSetData, InputData<D
     @Override
     public InputData<DataSetData> process(final DataSetData data) throws Exception {
         data.setVersion(jobExecutionId);
-        logger.info("Processing data {}", data);
+        logger.info("Processing DataSetData {}", data.getClass());
         return new InputData<>(data);
     }
 
