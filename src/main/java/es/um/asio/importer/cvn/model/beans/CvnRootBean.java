@@ -36,7 +36,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "CvnRootBean", propOrder = {
+@XmlType(name = "CVN", propOrder = {
     "cvnItemBean"
 })
 public class CvnRootBean {

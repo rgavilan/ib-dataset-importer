@@ -100,7 +100,7 @@ public class CvnServiceTest {
                 requestTo("http://curriculumpruebas.um.es/curriculum/rest/v1/auth/cvn?id=1"))
                 .andExpect(method(HttpMethod.GET))
                 .andExpect(header("application",any(String.class))).andExpect(header("key",any(String.class)))
-                .andRespond(withSuccess(givenACvnXmlWithOneCvnItemBean(),MediaType.APPLICATION_XML));  
+                .andRespond(withSuccess(givenACvnXmlWithOneCvnItemBean(),MediaType.APPLICATION_JSON));  
         
         CvnRootBean cvn = cvnService.findById(1L);
         
@@ -162,7 +162,7 @@ public class CvnServiceTest {
     
     private String givenACvnXmlWithOneCvnItemBean() {
         return "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" standalone=\"yes\"?>\r\n" + 
-                "<CvnRootBean\r\n" + 
+                "<Cvn\r\n" + 
                 "    xmlns=\"http://codes.cvn.fecyt.es/beans\">" +
                 " <CvnItemBean>\r\n" + 
                 "        <Code>000.020.000.000</Code>\r\n" + 
@@ -179,7 +179,7 @@ public class CvnServiceTest {
                 "            <Value>1.3.0</Value>\r\n" + 
                 "        </CvnString>\r\n" + 
                 "    </CvnItemBean>\r\n" + 
-                "</CvnRootBean>";
+                "</Cvn>";
     }
     
     private String givenAJsonWithListOfIds() {

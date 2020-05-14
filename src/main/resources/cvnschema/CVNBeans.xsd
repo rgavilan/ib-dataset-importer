@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.5-b05 . --><xs:schema xmlns:tns="http://codes.cvn.fecyt.es/beans" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" version="1.0" targetNamespace="http://codes.cvn.fecyt.es/beans">
 
-<xs:element name="CvnRootBean" type="tns:CvnRootBean"></xs:element>
+<xs:element name="CVN" type="tns:CvnRootBean"></xs:element>
 
 <xs:complexType name="CvnRootBean">
 <xs:sequence>

@@ -31,7 +31,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _CvnRootBean_QNAME = new QName("http://codes.cvn.fecyt.es/beans", "CvnRootBean");
+    private final static QName _CvnRootBean_QNAME = new QName("http://codes.cvn.fecyt.es/beans", "CVN");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: es.um.asio.domain.cvn
@@ -212,7 +212,7 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link CvnRootBean }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://codes.cvn.fecyt.es/beans", name = "CvnRootBean")
+    @XmlElementDecl(namespace = "http://codes.cvn.fecyt.es/beans", name = "CVN")
     public JAXBElement<CvnRootBean> createCvnRootBean(CvnRootBean value) {
         return new JAXBElement<CvnRootBean>(_CvnRootBean_QNAME, CvnRootBean.class, null, value);
     }

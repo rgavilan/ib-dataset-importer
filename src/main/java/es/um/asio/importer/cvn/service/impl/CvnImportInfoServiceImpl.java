@@ -2,8 +2,9 @@ package es.um.asio.importer.cvn.service.impl;
 
 import java.util.Date;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.ParameterizedTypeReference;
@@ -15,7 +16,6 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import es.um.asio.abstractions.dto.ImportResultDto;
-import es.um.asio.importer.cvn.exception.CvnRequestException;
 import es.um.asio.importer.cvn.exception.LastImportRequestException;
 import es.um.asio.importer.cvn.service.CvnImportInfoService;
 import es.um.asio.importer.util.RestPageImpl;
@@ -27,6 +27,11 @@ import es.um.asio.importer.util.RestPageImpl;
 @Service
 @ConditionalOnProperty(prefix = "app.services.input-processor.mockup", name = "enabled", havingValue = "false", matchIfMissing = true)
 public class CvnImportInfoServiceImpl implements CvnImportInfoService {
+   
+   /** 
+    * The logger. 
+    */
+   private static final Logger logger = LoggerFactory.getLogger(CvnImportInfoServiceImpl.class);
 
     /** 
      * The rest template. 
@@ -51,6 +56,7 @@ public class CvnImportInfoServiceImpl implements CvnImportInfoService {
         try {
             importResultsPaged = restTemplate.exchange(uri, HttpMethod.GET, null, responseType).getBody(); 
         } catch (RestClientException restClientException) {
+            logger.error("Error in findDateOfLastImport request {}. Exception: {}", uri, restClientException.getMessage());
             throw new LastImportRequestException(uri, restClientException);
         }
         
