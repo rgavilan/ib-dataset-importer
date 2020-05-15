@@ -30,4 +30,25 @@ public class DataSetMarshaller<T> extends XStreamMarshaller {
      * Data record tag.
      */
     public static final String DATA_RECORD = "DATA_RECORD";
+    
+    /** 
+     * The entity operation tag. 
+     * */
+    public static final String ACCION_ENTIDAD = "ACCIONENTIDAD";
+    
+    /** 
+     * Add operation tag. 
+     * */
+    public static final String ACCION_ENTIDAD_ADD = "ADD";
+    
+    /** 
+     * Modify operation tag. 
+     * */
+    public static final String ACCION_ENTIDAD_MODIFY = "MODIFY";
+    
+    /** 
+     * Delete operation tag. 
+     * */
+    public static final String ACCION_ENTIDAD_DELETE = "DELETE";    
+    
 }

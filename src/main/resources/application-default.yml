@@ -5,7 +5,16 @@ app:
     jpa:
       generate-ddl: true
       show-sql: true
+    datasource:
+      url: jdbc:mysql://localhost:3307/asio_jobs?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
 
 spring:
   batch:
     initialize-schema: always
+    # Dont launch jobs automatically
+    # job:
+      # enabled: false
+## Actuator
+management:
+  server:
+    port: 9320	    

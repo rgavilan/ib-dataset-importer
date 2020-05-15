@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (ID,ID_PROYECTO,ID_PERSONA,IDPERSONA,DESCRIPCION?,INICIO,FIN)+>
+  <!ELEMENT ID (#PCDATA)>
+  <!ELEMENT ID_PROYECTO (#PCDATA)>
+  <!ELEMENT ID_PERSONA (#PCDATA)>
+  <!ELEMENT IDPERSONA (#PCDATA)>
+  <!ELEMENT DESCRIPCION (#PCDATA)>
+  <!ELEMENT INICIO (#PCDATA)>
+  <!ELEMENT FIN (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <ID>21</ID>
+    <ID_PROYECTO>760</ID_PROYECTO>
+    <ID_PERSONA>29063907A</ID_PERSONA>
+    <IDPERSONA>1704</IDPERSONA>
+    <DESCRIPCION>6 nov: Participaci&#243;n en ODS6. D1.&#13;&#10;7 nov: Reuni&#243;n mensual noviembre. E1.&#13;&#10;8-10 nov: Participaci&#243;n en Semana de la Ciencia. D1.&#13;&#10;13 nov: Presentaci&#243;n en Aula S&#233;nior de la UMU. B2.&#13;&#10;27 nov: Reuni&#243;n UEV-UMU. E1.&#13;&#10;</DESCRIPCION>
+    <INICIO>2019/11/01 00:00:00</INICIO>
+    <FIN>2019/11/30 00:00:00</FIN>
+  </DATA_RECORD>
+</main>

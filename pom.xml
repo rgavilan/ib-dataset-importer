@@ -7,13 +7,13 @@
 	<parent>
 		<groupId>com.izertis.superpom</groupId>
 		<artifactId>izertis-superpom-parent-app</artifactId>
-		<version>1.1.0</version>
+		<version>1.1.1</version>
 	</parent>
 
 	<groupId>es.um.asio</groupId>
 	<artifactId>dataset-importer</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<name>UM - ASIO - dataset-importer</name>
+    <name>UM - ASIO - dataset-importer</name>
 	<description>UM - ASIO - dataset-importer</description>
 
 	<scm>
@@ -66,6 +66,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -94,11 +100,38 @@
 		</dependency>
 		
 		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-commons</artifactId>
+		</dependency>
+				
+		
+		<dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
             <version>1.4.11.1</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        
+		<dependency>
+		    <groupId>org.springframework.retry</groupId>
+			<artifactId>spring-retry</artifactId>
+		</dependency>
 		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+		
+		<dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+        </dependency>
+    
+        
 		<!-- Database -->
 		
 		<dependency>
@@ -117,7 +150,15 @@
 			<groupId>org.springframework.batch</groupId>
 			<artifactId>spring-batch-test</artifactId>
 			<scope>test</scope>
+		</dependency>		
+				
+		<dependency>
+		    <groupId>org.jeasy</groupId>
+		    <artifactId>easy-random-core</artifactId>
+		    <version>4.2.0</version>		    
+		    <scope>test</scope>
 		</dependency>
+		
 	</dependencies>
 	
 	<build>

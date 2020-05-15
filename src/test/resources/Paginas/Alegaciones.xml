@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (NUMERO,COD_TIPO,TITULO?,IDPERSONA,MOTIVO?,TEXTO,RESUELVE_TEXTO?,FECHA,ESTADO?)+>
+  <!ELEMENT NUMERO (#PCDATA)>
+  <!ELEMENT COD_TIPO (#PCDATA)>
+  <!ELEMENT TITULO (#PCDATA)>
+  <!ELEMENT IDPERSONA (#PCDATA)>
+  <!ELEMENT MOTIVO (#PCDATA)>
+  <!ELEMENT TEXTO (#PCDATA)>
+  <!ELEMENT RESUELVE_TEXTO (#PCDATA)>
+  <!ELEMENT FECHA (#PCDATA)>
+  <!ELEMENT ESTADO (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <NUMERO>164</NUMERO>
+    <COD_TIPO>4</COD_TIPO>
+    <TITULO>BECA DE INICIACION 367</TITULO>
+    <IDPERSONA>32813</IDPERSONA>
+    <MOTIVO>Puntuaci&#243;n total incorrecta</MOTIVO>
+    <TEXTO>La puntuaci&#243;n total est&#225; calculada err&#243;neamente:&#13;&#10;&#13;&#10;1. No se ha incluido las calificaciones de la Licenciatura en Ciencias del Trabajo de la Universidad de Murcia con su respectiva ponderaci&#243;n&#40;expediente del que disponen ustedes&#41;. &#13;&#10;. Tambi&#233;n deber&#225;n incluirse los creditos de formaci&#243;n que son asignaturas obligatorias.&#13;&#10;&#13;&#10;2. Para el c&#225;lculo de la puntuaci&#243;n de la Diplomatura de Relaciones Laborales no se ha aplicado el criterio que determina el propio certificado de calificaciones de la Universidad de Alicante. El certificado textualmente &#40;se adjunta&#41; indica que: &#34;si no hay calificaci&#243;n num&#233;rica se aplica el valor...:Aprobado&#61;6, Notable&#61;8, Sobresaliente&#61;9,5...&#34;&#13;&#10;&#13;&#10;Se adjunta:&#13;&#10;1. Certificado Calificaciones Relaciones Laborales&#13;&#10;2. Certificado Calificaciones Ciencias del Trabajo&#13;&#10;&#13;&#10;&#13;&#10;Ruego, por todo ello, se revise el expediente y se realice el c&#225;lculo de la puntuaci&#243;n correctamente.&#13;&#10;&#13;&#10;&#193;ngel Manzanares Guti&#233;rrez</TEXTO>
+    <RESUELVE_TEXTO>En relaci&#243;n con la alegaci&#243;n presentada a la Resoluci&#243;n Provisional de la Convocatoria R.228/2012 de Ayudas de Iniciaci&#243;n a&#13;&#10;la Investigaci&#243;n 2012 de la Universidad de Murcia, modificada por R.286/2012, la Comisi&#243;n de Investigaci&#243;n ha tenido en cuenta para el c&#225;lculo de su nota media la certificaci&#243;n acad&#233;mica del T&#237;tulo de Diplomado en Relaciones Laborales por la Universidad de Alicante, as&#237;como la correspondiente a la titulaci&#243;n de Licenciado en Ciencias del Trabajo por la Universidad de Murcia. Asimismo la Comisi&#243;n de Investigaci&#243;n tenido en cuenta incluir los &#34;Complementos Formativos&#34; para el c&#225;lculo de dicha nota media, por lo que se modifica la puntuaci&#243;n total obtenida, de 5,784 a 5,818, manteni&#233;ndose en el pueso 87 de la Resoluci&#243;n Provisional.</RESUELVE_TEXTO>
+    <FECHA>2012/07/20 12:10:46</FECHA>
+    <ESTADO>R</ESTADO>
+  </DATA_RECORD>
+</main>
