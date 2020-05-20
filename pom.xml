@@ -17,7 +17,7 @@
 	<description>UM - ASIO - dataset-importer</description>
 
 	<scm>
-		<url>https://git.izertis.com/universidaddemurcia/semantmurc/dataset-importer</url>
+		<url>scm:git:https://github.com/HerculesCRUE/ib-dataset-importer.git</url>
 	</scm>
 
 	<properties>
