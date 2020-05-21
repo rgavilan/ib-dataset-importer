@@ -17,16 +17,8 @@ Para realizar la compilación se ejecutará el siguiente comando:
 mvn clean package
 ```
 
-En caso de querer generar al mismo tiempo JavaDoc y Sources el comando siguiente: 
-
-```bash
-mvn clean package javadoc:jar source:jar
-```
-
 También sería posible instalar o desplegar los artefactos sustituyendo `package` por `install` o `deploy` respectivamente.
 
 Los artefactos se generarán dentro del directorio `target`:
 
 * Artefacto: dataset-importer-{version}.jar
-* JavaDoc: dataset-importer-{version}-javadoc.jar
-* Sources: dataset-importer-{version}-sources.jar
