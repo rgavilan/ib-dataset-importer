@@ -99,6 +99,13 @@ Será preciso configurar las siguientes variables de entorno cuando se instale e
 |`APP_SERVICES_INPUTPROCESSOR_ENDPOINT`| URL del servicio para obtener datos de importaciones anteriores | localhost:9322 |
 |`APP_SERVICES_INPUTPROCESSOR_MOCKUP_ENABLED`| Indica si se deben utilizar servicios mock para obtener datos de importaciones anteriores. Valores admisibles: `true` y `false` | true |
 
+## Testing y cobertura
+
+Se incluyen los resultados del testing y cobertura en los siguientes enlaces:
+
+* [Testing](http://herc-iz-front-desa.atica.um.es:8070/dataset-importer/surefire/surefire-report.html)
+* [Cobertura](http://herc-iz-front-desa.atica.um.es:8070/dataset-importer/jacoco/)
+
 ##  Documentación adicional
 
 * [Compilación](docs/build.md)
