@@ -142,7 +142,7 @@ public class CvnItemBean
      */
     public List<CvnAuthorBean> getCvnAuthorBean() {
         if (cvnAuthorBean == null) {
-            cvnAuthorBean = new ArrayList<CvnAuthorBean>();
+            cvnAuthorBean = new ArrayList<>();
         }
         return this.cvnAuthorBean;
     }
@@ -171,7 +171,7 @@ public class CvnItemBean
      */
     public List<CvnBoolean> getCvnBoolean() {
         if (cvnBoolean == null) {
-            cvnBoolean = new ArrayList<CvnBoolean>();
+            cvnBoolean = new ArrayList<>();
         }
         return this.cvnBoolean;
     }
@@ -200,7 +200,7 @@ public class CvnItemBean
      */
     public List<CvnCodeGroup> getCvnCodeGroup() {
         if (cvnCodeGroup == null) {
-            cvnCodeGroup = new ArrayList<CvnCodeGroup>();
+            cvnCodeGroup = new ArrayList<>();
         }
         return this.cvnCodeGroup;
     }
@@ -229,7 +229,7 @@ public class CvnItemBean
      */
     public List<CvnDateDayMonthYear> getCvnDateDayMonthYear() {
         if (cvnDateDayMonthYear == null) {
-            cvnDateDayMonthYear = new ArrayList<CvnDateDayMonthYear>();
+            cvnDateDayMonthYear = new ArrayList<>();
         }
         return this.cvnDateDayMonthYear;
     }
@@ -258,7 +258,7 @@ public class CvnItemBean
      */
     public List<CvnDateMonthYear> getCvnDateMonthYear() {
         if (cvnDateMonthYear == null) {
-            cvnDateMonthYear = new ArrayList<CvnDateMonthYear>();
+            cvnDateMonthYear = new ArrayList<>();
         }
         return this.cvnDateMonthYear;
     }
@@ -287,7 +287,7 @@ public class CvnItemBean
      */
     public List<CvnDateYear> getCvnDateYear() {
         if (cvnDateYear == null) {
-            cvnDateYear = new ArrayList<CvnDateYear>();
+            cvnDateYear = new ArrayList<>();
         }
         return this.cvnDateYear;
     }
@@ -316,7 +316,7 @@ public class CvnItemBean
      */
     public List<CvnDouble> getCvnDouble() {
         if (cvnDouble == null) {
-            cvnDouble = new ArrayList<CvnDouble>();
+            cvnDouble = new ArrayList<>();
         }
         return this.cvnDouble;
     }
@@ -345,7 +345,7 @@ public class CvnItemBean
      */
     public List<CvnDuration> getCvnDuration() {
         if (cvnDuration == null) {
-            cvnDuration = new ArrayList<CvnDuration>();
+            cvnDuration = new ArrayList<>();
         }
         return this.cvnDuration;
     }
@@ -374,7 +374,7 @@ public class CvnItemBean
      */
     public List<CvnEntityBean> getCvnEntityBean() {
         if (cvnEntityBean == null) {
-            cvnEntityBean = new ArrayList<CvnEntityBean>();
+            cvnEntityBean = new ArrayList<>();
         }
         return this.cvnEntityBean;
     }
@@ -403,7 +403,7 @@ public class CvnItemBean
      */
     public List<CvnExternalPKBean> getCvnExternalPKBean() {
         if (cvnExternalPKBean == null) {
-            cvnExternalPKBean = new ArrayList<CvnExternalPKBean>();
+            cvnExternalPKBean = new ArrayList<>();
         }
         return this.cvnExternalPKBean;
     }
@@ -432,7 +432,7 @@ public class CvnItemBean
      */
     public List<CvnFamilyNameBean> getCvnFamilyNameBean() {
         if (cvnFamilyNameBean == null) {
-            cvnFamilyNameBean = new ArrayList<CvnFamilyNameBean>();
+            cvnFamilyNameBean = new ArrayList<>();
         }
         return this.cvnFamilyNameBean;
     }
@@ -461,7 +461,7 @@ public class CvnItemBean
      */
     public List<CvnPageBean> getCvnPageBean() {
         if (cvnPageBean == null) {
-            cvnPageBean = new ArrayList<CvnPageBean>();
+            cvnPageBean = new ArrayList<>();
         }
         return this.cvnPageBean;
     }
@@ -490,7 +490,7 @@ public class CvnItemBean
      */
     public List<CvnPhoneBean> getCvnPhoneBean() {
         if (cvnPhoneBean == null) {
-            cvnPhoneBean = new ArrayList<CvnPhoneBean>();
+            cvnPhoneBean = new ArrayList<>();
         }
         return this.cvnPhoneBean;
     }
@@ -519,7 +519,7 @@ public class CvnItemBean
      */
     public List<CvnPhotoBean> getCvnPhotoBean() {
         if (cvnPhotoBean == null) {
-            cvnPhotoBean = new ArrayList<CvnPhotoBean>();
+            cvnPhotoBean = new ArrayList<>();
         }
         return this.cvnPhotoBean;
     }
@@ -548,7 +548,7 @@ public class CvnItemBean
      */
     public List<CvnRichText> getCvnRichText() {
         if (cvnRichText == null) {
-            cvnRichText = new ArrayList<CvnRichText>();
+            cvnRichText = new ArrayList<>();
         }
         return this.cvnRichText;
     }
@@ -577,7 +577,7 @@ public class CvnItemBean
      */
     public List<CvnString> getCvnString() {
         if (cvnString == null) {
-            cvnString = new ArrayList<CvnString>();
+            cvnString = new ArrayList<>();
         }
         return this.cvnString;
     }
@@ -606,7 +606,7 @@ public class CvnItemBean
      */
     public List<CvnTitleBean> getCvnTitleBean() {
         if (cvnTitleBean == null) {
-            cvnTitleBean = new ArrayList<CvnTitleBean>();
+            cvnTitleBean = new ArrayList<>();
         }
         return this.cvnTitleBean;
     }
@@ -635,7 +635,7 @@ public class CvnItemBean
      */
     public List<CvnVolumeBean> getCvnVolumeBean() {
         if (cvnVolumeBean == null) {
-            cvnVolumeBean = new ArrayList<CvnVolumeBean>();
+            cvnVolumeBean = new ArrayList<>();
         }
         return this.cvnVolumeBean;
     }

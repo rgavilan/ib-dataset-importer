@@ -68,7 +68,7 @@ public class CvnRootBean {
      */
     public List<CvnItemBean> getCvnItemBean() {
         if (cvnItemBean == null) {
-            cvnItemBean = new ArrayList<CvnItemBean>();
+            cvnItemBean = new ArrayList<>();
         }
         return this.cvnItemBean;
     }

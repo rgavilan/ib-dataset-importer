@@ -1,13 +1,11 @@
 package es.um.asio.importer.marshaller;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper;
 import org.springframework.core.convert.ConversionService;
+import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.support.DefaultConversionService;
 
 import es.um.asio.abstractions.domain.Operation;
-
-import org.springframework.core.convert.converter.Converter;
 
 /**
  * Extension of {@link BeanWrapperFieldSetMapper}. Sets generic type as target type automatically.
@@ -36,12 +34,15 @@ public class DataSetFieldSetMapper<T> extends BeanWrapperFieldSetMapper<T> {
     private ConversionService createConversionService() {
         DefaultConversionService conversionService = new DefaultConversionService();
         DefaultConversionService.addDefaultConverters(conversionService);
+        
         conversionService.addConverter(new Converter<String, Float>() {
             @Override
             public Float convert(String text) {               
                 return Float.valueOf(text.replace(',', '.'));
             }
         });
+        
+        
         DefaultConversionService.addDefaultConverters(conversionService);
         conversionService.addConverter(new Converter<String, Operation>() {
             @Override

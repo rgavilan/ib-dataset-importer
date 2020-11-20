@@ -1,4 +1,4 @@
-package es.um.asio.importer.dataset.config.gruposInvestigacion;
+package es.um.asio.importer.dataset.config.gruposinvestigacion;
 
 import org.springframework.batch.core.job.builder.FlowBuilder;
 import org.springframework.batch.core.job.flow.Flow;

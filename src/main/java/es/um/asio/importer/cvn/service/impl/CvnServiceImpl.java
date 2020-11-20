@@ -66,7 +66,7 @@ public class CvnServiceImpl implements CvnService {
         try {
             return restTemplate.exchange(uri, HttpMethod.GET, entity, CvnChanges.class).getBody();
         } catch (RestClientException restClientException) {
-            logger.error("Error in cvn-findAllChangesByDate request {}. Exception: {}", uri, restClientException.getMessage());
+            logger.error("Error in cvn-findAllChangesByDate request {}.", uri);
             throw new CvnChangesRequestException(uri, restClientException);
         }
     }
@@ -83,7 +83,7 @@ public class CvnServiceImpl implements CvnService {
         try {
             return restTemplate.execute(uri, HttpMethod.GET, clientHttpRequest -> clientHttpRequest.getHeaders().addAll(getHeaders()), cvnResponseExtractor);
         } catch (RestClientException restClientException) {
-            logger.error("Error in cvn request {}. Exception: {}", uri, restClientException.getMessage());
+            logger.error("Error in cvn request {}.", uri);
             throw new CvnRequestException(uri, restClientException);
         }
     }

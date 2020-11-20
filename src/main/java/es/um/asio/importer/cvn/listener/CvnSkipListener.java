@@ -27,7 +27,7 @@ public class CvnSkipListener implements SkipListener<CvnRootBean, InputData<Data
      */
     @Override
     public void onSkipInRead(Throwable t) {
-        logger.warn("Skipped CVN reading {}", t);
+        logger.warn("Skipped CVN reading {}", t.toString());
     }    
 
     /**
@@ -38,7 +38,7 @@ public class CvnSkipListener implements SkipListener<CvnRootBean, InputData<Data
      */
     @Override
     public void onSkipInProcess(CvnRootBean item, Throwable t) {
-        logger.warn("Skipped CVN processing {}, {}", item, t);        
+        logger.warn("Skipped CVN processing {}, {}", item, t.toString());        
     }
 
     /**
@@ -49,7 +49,7 @@ public class CvnSkipListener implements SkipListener<CvnRootBean, InputData<Data
      */
     @Override
     public void onSkipInWrite(InputData<DataSetData> item, Throwable t) {
-        logger.warn("Skipped CVN writing {}, {}", item, t);
+        logger.warn("Skipped CVN writing {}, {}", item, t.toString());
     }
 
 }

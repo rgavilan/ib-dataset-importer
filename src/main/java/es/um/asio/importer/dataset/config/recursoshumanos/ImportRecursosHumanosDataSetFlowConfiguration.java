@@ -1,4 +1,4 @@
-package es.um.asio.importer.dataset.config.recursosHumanos;
+package es.um.asio.importer.dataset.config.recursoshumanos;
 
 import org.springframework.batch.core.job.builder.FlowBuilder;
 import org.springframework.batch.core.job.flow.Flow;

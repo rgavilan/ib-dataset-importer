@@ -56,7 +56,7 @@ public class CvnImportInfoServiceImpl implements CvnImportInfoService {
         try {
             importResultsPaged = restTemplate.exchange(uri, HttpMethod.GET, null, responseType).getBody(); 
         } catch (RestClientException restClientException) {
-            logger.error("Error in findDateOfLastImport request {}. Exception: {}", uri, restClientException.getMessage());
+            logger.error("Error in findDateOfLastImport");
             throw new LastImportRequestException(uri, restClientException);
         }
         
