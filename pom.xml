@@ -16,6 +16,7 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>UM - ASIO - dataset-importer</name>
 	<description>UM - ASIO - dataset-importer</description>
+	<url>https://www.um.es/web/hercules/</url>
 
 	<scm>
 		<url>scm:git:https://github.com/HerculesCRUE/ib-dataset-importer.git</url>
