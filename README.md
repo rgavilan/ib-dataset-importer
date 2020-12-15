@@ -119,7 +119,7 @@ Será preciso configurar las siguientes variables de entorno cuando se instale e
 Se incluyen los resultados del testing y cobertura en los siguientes enlaces:
 
 * [Testing](http://herc-iz-front-desa.atica.um.es:8070/dataset-importer/surefire/surefire-report.html)
-* [Cobertura](http://herc-iz-front-desa.atica.um.es:8070/dataset-importer/jacoco/)
+* [Cobertura](https://sonarcloud.io/component_measures?id=HerculesCRUE_ib-dataset-importer&metric=coverage&view=list)
 
 ##  Documentación adicional
 
