@@ -5,7 +5,7 @@
 | Entregable     | Importador de datos del DataSet de Murcia                    |
 | -------------- | ------------------------------------------------------------ |
 | Fecha          | 17/12/2020                                                   |
-| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](http://www.crue.org/SitePages/ProyectoHercules.aspx) |
+| Proyecto       | [ASIO](https://www.um.es/web/hercules/proyectos/asio) (Arquitectura Semántica e Infraestructura Ontológica) en el marco de la iniciativa [Hércules](https://www.um.es/web/hercules/) para la Semántica de Datos de Investigación de Universidades que forma parte de [CRUE-TIC](https://www.crue.org/proyecto/hercules/) |
 | Módulo         | Importador base                                              |
 | Tipo           | Software                                                     |
 | Objetivo       | Importador de datos del DataSet de Murcia para el proyecto Backend SGI (ASIO). |
