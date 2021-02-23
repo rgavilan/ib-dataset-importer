@@ -31,7 +31,7 @@ jobs:
       - name: Build with Maven
         env:
           GITHUB_USER: ${{ secrets.PERSONAL_GITHUB_USER }}
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          GITHUB_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         run: mvn -s ./.ci/settings.xml -B -U clean package jacoco:report-aggregate -DfailOnError=false
       - name: Analyze
         env:
