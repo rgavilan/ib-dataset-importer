@@ -33,7 +33,12 @@
 
   <servers>
     <server>
-      <id>github</id>
+      <id>github-asio-abstractions</id>
+      <username>${env.GITHUB_USER}</username>
+      <password>${env.GITHUB_TOKEN}</password>
+    </server>
+    <server>
+      <id>github-dataset-domain-model</id>
       <username>${env.GITHUB_USER}</username>
       <password>${env.GITHUB_TOKEN}</password>
     </server>
