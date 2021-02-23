@@ -20,12 +20,12 @@
         <repository>
           <id>github-asio-abstractions</id>
           <name>GitHub asio-abstractions Apache Maven Packages</name>
-          <url>https://maven.pkg.github.com/HerculesCRUE/ib-asio-abstractions</url>
+          <url>https://maven.pkg.github.com/rgavilan/ib-asio-abstractions</url>
         </repository>
         <repository>
           <id>github-dataset-domain-model</id>
           <name>GitHub dataset-domain-model Apache Maven Packages</name>
-          <url>https://maven.pkg.github.com/HerculesCRUE/ib-dataset-domain-model</url>
+          <url>https://maven.pkg.github.com/rgavilan/ib-dataset-domain-model</url>
         </repository>
       </repositories>
     </profile>
