@@ -32,7 +32,7 @@ jobs:
         env:
           GITHUB_USER: ${{ secrets.PERSONAL_GITHUB_USER }}
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
-        run: mvn -B -U clean package jacoco:report-aggregate -DfailOnError=false
+        run: mvn -s ./.ci/settings.xml -B -U clean package jacoco:report-aggregate -DfailOnError=false
       - name: Analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
