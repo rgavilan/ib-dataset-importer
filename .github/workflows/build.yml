@@ -1,4 +1,4 @@
-name: CI
+name: Build
 
 on: 
   push:
@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: jar
-          path: target/dataset-domain-model-*.jar
+          path: target/dataset-importer-*.jar
           retention-days: 5
 
   deploy:
