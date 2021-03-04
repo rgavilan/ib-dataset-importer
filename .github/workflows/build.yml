@@ -8,6 +8,11 @@ on:
       - 'v*'
   pull_request:
 
+env:
+  DOCKER_IMAGE: herculescrue/dataset-importer
+  ARTIFACT_PATH: target/dataset-importer-*.jar
+  DOWNLOAD_ARTIFACT_PATH: docker-build/java/app.jar
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,18 +37,16 @@ jobs:
           GITHUB_USER: ${{ secrets.PERSONAL_GITHUB_USER }}
           GITHUB_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         run: mvn -s ./.ci/settings.xml -B -U clean package
-      - name: Archive JAR
+      - name: Archive artifact
         uses: actions/upload-artifact@v2
         with:
           name: jar
-          path: target/dataset-importer-*.jar
+          path: ${{ env.ARTIFACT_PATH }}
           retention-days: 5
 
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
-    env:
-      DOCKER_IMAGE: herculescrue/dataset-importer
 
     steps:
 
@@ -51,11 +54,11 @@ jobs:
         with:
           fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
-      - name: Download a single artifact
+      - name: Download artifact
         uses: actions/download-artifact@v2
         with:
           name: jar
-          path: docker-build/java/app.jar
+          path: ${{ env.DOWNLOAD_ARTIFACT_PATH }}
       
       - name: Docker meta
         id: docker_meta
