@@ -40,6 +40,9 @@ jobs:
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: docker-build
 
     steps:
 
@@ -51,7 +54,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: jar
-          path: docker-build/java/app.jar
+          path: java/app.jar
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
