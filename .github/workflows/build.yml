@@ -42,6 +42,8 @@ jobs:
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
+    env:
+      DOCKER_IMAGE: herculescrue/dataset-importer
 
     steps:
 
@@ -59,7 +61,7 @@ jobs:
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
         with:
-          images: herculescrue/dataset-importer
+          images: $DOCKER_IMAGE
           tag-semver: |
             {{version}}
             {{major}}.{{minor}}
@@ -84,6 +86,8 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
+          cache-from: type=registry,ref=$DOCKER_IMAGE:latest
+          cache-to: type=inline
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
