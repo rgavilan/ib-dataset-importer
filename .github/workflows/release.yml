@@ -30,12 +30,4 @@ jobs:
           GITHUB_USER: ${{ secrets.PERSONAL_GITHUB_USER }}
           GITHUB_USER_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         run: mvn -s ./.ci/settings.xml -B clean deploy javadoc:jar source:jar -DaltDeploymentRepository='github::default::https://maven.pkg.github.com/rgavilan/ib-dataset-importer'
-      - name: Microsoft Teams Notification
-        uses: skitionek/notify-microsoft-teams@master
-        if: failure()
-        with:
-          webhook_url: ${{ secrets.MSTEAMS_WEBHOOK }}
-          overwrite: "{title: `dataset-importer (Release Maven)`}"
-          needs: ${{ toJson(needs) }}
-          job: ${{ toJson(job) }}
-          steps: ${{ toJson(steps) }}
+      
